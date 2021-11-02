@@ -24,3 +24,7 @@ https://www.converse.com.ar/ - Elegido por los productos que ofrece y los client
 https://tienda.fila.com.ar/  - Elegido por los productos que ofrece y los clientes a los que apunta.
 
 ------------------------------------------------------------------------------------------------------------------
+
+Link Tablero de Trabajo:
+
+https://trello.com/espaciodetrabajodelequipo9
