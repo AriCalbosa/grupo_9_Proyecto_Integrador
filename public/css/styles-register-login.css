@@ -3,3 +3,101 @@
     padding: 0px;
     box-sizing: border-box;
 }
+
+h3 {
+    text-align: center;
+}
+
+.login, .registro {
+    width: 100%;
+}
+
+.ingresar {
+    text-align: center;
+    margin: 30px 0px 100px 0px;
+}
+
+.ingresar input {
+    width: 80%;
+    border-radius: 6px;
+    padding: 5px;
+}
+
+.ingresar div input{
+    margin: 15px 0px;
+}
+
+.ingresar button {
+    width: 80%;
+    border-radius: 6px;
+    padding: 5px;
+    margin-top: 15px;
+    background-color: black;
+    color: white;
+    transition: all 0.5s;
+}
+
+.ingresar button:hover {
+    background-color: rgb(20, 20, 20);
+}
+
+.registrarse h4 {
+    margin-top: 15px;
+}
+
+.registrarse {
+    margin: 30px 0px;
+    text-align: center;
+}
+
+.registrarse input {
+    width: 80%;
+    border-radius: 6px;
+    padding: 5px;
+}
+
+.perfil input, .categorias input {
+    width: auto;
+}
+
+.registrarse div input{
+    margin: 15px 0px;
+}
+
+.borrar {
+    width: 80%;
+    border-radius: 6px;
+    padding: 5px;
+    margin-top: 15px;
+    background-color: #666;
+    color: white;
+    transition: all 0.5s;
+}
+
+.borrar:hover {
+    background-color: rgb(59, 58, 58);
+}
+
+.enviar {
+    width: 80%;
+    border-radius: 6px;
+    padding: 5px;
+    margin-top: 15px;
+    background-color: black;
+    color: white;
+    transition: all 0.5s;
+}
+
+.enviar:hover {
+    background-color: rgb(20, 20, 20);
+}
+
+@media (min-width: 769px){
+    .cuenta {
+        display: flex;
+        justify-content: center;
+    }
+    .registrarse {
+        border-left: solid 1px #666;
+    }
+}
