@@ -3,53 +3,122 @@
     padding: 0px;
     box-sizing: border-box;
 }
-.mod {           
-        
-         
-        display: flex;
-        flex-wrap: wrap;
-        background-color: #ebebeb;
-        border-top: solid 1px white;
-        padding: 1px;
-        position: relative;
-    }
 
-.selection {
+p, label {
+    font-size: 20px;
+}
 
-    
+h4 {
+    font-size: 20px;
+}
+.detalle-producto {
     background-color: #ebebeb;
-    border-top: solid 1px white;
-    padding: 1px 1px;
-    position: relative;
-    height: 1px;
-
-
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+    box-shadow : 0px 0px 20px rgb(0 , 0 , 0 )
 }
 
-.imgs{
-     width: 120%;
-     padding: 1px 1px ;
-
-}
-.principal {
-
-    
-    border-top: solid 1px;
-    padding: 1px 1px;
-    position: relative;
-    height: 1px;
-
+.colores-producto {
+    display: flex;
 }
 
-.detall{
-    font-size: 14px;
-    margin: 20px 0px;
-    
-    
-    
-    
-    padding: 1px;
-    position: relative;
-
+.descripcion-producto {
+    text-align: center;
 }
+
+.nombre-producto {
+    text-align: center;
+}
+
+/* .caracteristicas-producto {
+    text-align: left;
+} */
+
+.caracteristicas-producto p, .caracteristicas-producto div {
+    padding-top: 10px;
+}
+
+select {
+    width: 150px;
+    border-radius: 6px;
+    padding: 5px;
+    margin-top: 15px;
+    background-color: black;
+    color: white;
+}
+
+.caracteristicas-producto, .boton {
+    padding: 10px 0;
+}
+
+.boton button {
+    width: 80%;
+    border-radius: 6px;
+    padding: 5px;
+    margin-top: 15px;
+    background-color: black;
+    color: white;
+    transition: all 0.5s;
+}
+
+.boton button:hover {
+    background-color: rgb(20, 20, 20);
+}
+
+
+
+
+
+
+/* h4 {
+    font-size: 30px;
+}
+
+p {
+    font-size: 25px;
+}
+
+
+
+.colores-producto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 15%;
+    border: solid 1px red;
+}
+
+.color01, .color02, .color03 {
+   border: solid 1px yellow;
+}
+
+.producto-principal {
+    width: 50%;
+    border: solid 1px red;
+}
+
+.descripcion-producto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 35%;
+    font-size: 25px;
+    border: solid 1px red;
+}
+
+.caracteristicas-producto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.caracteristicas-producto form {
+
+    display: flex;
+    flex-direction: column;
+
+} */

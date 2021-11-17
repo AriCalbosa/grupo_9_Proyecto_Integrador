@@ -26,19 +26,24 @@ h3 {
 .cabecera-principal {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 5%;
+    justify-content: space-around;
+    padding: 3% 3% 0 3%;
     
 }
 
-.logo {
-    width: 50%;
+.logo, .buscador {
+    width: 45%;
+}
+
+.imagen-logo {
+    width: 72%;
+    display:block;
+    margin:auto;
 }
 
 .buscador {
     display: flex;
     align-items: center;
-    width: 50%;
 }
 
 .buscador input {
@@ -71,7 +76,7 @@ h3 {
 
 .listas01 {
     width: 100%;
-    margin: 15px 0;
+    margin: 20px 0;
 }
 
 .lista01 {
@@ -234,6 +239,12 @@ footer i:hover{
     .logo, .buscador, .listas01 {
         width: 33%;
     }
+    /* .listas01 {
+        width: 20%;
+    }
+    .buscador {
+        width: 45%;
+    } */
     .menu-hamburguesa {
         display: none;
     }
@@ -241,7 +252,7 @@ footer i:hover{
         padding-right: 50px;
     }
     .lista01 li {
-        padding: 0 5px;
+        padding: 0 5px 0 15px;
     }
     .lista01 {
         display: flex;

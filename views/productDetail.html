@@ -14,7 +14,9 @@
 <body>
     <header class="cabecera">
         <div class="cabecera-principal">
-            <img class="logo" src="images/nike-logo2.jpg" alt= "Logo de MiZapatilla">
+            <div class="logo">
+                <img class="imagen-logo" src="images/logo/logo-redondo-negro.png" alt= "Logo de MiZapatilla">
+            </div>
             <div class="buscador">
                 <form action="#" method="GET">
                    <input type="text" name="search" placeholder="Buscar productos, marcas y más...">
@@ -38,37 +40,65 @@
                 <li><a href ="#">Mujer</a></li>
                 <li><a href ="#">Unisex</a></li>
             </ul>
-            
         </nav>
     </header>
     <main>
-        <section class="productos">
-             <div class="mod">
-                <article>
-                    <div class= "selection">
-                        <img src = "images/adidas/running/hombre/adidas-running-hombre02-color01.webp" alt="Adidas Ultraboost 21" class=imgs>
-                        <img src = "images/adidas/running/hombre/adidas-running-hombre02-color02.webp" alt="Adidas Ultraboost 21" class=imgs>
-                        <img src = "images/adidas/running/hombre/adidas-running-hombre02-color03.webp" alt="Adidas Ultraboost 21" class=imgs>
-                    </div>
-                </article>
-                <article>
-                    <div class ="principal">   
-                    <img src = "images/adidas/running/mujer/adidas-running-mujer02-color01.webp" alt="Adidas X9000L3 COLD.RDY" class=>
-                    </div>
-                </article>
-                <article>
-                    <div class=.detall>
-                        <h3 class = >Adidas X9000L1</h3>
-                        <p class = "precio">$11.999</p>
-                        <p class = "color"> colores</p>
-                        <p class = > Talle </p><p class= > Cantidad </p>
-                        <p class= >Añadir al Carrito</p>
-                    </div>
-                </article>
+        <h3>Detalle de Producto</h3>
+        <div class="detalle-producto">
+            <div class="producto-principal">
+                <img src = "images/adidas/running/hombre/adidas-running-hombre01-color01.webp" alt="Adidas X9000L1" class="product_img">
             </div>
-        </section>
-
-        
+            <div class="colores-producto">
+                <div class="color01">
+                    <img src = "images/adidas/running/hombre/adidas-running-hombre01-color01.webp" alt="Adidas X9000L1" class="product_img">
+                </div>
+                <div class="color02">
+                    <img src = "images/adidas/running/hombre/adidas-running-hombre01-color02.webp" alt="Adidas X9000L1" class="product_img">
+                </div>
+                <div class="color03">
+                    <img src = "images/adidas/running/hombre/adidas-running-hombre01-color03.webp" alt="Adidas X9000L1" class="product_img">
+                </div>
+            </div>
+            <div class="descripcion-producto">
+                <div class="nombre-producto">
+                    <h4>Adidas X9000L1</h4>
+                </div>
+                <div class="caracteristicas-producto">
+                    <p>Precio: $11.999</p>
+                    <form action="/" method="POST">
+                        <div class="color">
+                        <label for="color">Color: </label>
+                        <select name="color" id="color">
+                            <option value="01">Negro y Blanco</option>
+                            <option value="02">Negro y Verde</option>
+                            <option value="03">Gris</option>
+                        </select>
+                        </div>
+                        <div class="talle">
+                            <label for="talle">Talle: </label>
+                            <select name="talle" id="talle">
+                               <option value="talle-1">38</option>
+                               <option value="talle-2">39</option>
+                               <option value="talle-3">40</option>
+                            </select>
+                        </div>
+                        <div class="cantidad">
+                            <label for="cantidad">Cantidad: </label>
+                            <select name="cantidad" id="cantidad">
+                               <option value="01">1</option>
+                               <option value="02">2</option>
+                               <option value="03">3</option>
+                               <option value="04">4</option>
+                               <option value="05">5</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="boton">
+                    <button type="submit">Agregar al Carrito <i class="fas fa-cart-plus"></i></button>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <div class="beneficios">
@@ -92,3 +122,28 @@
     </footer>
 </body>
 </html>
+
+
+<!-- <div class="mod">
+    <article>
+        <div class= "selection">
+            <img src = "images/adidas/running/hombre/adidas-running-hombre01-color01.webp" alt="Adidas X9000L1" class="product_img">
+            <img src = "images/adidas/running/hombre/adidas-running-hombre01-color02.webp" alt="Adidas X9000L1" class="product_img">
+            <img src = "images/adidas/running/hombre/adidas-running-hombre01-color03.webp" alt="Adidas X9000L1" class="product_img">
+        </div>
+    </article>
+    <article>
+        <div class ="principal">   
+        <img src = "images/adidas/running/hombre/adidas-running-hombre01-color01.webp" alt="Adidas X9000L1" class="product_img">
+        </div>
+    </article>
+    <article>
+        <div class=.detall>
+            <h3 class = >Adidas X9000L1</h3>
+            <p class = "precio">$11.999</p>
+            <p class = "color"> colores</p>
+            <p class = > Talle </p><p class= > Cantidad </p>
+            <p class= >Añadir al Carrito</p>
+        </div>
+    </article>
+</div> -->
