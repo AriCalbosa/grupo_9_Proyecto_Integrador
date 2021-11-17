@@ -95,41 +95,41 @@ Productos Puma:
    Futbol
 
       Hombre:
-         1- 
-         2- 
+         1- https://ar.puma.com/botines-future-z-3-2-fg-ag-de-futbol-para-hombre-106794.html?color=6866
+         2- https://ar.puma.com/botines-ultra-3-3-fg-de-futbol-106802.html?color=6863
 
       Mujer:
-         1- 
-         2- 
+         1- https://ar.puma.com/future-z-3-1-njr-fg-ag-106911.html?color=6845
+         2- https://ar.puma.com/botines-ultra-3-3-fg-de-futbol-para-mujer-106667.html?color=6860
 
       Unisex:
-         1- 
+         1- https://ar.puma.com/botines-future-z-3-1-fg-ag-106636-03.html?color=1365
 
    Running
 
       Hombre:
-         1- 
-         2- 
+         1- https://ar.puma.com/zapatillas-de-running-para-hombre-cell-fraction-194361-02.html?color=6241
+         2- https://ar.puma.com/zapatillas-de-entrenamiento-para-hombre-fuse-194419-08.html?color=1559
 
       Mujer:
-         1- 
-         2- 
+         1- https://ar.puma.com/zapatillas-provoke-xt-ftr-moto-de-entrenamiento-para-mujer-195269-02.html?color=5739
+         2- https://ar.puma.com/zapatillas-de-entrenamiento-para-mujer-lvl-up-xt-untamed-floral-194426-02.html?color=608
 
       Unisex:
-         1- 
+         1- https://ar.puma.com/spike-evospeed-tokyo-future-track-and-field-192473.html?color=7271
 
    Casual
 
       Hombre:
-         1- 
-         2- 
+         1- https://ar.puma.com/zapatillas-graviton-pro-384288-07.html?color=7132
+         2- https://ar.puma.com/zapatillas-suede-triplex-381175-04.html?color=7009
 
       Mujer:
-         1- 
-         2- 
+         1- https://ar.puma.com/zapatillas-cruise-rider-nu-liberty-382107.html?color=7180
+         2- https://ar.puma.com/zapatillas-cali-wedge-tonal-381123.html?color=7084
 
       Unisex:
-         1- 
+         1- https://ar.puma.com/zapatillas-pride-suede-380838.html?color=505
 
 
 
