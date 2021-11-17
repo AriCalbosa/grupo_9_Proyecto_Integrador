@@ -3,3 +3,53 @@
     padding: 0px;
     box-sizing: border-box;
 }
+.mod {           
+        
+         
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #ebebeb;
+        border-top: solid 1px white;
+        padding: 1px;
+        position: relative;
+    }
+
+.selection {
+
+    
+    background-color: #ebebeb;
+    border-top: solid 1px white;
+    padding: 1px 1px;
+    position: relative;
+    height: 1px;
+
+
+
+}
+
+.imgs{
+     width: 120%;
+     padding: 1px 1px ;
+
+}
+.principal {
+
+    
+    border-top: solid 1px;
+    padding: 1px 1px;
+    position: relative;
+    height: 1px;
+
+}
+
+.detall{
+    font-size: 14px;
+    margin: 20px 0px;
+    
+    
+    
+    
+    padding: 1px;
+    position: relative;
+
+}
