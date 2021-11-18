@@ -3,3 +3,128 @@
     padding: 0px;
     box-sizing: border-box;
 }
+
+.productos-carrito {
+    box-shadow: 0px 0px 20px rgb(100 , 100 , 100 );
+}
+
+article {
+    display: flex;
+    background-color: #eceff1;
+    padding: 10px;
+    margin: 10px;
+}
+
+.imagen-producto {
+    width: 50%;
+}
+
+.descripcion-producto {
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.precio-producto p {
+    color: #39b54a;
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+.caracteristicas-producto div {
+    padding-top: 10px;
+}
+
+select {
+    font-size: 11px;
+    width: 105px;
+    border-radius: 6px;
+    padding: 5px;
+    background-color: black;
+    color: white;
+}
+
+.talle select {
+    width: 111px;
+}
+
+.cantidad select {
+    width: 80px;
+}
+
+.boton {
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+article .boton button {
+    background-color: transparent;
+    border: 0 ;
+    border-bottom: 1px solid #000;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+article .boton button:hover {
+    color: red;
+    border-bottom: 1px solid red
+}
+
+.resumen {
+    background-color: #eceff1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    height: 150px;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0px 0px 20px rgb(100 , 100 , 100 );
+}
+
+.resumen h3 {
+    margin: 0%;
+}
+
+.total {
+    width: 90%;
+    font-size: 25px;
+    margin: 0 auto;
+}
+
+.resumen button {
+    width: 80%;
+    border-radius: 6px;
+    padding: 5px;
+    margin-top: 15px;
+    background-color: black;
+    color: white;
+    transition: all 0.5s;
+}
+
+.resumen button:hover {
+    background-color: rgb(20, 20, 20);
+}
+
+
+
+@media (min-width: 769px){
+    .carrito {
+        display: flex;
+    }
+    .productos-carrito {
+        width: 50%;
+    }
+    .resumen {
+        width: 50%;
+        height: 250px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .nombre-producto {
+        font-size: 20px;
+    }
+}

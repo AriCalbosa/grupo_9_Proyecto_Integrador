@@ -15,7 +15,7 @@ p {
 
 h3 {
     font-size: 24px;
-    margin: 20px 0px;
+    margin: 20px 0px 50px 0px;
 }
 
 .cabecera {
@@ -140,13 +140,13 @@ main {
     justify-content: space-around;
 }
 
-article {
+section article {
     background-color: white;
     margin: 10px;
     transition: box-shadow 0.5s;
 }
 
-article:hover {
+section article:hover {
     box-shadow : 0px 0px 20px rgb(0 , 0 , 0 );
 }
 
@@ -158,7 +158,7 @@ article:hover {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    background-color: #ebebeb;
+    background-color: #eceff1;
     border-top: solid 1px white;
     padding: 15px;
     position: relative;
@@ -239,12 +239,6 @@ footer i:hover{
     .logo, .buscador, .listas01 {
         width: 33%;
     }
-    /* .listas01 {
-        width: 20%;
-    }
-    .buscador {
-        width: 45%;
-    } */
     .menu-hamburguesa {
         display: none;
     }
@@ -264,7 +258,6 @@ footer i:hover{
         justify-content: space-between;
         margin-top: 15px;
     }
-    
     .lista02 {
         display: flex;
         justify-content: space-around;
@@ -274,7 +267,7 @@ footer i:hover{
     .listas li {
         margin: 0 8px;
     }
-    article {
+    section article {
         width: 43%;
         box-shadow : 0px 0px 10px rgb(100 , 100 , 100 );
     }
@@ -282,20 +275,19 @@ footer i:hover{
         display: block;
         visibility: hidden;
     }
-    article:hover .descripcion{
+    section article:hover .descripcion{
         visibility: visible;
     }
 }
 
 @media (min-width: 1200px){
     .cabecera-principal, .listas {
-        /* max-width: 1200px; */
         margin: auto;
     }
     .listas {
         margin-top: 10px;
     }
-    article {
+    section article {
         width: 22%;
     }
     .beneficios {

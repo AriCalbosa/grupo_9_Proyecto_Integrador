@@ -43,39 +43,115 @@
         </nav>
     </header>
     <main>
-        <div class="productos-Carrito">
-            <article>
-                <div class="producto-Carrito">
-                <img src = "images/adidas/running/hombre/adidas-running-hombre01-color01.webp" alt="Adidas X9000L1" class="product_img">
-              </div>
-            <h4 class = "Nombre del producto">Adidas X9000L1</h4>
-                    <label>Color<select></select></label>
-                    <label>Talle<select></select></label>
-                    <label>Cantidad<select></select></label>
-                    <p class = "Precio">$11.999</p>
-                </div>
-            </article>
+        <h3>Mi Carrito</h3>
+        <div class="carrito">
+            <div class="productos-carrito">
                 <article>
-                <img src = "images/adidas/running/hombre/adidas-running-hombre02-color01.webp" alt="Adidas Ultraboost 21" class="product_img">
-                <div class="producto-Carrito">
-                
-                <h4 class = "Nombre del producto">Adidas X9000L1</h4>
-
-                        <label>Color<select></select></label>
-                        <label>Talle<select></select></label>
-                        <label>Cantidad<select></select></label>
-                        <p class = "Precio">$26,999</p>
-                        
+                    <div class="imagen-producto">
+                        <img src = "images/adidas/running/hombre/adidas-running-hombre01-color01.webp" alt="Adidas X9000L1" class="product_img">
                     </div>
-                </article> 
-                <div class ="Resumen">
-                <h4>Resumen</h4>
-                </div> 
-                <div><p>Subtotal:</p>
-                <button>Hacer compra</button>
+                    <div class="descripcion-producto">
+                        <div class="nombre-producto">
+                            <h4>Adidas X9000L1</h4>
+                        </div>
+                        <div class="precio-producto">
+                            <p>$11.999</p>
+                        </div>
+                        <div class="caracteristicas-producto">
+                            <form action="/" method="POST">
+                                <div class="color">
+                                <label for="color">Color: </label>
+                                <select name="color" id="color">
+                                    <option value="01">Negro y Blanco</option>
+                                    <option value="02">Negro y Verde</option>
+                                    <option value="03">Gris</option>
+                                </select>
+                                </div>
+                                <div class="talle">
+                                    <label for="talle">Talle: </label>
+                                    <select name="talle" id="talle">
+                                       <option value="talle-1">38</option>
+                                       <option value="talle-2">39</option>
+                                       <option value="talle-3">40</option>
+                                    </select>
+                                </div>
+                                <div class="cantidad">
+                                    <label for="cantidad">Cantidad: </label>
+                                    <select name="cantidad" id="cantidad">
+                                       <option value="01">1</option>
+                                       <option value="02">2</option>
+                                       <option value="03">3</option>
+                                       <option value="04">4</option>
+                                       <option value="05">5</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="boton">
+                            <button type="submit">Sacar del Carrito</button>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="imagen-producto">
+                        <img src = "images/adidas/running/hombre/adidas-running-hombre02-color01.webp" alt="Adidas Ultraboost 21" class="product_img">
+                    </div>
+                    <div class="descripcion-producto">
+                        <div class="nombre-producto">
+                            <h4>Adidas Ultraboost 21</h4>
+                        </div>
+                        <div class="precio-producto">
+                            <p>$26.999</p>
+                        </div>
+                        <div class="caracteristicas-producto">
+                            <form action="/" method="POST">
+                                <div class="color">
+                                <label for="color">Color: </label>
+                                <select name="color" id="color">
+                                    <option value="01">Naranja y Negro</option>
+                                    <option value="02">Blanco y Negro</option>
+                                    <option value="03">Negro</option>
+                                </select>
+                                </div>
+                                <div class="talle">
+                                    <label for="talle">Talle: </label>
+                                    <select name="talle" id="talle">
+                                       <option value="talle-1">38</option>
+                                       <option value="talle-2">39</option>
+                                       <option value="talle-3">40</option>
+                                    </select>
+                                </div>
+                                <div class="cantidad">
+                                    <label for="cantidad">Cantidad: </label>
+                                    <select name="cantidad" id="cantidad">
+                                       <option value="01">1</option>
+                                       <option value="02">2</option>
+                                       <option value="03">3</option>
+                                       <option value="04">4</option>
+                                       <option value="05">5</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="boton">
+                            <button type="submit">Sacar del Carrito</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="resumen">
+                <div>
+                    <h3>Resumen</h4>
                 </div>
-
-        </main>
+                <div class="total">
+                    <h4>Total: $38.999</h4>
+                </div>
+                <div class="boton">
+                    <button type="submit">Proceder al Pago</i></button>
+                </div>
+            </div>
+        </div>
+    </main>
     <footer>
         <div class="beneficios">
             <div class="pago">
@@ -94,7 +170,7 @@
                 <p>¿No te gusta? ¡Devolvelo! En MiZapatilla, no hay nada que no puedas hacer, porque estás siempre protegid@.</p>
             </div>
         </div>
-        <p>Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
+        <p>Copyright © 1999-2021 MiZapatilla S.R.L.</p>
     </footer>
 </body>
 </html>
