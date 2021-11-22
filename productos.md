@@ -50,8 +50,8 @@ Productos Nike:
    Futbol
 
       Hombre:
-         1- https://www.newsport.com.ar/botines-hombre-mercurial-superfly-8-academy-fg-mg-cv0843403/p
-         2- https://www.newsport.com.ar/botines-nino-superfly-7-academy-fg-mg-at8120801/p
+         1- https://www.dexter.com.ar/botines-nike-vapor-13-academy-ic/NI_AT7993-906.html
+         2- https://www.dexter.com.ar/botines-nike-superfly-7-academy-tf/NI_AT7978-414.html
 
       Mujer:
          1- https://www.newsport.com.ar/botines-phantom-gt-elite-df-fg-cw6589160/p
@@ -63,28 +63,28 @@ Productos Nike:
    Running
 
       Hombre:
-         1- https://www.newsport.com.ar/zapatillas-hombre-quest-4-da1105003/p
-         2- https://www.newsport.com.ar/zapatillas-hombre-revolution-5-bq3204600/p
+         1- https://www.dexter.com.ar/zapatillas-nike-renew-run/NI_CK6357-002.html
+         2- https://www.dexter.com.ar/zapatillas-nike-downshifter-11/NI_CW3411-003.html
 
       Mujer:
-         1- https://www.newsport.com.ar/zapatillas-mujer-flex-experience-rn-8-aj5908003/p
-         2- https://www.newsport.com.ar/zapatillas-mujer-quest-4-da1106006/p
-
+         1- https://www.dexter.com.ar/zapatillas-nike-react-infinity-run-flyknit/NI_CD4372-002.html
+         2- https://www.dexter.com.ar/zapatillas-nike-quest-4/NI_DA1106-101.html
       Unisex:
-         1- https://www.digitalsport.com.ar/sport78/prod/zapatillas-revolution-5-nike-542335/?gclid=CjwKCAiA7dKMBhBCEiwAO_crFOM2QH6Ro8KhSu9M3r7GF3g7byrmv4cCTmxjJXYDpRNMqHtZ55mTrxoCneEQAvD_BwE
+         1- https://www.dexter.com.ar/zapatillas-nike-downshifter-11/NI_CW3411-003.html
 
    Casual
 
       Hombre:
-         1- https://www.moovbydexter.com.ar/zapatillas-nike-waffle-one/NI_DA7995-600.html
-         2- https://www.moovbydexter.com.ar/zapatillas-nike-air-force-1-07/NI_CN0866-002.html
+         1- https://www.moovbydexter.com.ar/zapatillas-nike-air-force-1-07/NI_CN0866-002.html
+         2- https://www.moovbydexter.com.ar/zapatillas-nike-air-max-90/NI_DC9845-100.html
 
       Mujer:
-         1- https://www.grid.com.ar/botitas-nike-blazer-mid-77-se-moda-mujer-3160123/p
-         2- https://www.grid.com.ar/zapatillas-nike-blazer-low-77-moda-hombre-3160072/p
+         1- https://www.moovbydexter.com.ar/zapatillas-nike-sb-chron-solarsoft/NI_CD6278-100.html
+         2- https://www.moovbydexter.com.ar/zapatillas-nike-air-force-1-pixel-se/NI_DH9632-100.html
+
 
       Unisex:
-         1- 
+         1- https://www.moovbydexter.com.ar/zapatillas-nike-air-force-1-%2707/NI_DD8959-100.html
 
 
 
