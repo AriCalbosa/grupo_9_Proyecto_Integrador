@@ -54,11 +54,11 @@ Productos Nike:
          2- https://www.dexter.com.ar/botines-nike-superfly-7-academy-tf/NI_AT7978-414.html
 
       Mujer:
-         1- https://www.newsport.com.ar/botines-phantom-gt-elite-df-fg-cw6589160/p
-         2- https://www.newsport.com.ar/phantom-vsn-2-academy-df-ic-rj-cd4168606/p
+         1- https://www.dexter.com.ar/botines-nike-legend-8-academy-fg-mg/NI_AT5292-010.html
+         2- https://www.dexter.com.ar/botines-nike-mercurial-superfly-8-academy-fg%2Fmg/NI_CV1127-403.html
 
       Unisex:
-         1- https://www.newsport.com.ar/botines-superfly-7-club-fg-mg-at7949801/p
+         1- https://www.dexter.com.ar/botines-nike-mercurial-vapor-14-academy-tf/NI_CV0822-600.html
 
    Running
 
@@ -68,7 +68,7 @@ Productos Nike:
 
       Mujer:
          1- https://www.dexter.com.ar/zapatillas-nike-react-infinity-run-flyknit/NI_CD4372-002.html
-         2- https://www.dexter.com.ar/zapatillas-nike-quest-4/NI_DA1106-101.html
+         2- https://www.dexter.com.ar/zapatillas-nike-air-max-bella-training-4/NI_CW3398-002.html
       Unisex:
          1- https://www.dexter.com.ar/zapatillas-nike-downshifter-11/NI_CW3411-003.html
 
@@ -84,7 +84,7 @@ Productos Nike:
 
 
       Unisex:
-         1- https://www.moovbydexter.com.ar/zapatillas-nike-air-force-1-%2707/NI_DD8959-100.html
+         1- https://www.dexter.com.ar/zapatillas-nike-air-max-excee/NI_CD6894-102.html
 
 
 
