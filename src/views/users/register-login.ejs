@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs') %>
+    <title>Cuenta</title>
+    <link href="/css/styles-register-login.css" rel="stylesheet">
+</head>
+<body>
+    <%- include('../partials/header.ejs') %>
+    <main>
+        <div class="cuenta">
+            <div class="login">
+                <h3>Ingresá a tu cuenta</h3>
+                <form action="/login" method="POST" class="ingresar">
+                    <div>
+                        <input type="text" name="usuario" placeholder="Nombre de usuario" required>
+                    </div>
+                    <div>
+                        <input type="password" name="contraseña" placeholder="Contraseña" required>
+                    </div>
+                    <div>
+                        <button type="submit">Ingresar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="registro">
+                <h3>Creá tu Cuenta</h3>
+                <form action="/registro" method="POST" class="registrarse">
+                    <div class="nombre">
+                        <input type="text" name="nombre" placeholder="Nombre y apellido" required>
+                        <span class="feedback"></span>
+                    </div>
+                    <div class="usuario">
+                        <input type="text" name="usuario" placeholder="Nombre de usuario" required>
+                        <span class="feedback"></span>
+                    </div>
+                    <div class="mail">
+                        <input type="email" name="email" placeholder="E-mail" required>
+                        <span class="feedback"></span>
+                    </div>
+                    <div class="domicilio">
+                        <input type="text" name="domicilio" placeholder="Domicilio" required>
+                        <span class="feedback"></span>
+                    </div>
+                    <div class="contraseña01">
+                        <input type="password" name="contraseña" placeholder="Contraseña" required>
+                        <span class="feedback"></span>
+                    </div>
+                    <div class="contraseña02">
+                        <input type="password" name="confirma-contraseña" placeholder="Confirmar contraseña" required>
+                        <span class="feedback"></span>
+                    </div>
+                    <div>
+                        <button class="borrar" type="reset">Borrar</button>
+                        <button class="enviar" type="submit">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>
