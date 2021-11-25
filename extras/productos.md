@@ -21,24 +21,6 @@ Productos Adidas:
       15- 
 
 
-   Running
-
-      01- https://www.adidas.com.ar/zapatillas-x9000l1/H68081.html
-      02- https://www.adidas.com.ar/zapatillas-ultraboost-21/FZ1924.html
-      03- https://www.adidas.com.ar/zapatillas-supernova-tokio/FY2862.html
-      04- https://www.adidas.com.ar/zapatillas-ultraboost-winter.rdy/EG9803.html
-      05- https://www.adidas.com.ar/zapatillas-ultraboost-21-primeblue/FX7729.html
-      06- 
-      07- 
-      08- 
-      09- 
-      10- 
-      11- 
-      12- 
-      13- 
-      14- 
-      15- 
-
    Futbol
 
       01- https://www.adidas.com.ar/botines-predator-mutator-20.1-terreno-firme/FW9186.html
@@ -57,5 +39,23 @@ Productos Adidas:
       14- 
       15- 
 
-   
+
+   Running
+
+      01- https://www.adidas.com.ar/zapatillas-x9000l1/H68081.html
+      02- https://www.adidas.com.ar/zapatillas-ultraboost-21/FZ1924.html
+      03- https://www.adidas.com.ar/zapatillas-supernova-tokio/FY2862.html
+      04- https://www.adidas.com.ar/zapatillas-ultraboost-winter.rdy/EG9803.html
+      05- https://www.adidas.com.ar/zapatillas-ultraboost-21-primeblue/FX7729.html
+      06- 
+      07- 
+      08- 
+      09- 
+      10- 
+      11- 
+      12- 
+      13- 
+      14- 
+      15- 
+
 -------------------------------------------------------------
