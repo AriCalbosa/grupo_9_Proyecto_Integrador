@@ -2,7 +2,7 @@
 
 Descripción de productos:
 
-Nuestro sitio web ofrece una selección de calzados de primer nivel para hombres y mujeres adultos.
+Nuestro sitio web ofrece una selección de calzados de primer nivel para adultos.
 
 ------------------------------------------------------------------------------------------------------------------
 
