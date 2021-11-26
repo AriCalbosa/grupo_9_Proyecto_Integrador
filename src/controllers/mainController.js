@@ -16,7 +16,7 @@ const mainController = {
     listaProductos: (req, res) => {
         res.render('../src/views/products/productList')
     },
-    nuevoProducto: (req,res) => {
+    crearProducto: (req,res) => {
         res.render('../src/views/products/productNew')
     },
     editarProducto: (req, res) => {
