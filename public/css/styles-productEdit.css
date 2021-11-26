@@ -25,8 +25,35 @@ label {
     display: flex;
 }
 
+.color01, .color02, .color03{
+    position: relative;
+}
+
+.boton-editar button {
+    border: none;
+    padding: 1px;
+    background-color: #eceff1;
+    color: rgb(43, 43, 43);
+}
+
+.boton-editar button:hover {
+    color: red;
+}
+
+.colores-producto .boton-editar {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 100%;
+    text-align: right;
+}
+
 .descripcion-producto {
     text-align: center;
+}
+
+.descripcion-producto .boton-editar {
+    text-align: right;
 }
 
 .nombre-producto {
@@ -37,6 +64,10 @@ label {
 .nombre-producto h4, .precio-producto p {
     font-size: 40px;
 }
+
+/* .precio-producto {
+    width: 70%;
+} */
 
 .precio-producto p {
     color: #39b54a;
@@ -87,15 +118,6 @@ select {
     background-color: rgb(20, 20, 20);
 }
 
-.boton i {
-    transition: transform 0.5s;
-}
-
-.boton:hover i {
-    transform: rotateZ(-360deg);
-}
-
-
 @media (min-width: 769px){
     .detalle-producto {
         flex-direction: row;
@@ -106,6 +128,9 @@ select {
         flex-direction: column;
         justify-content: space-around;
         width: 15%;
+    }
+    .colores-producto .boton-editar {
+        font-size: 12px;
     }
     .producto-principal {
         order: 2;
@@ -136,5 +161,12 @@ select {
 @media (min-width: 1200px) {
     .nombre-producto h4, .precio-producto p {
         font-size: 40px;
+    }
+}
+
+@media (min-width: 1200px){
+    .colores-producto .boton-editar {
+        width: 103px;
+        font-size: 100%;
     }
 }

@@ -13,6 +13,15 @@ const mainController = {
     producto: (req, res) => {
         res.render('../src/views/products/productDetail');
     },
-}
+    listaProductos: (req, res) => {
+        res.render('../src/views/products/productList')
+    },
+    nuevoProducto: (req,res) => {
+        res.render('../src/views/products/productNew')
+    },
+    editarProducto: (req, res) => {
+        res.render('../src/views/products/productEdit')
+    }
+};
 
 module.exports = mainController;

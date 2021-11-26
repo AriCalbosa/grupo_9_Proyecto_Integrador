@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs') %>
+    <link href="/css/styles-productEdit.css" rel="stylesheet">
+    <title>Editar Producto</title>
+</head>
+<body>
+    <%- include('../partials/header.ejs') %>
+    <main>
+        <h3>Editar Producto</h3>
+        <div class="detalle-producto">
+            <div class="producto-principal">
+                <img src = "images/adidas/running/01/color01.webp" alt="Adidas X9000L1" class="product_img">
+            </div>
+            <div class="colores-producto">
+                <div class="color01">
+                    <img src = "images/adidas/running/01/color01.webp" alt="Adidas X9000L1" class="product_img">
+                    <div class="boton-editar">
+                        <button type="submit">Editar foto  <i class="fas fa-edit"></i></button>
+                    </div>
+                </div>
+                <div class="color02">
+                    <img src = "images/adidas/running/01/color02.webp" alt="Adidas X9000L1" class="product_img">
+                    <div class="boton-editar">
+                        <button type="submit">Editar foto  <i class="fas fa-edit"></i></button>
+                    </div>
+                </div>
+                <div class="color03">
+                    <img src = "images/adidas/running/01/color03.webp" alt="Adidas X9000L1" class="product_img">
+                    <div class="boton-editar">
+                        <button type="submit">Editar foto  <i class="fas fa-edit"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="descripcion-producto">
+                <div class="nombre-producto">
+                    <h4>Adidas X9000L1</h4>
+                    <div class="boton-editar">
+                        <button type="submit">Editar nombre  <i class="fas fa-edit"></i></button>
+                    </div>
+                </div>
+                <div class="precio-producto">
+                    <p>$11.999</p>
+                    <div class="boton-editar">
+                        <button type="submit">Editar precio  <i class="fas fa-edit"></i></button>
+                    </div>
+                </div>
+                <div class="caracteristicas-producto">
+                    <form action="/" method="POST">
+                        <div class="color">
+                        <label for="color">Color: </label>
+                        <select name="color" id="color">
+                            <option value="01">Negro y Blanco</option>
+                            <option value="02">Negro y Verde</option>
+                            <option value="03">Gris</option>
+                        </select>
+                        <div class="boton-editar">
+                            <button type="submit">Editar colores  <i class="fas fa-edit"></i></button>
+                        </div>
+                        </div>
+                        <div class="talle">
+                            <label for="talle">Talle: </label>
+                            <select name="talle" id="talle">
+                               <option value="talle-1">38</option>
+                               <option value="talle-2">39</option>
+                               <option value="talle-3">40</option>
+                            </select>
+                            <div class="boton-editar">
+                                <button type="submit">Editar talles  <i class="fas fa-edit"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="boton">
+                    <button type="submit">Guardar Edición  <i class="fas fa-edit"></i></button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>

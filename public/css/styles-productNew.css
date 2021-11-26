@@ -17,12 +17,28 @@ label {
     box-shadow : 0px 0px 20px rgb(0 , 0 , 0 );
 }
 
-.product_img {
+.producto-principal {
+    height: 327px;
+    text-align: center;
+    border: 1px solid #666;
+    display: flex;
+}
+
+.producto-principal .imagen-producto-color01 {
     width: 100%;
+    padding-top: 137px;
 }
 
 .colores-producto {
     display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+}
+
+.colores-producto .imagen-producto-color01, .colores-producto .imagen-producto-color02, .colores-producto .imagen-producto-color03 {
+    width: 33%;
+    height: 95px;
+    border: 1px solid #666;
 }
 
 .descripcion-producto {
@@ -48,8 +64,11 @@ label {
     padding-top: 10px;
 }
 
+.nombre-producto, .precio-producto {
+    padding-top: 20px;
+}
+
 select {
-    width: 150px;
     border-radius: 6px;
     padding: 5px;
     margin-top: 15px;
@@ -57,23 +76,27 @@ select {
     color: white;
 }
 
-.talle select {
-    width: 155px;
+.categoria select {
+    width: 115px;
 }
 
-.cantidad select {
-    width: 126px;
+.cantidad-colores select {
+    width: 40px;
+}
+
+.talle select {
+    width: 149px;
 }
 
 .caracteristicas-producto, .boton {
     padding: 10px 0;
 }
 
-.boton {
+.boton-crear, .boton-borrar {
     width: 100%;
 }
 
-.boton button {
+.boton-crear button {
     width: 80%;
     border-radius: 6px;
     padding: 5px;
@@ -83,22 +106,33 @@ select {
     transition: all 0.5s;
 }
 
-.boton button:hover {
+.boton-crear button:hover {
     background-color: rgb(20, 20, 20);
 }
 
-.boton i {
-    transition: transform 0.5s;
+.boton-borrar button {
+    width: 80%;
+    border-radius: 6px;
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: rgb(100 , 100 , 100 );
+    color: white;
+    transition: all 0.5s;
 }
 
-.boton:hover i {
-    transform: rotateZ(-360deg);
+.boton-borrar button:hover {
+    background-color: rgb(20, 20, 20);
 }
+
 
 
 @media (min-width: 769px){
     .detalle-producto {
         flex-direction: row;
+    }
+    .producto-principal {
+        height: 343px;
+        margin: 10px 0 10px 10px;
     }
     .colores-producto {
         order: 1;
@@ -106,6 +140,9 @@ select {
         flex-direction: column;
         justify-content: space-around;
         width: 15%;
+    }
+    .colores-producto .imagen-producto-color01, .colores-producto .imagen-producto-color02, .colores-producto .imagen-producto-color03 {
+        width: 100%;
     }
     .producto-principal {
         order: 2;
@@ -138,3 +175,64 @@ select {
         font-size: 40px;
     }
 }
+
+
+
+
+
+
+
+
+/* .producto-nuevo {
+    text-align: center;
+    margin: 30px 0px 100px 0px;
+}
+
+label, input {
+    font-size: 100%;
+}
+
+.producto-nuevo div {
+    margin: 30px 0;
+}
+
+.producto-nuevo input {
+    width: 80%;
+    border-radius: 6px;
+    padding: 5px;
+}
+
+.imagen-producto input {
+    text-align: center;
+}
+
+.radio input {
+    width: 25px;
+}
+
+.producto-nuevo div input{
+    margin: 5px 0px;
+}
+
+.producto-nuevo button {
+    width: 80%;
+    border-radius: 6px;
+    padding: 5px;
+    margin-top: 15px;
+    background-color: black;
+    color: white;
+    transition: all 0.5s;
+}
+
+.producto-nuevo button:hover {
+    background-color: rgb(20, 20, 20);
+}
+
+@media (min-width: 769px){
+    .producto-nuevo input, .producto-nuevo button {
+        width: 60%;
+    }
+    .radio input {
+        width: 25px;
+    }
+} */

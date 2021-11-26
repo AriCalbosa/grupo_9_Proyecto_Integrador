@@ -1,14 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include('partials/head.ejs') %>
+    <%- include('../partials/head.ejs') %>
+    <link href="/css/styles-productNew.css" rel="stylesheet">
     <title>Producto Nuevo</title>
 </head>
 <body>
-    <%- include('partials/header.ejs') %>
+    <%- include('../partials/header.ejs') %>
     <main>
-        
+        <h3>Nuevo Producto</h3>
+        <form action="/nuevo-producto" method="POST" class="detalle-producto">
+            <div class="producto-principal">
+                <div class="imagen-producto-color01">
+                    <label for="imagen-producto">Imagen del producto Color 01</label>
+                    <br>
+                    <input type="file" name="imagen-producto" accept=".png, .jpg, .webp" multiple>
+                </div>
+            </div>
+            <div class="colores-producto">
+                <div class="imagen-producto-color01">
+                    <label for="imagen-producto">Imagen del producto Color 01</label>
+                    <br>
+                    <input type="file" name="imagen-producto" accept=".png, .jpg, .webp" multiple>
+                </div>
+                <div class="imagen-producto-color02">
+                    <label for="imagen-producto">Imagen del producto Color 02</label>
+                    <br>
+                    <input type="file" name="imagen-producto" accept=".png, .jpg, .webp" multiple>
+                </div>
+                <div class="imagen-producto-color03">
+                    <label for="imagen-producto">Imagen del producto Color 03</label>
+                    <br>
+                    <input type="file" name="imagen-producto" accept=".png, .jpg, .webp" multiple>
+                </div>
+            </div>
+            <div class="descripcion-producto">
+                <div class="nombre-producto">
+                    <input type="text" name="descripcion-producto" placeholder="Nombre del producto" required>
+                </div>
+                <div class="precio-producto">
+                    <input type="number" name="precio" placeholder="Precio del producto $" required>
+                </div>
+                <div class="caracteristicas-producto">
+                    <div class="categoria">
+                        <label for="categoria">Categoría: </label>
+                        <select name="categoria" id="categoria">
+                           <option value="casual">Casual</option>
+                           <option value="futbol">Futbol</option>
+                           <option value="running">Running</option>
+                        </select>
+                    </div>
+                    <div class="cantidad-colores">
+                        <label for="colores">Cantidad de Colores: </label>
+                        <select name="colores" id="colores">
+                           <option value="color01">1</option>
+                           <option value="color02">2</option>
+                           <option value="color03">3</option>
+                        </select>
+                    </div>
+                    <div class="talle">
+                        <label for="talle">Talle: </label>
+                        <input type="checkbox" name="talle" value="38">38
+                        <input type="checkbox" name="talle" value="39">39
+                        <input type="checkbox" name="talle" value="40">40
+                    </div>
+                </div>
+                <div class="boton-crear">
+                    <button type="submit">Crear Producto</button>
+                </div>
+                <div class="boton-borrar">
+                    <button type="reset">Borrar</button>
+                </div>
+            </div>
+        </form>
     </main>
-    <%- include('partials/footer.ejs') %>
+    <%- include('../partials/footer.ejs') %>
 </body>
 </html>
+
+
+
+<!-- <div class="producto-nuevo">
+    <form action="/nuevo-producto" method="POST" class="nuevo-producto-form">
+        <div>
+            <input type="text" name="descripcion-producto" placeholder="Nombre del producto" required>
+        </div>
+        <div>
+            <input type="number" name="precio" placeholder="Precio del producto $" required>
+        </div>
+        <div class="imagen-producto">
+            <label for="imagen-producto">Imagen del producto: </label>
+            <br>
+            <input type="file" name="imagen-producto" accept=".png, .jpg, .webp" multiple>
+        </div>
+        <div class="radio">
+            <label for="categoria">Categoría: </label>
+            <br>
+            <input type="radio" name="categoria" value="Casual">Casual
+            <input type="radio" name="categoria" value="Futbol">Futbol
+            <input type="radio" name="categoria" value="Running">Running
+        </div>
+        <div class="radio">
+            <label for="colores">Cantidad de Colores: </label>
+            <br>
+            <input type="radio" name="colores" value="01">1
+            <input type="radio" name="colores" value="02">2
+            <input type="radio" name="colores" value="03">3
+        </div>
+        <div>
+            <button type="submit">Subir Producto</button>
+        </div>
+    </form>
+</div> -->

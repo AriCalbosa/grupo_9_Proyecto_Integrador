@@ -1,0 +1,210 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+}
+
+p {
+    font-size: 12px;
+}
+
+h3 {
+    font-size: 24px;
+    margin: 20px 0px 50px 0px;
+}
+
+.cabecera {
+    background-color:  black;
+    padding-bottom: 20px;
+}
+
+.cabecera-principal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 3% 3% 0 3%;
+    
+}
+
+.logo, .buscador {
+    width: 45%;
+}
+
+.imagen-logo {
+    width: 72%;
+    display:block;
+    margin:auto;
+}
+
+.buscador {
+    display: flex;
+    align-items: center;
+}
+
+.buscador input {
+    border-top: 1px solid rgb(207, 206, 206);
+    border-left: 1px solid rgb(207, 206, 206);
+    border-bottom: 1px solid rgb(207, 206, 206);
+    border-right: none;
+    border-radius: 8px 0 0 8px;
+    padding: 10px;
+    width: 100%;
+    outline: none;
+}
+
+.buscador i {
+    border-top: 1px solid rgb(207, 206, 206);
+    border-right: 1px solid rgb(207, 206, 206);
+    border-bottom: 1px solid rgb(207, 206, 206);
+    border-left: none;
+    border-radius: 0 8px 8px 0;
+    padding: 10px;
+    background-color: white;
+    color: rgb(177, 174, 174);
+}
+
+.buscador form{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.listas01 {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.lista01 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.lista01 i {
+    font-size: 35px;
+}
+
+.listas01 ul, .listas02 ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.listas01 a, .listas02 a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    padding: 5px 0;
+}
+
+
+.menu-hamburguesa {
+    background-color: white;
+    color: black;
+    display: block;
+    max-width: 50px;
+    padding: 15px 0;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    text-decoration: none;
+    margin: auto;
+}
+
+.listas02 {
+    display: none;
+    
+}
+
+main {
+    margin: 0 auto;
+    width: 90vw;
+    padding-bottom: 40px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer div div, footer>p {
+    padding-top: 45px;
+}
+
+footer i {
+    color: white;
+    font-size: 2em;
+    margin-bottom: 10px;
+    transition: color 0.5s;
+}
+
+footer i:hover{
+    color: #666;
+}
+
+@media (min-width: 769px){
+    .cabecera-principal {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+    }
+    .logo, .buscador, .listas01 {
+        width: 33%;
+    }
+    .menu-hamburguesa {
+        display: none;
+    }
+    .listas01 {
+        padding-right: 50px;
+    }
+    .lista01 li {
+        padding: 0 5px 0 15px;
+    }
+    .lista01 {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
+    .listas02 {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+    }
+    .lista02 {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        width: 100%;
+    }
+    .listas li {
+        margin: 0 8px;
+    }
+}
+
+@media (min-width: 1200px){
+    .cabecera-principal, .listas {
+        margin: auto;
+    }
+    .listas {
+        margin-top: 10px;
+    }
+    .beneficios {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .beneficios div {
+        width: 30%;
+        padding-bottom: 45px;
+    }
+    footer>p {
+        text-align: start;
+    }
+}
