@@ -12,24 +12,16 @@ app.listen(5000, function(){
 
 const mainRoutes = require('./routes/mainRoutes');
 
+const productRoutes = require('./routes/productRoutes');
+
+const userRoutes = require('./routes/userRoutes');
+
 // app.use(express.static('../public'));
 
 app.set('view engine', 'ejs');
 
 app.use('/', mainRoutes);
 
-// app.get('/', function (req,res){
-//     res.sendFile(path.resolve(__dirname,'./views/home.ejs'));
-// });
+app.use('/', productRoutes);
 
-// app.get('/carrito', function (req,res){
-//     res.sendFile(path.resolve(__dirname,'./views/productCart.ejs'));
-// });
-
-// app.get('/producto', function (req,res){
-//     res.sendFile(path.resolve(__dirname,'./views/productDetail.ejs'));
-// });
-
-// app.get('/cuenta', function (req,res){
-//     res.sendFile(path.resolve(__dirname,'./views/register-login.ejs'));
-// });
+app.use('/', userRoutes);
