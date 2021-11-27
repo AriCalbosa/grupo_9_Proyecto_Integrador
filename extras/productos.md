@@ -9,16 +9,16 @@ Productos Adidas:
       03- https://www.adidas.com.ar/zapatillas-hoops-2.0-mid/FY6023.html
       04- https://www.adidas.com.ar/zapatillas-courtpoint-base-los-simpsons/GZ5343.html
       05- https://www.adidas.com.ar/zapatillas-zx-1k-boost-pride/GW2418.html
-      06- 
-      07- 
-      08- 
-      09- 
-      10- 
-      11- 
-      12- 
-      13- 
-      14- 
-      15- 
+      06- https://www.adidas.com.ar/zapatillas-3mc-vulc/B22706.html
+      07- https://www.adidas.com.ar/zapatillas-continental-80-stripes/FX5091.html
+      08- https://www.adidas.com.ar/zapatillas-samba-adv/GZ8477.html
+      09- https://www.adidas.com.ar/superstar-slip-on/FW7052.html
+      10- https://www.adidas.com.ar/zapatillas-tyshawn/H04930.html
+      11- https://www.adidas.com.ar/zapatillas-busenitz-vintage/H04879.html
+      12- https://www.adidas.com.ar/zapatillas-delpala/FV0634.html
+      13- https://www.adidas.com.ar/zapatillas-stan-smith/FX5502.html
+      14- https://www.adidas.com.ar/zapatillas-nite-jogger/FW4394.html
+      15- https://www.adidas.com.ar/zapatillas-daily-3.0-lts/H01228.html
 
 
    Futbol
