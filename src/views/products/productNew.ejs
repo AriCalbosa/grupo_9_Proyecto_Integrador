@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <%- include('../partials/head.ejs') %>
-    <link href="/css/styles-productNew.css" rel="stylesheet">
+    <link href="/css/products/styles-productNew.css" rel="stylesheet">
     <title>Crear Producto</title>
 </head>
 <body>
@@ -91,38 +91,3 @@
     <%- include('../partials/footer.ejs') %>
 </body>
 </html>
-
-
-
-<!-- <div class="producto-nuevo">
-    <form action="/nuevo-producto" method="POST" class="nuevo-producto-form">
-        <div>
-            <input type="text" name="descripcion-producto" placeholder="Nombre del producto" required>
-        </div>
-        <div>
-            <input type="number" name="precio" placeholder="Precio del producto $" required>
-        </div>
-        <div class="imagen-producto">
-            <label for="imagen-producto">Imagen del producto: </label>
-            <br>
-            <input type="file" name="imagen-producto" accept=".png, .jpg, .webp" multiple>
-        </div>
-        <div class="radio">
-            <label for="categoria">Categoría: </label>
-            <br>
-            <input type="radio" name="categoria" value="Casual">Casual
-            <input type="radio" name="categoria" value="Futbol">Futbol
-            <input type="radio" name="categoria" value="Running">Running
-        </div>
-        <div class="radio">
-            <label for="colores">Cantidad de Colores: </label>
-            <br>
-            <input type="radio" name="colores" value="01">1
-            <input type="radio" name="colores" value="02">2
-            <input type="radio" name="colores" value="03">3
-        </div>
-        <div>
-            <button type="submit">Subir Producto</button>
-        </div>
-    </form>
-</div> -->
