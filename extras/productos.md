@@ -47,15 +47,15 @@ Productos Adidas:
       03- https://www.adidas.com.ar/zapatillas-supernova-tokio/FY2862.html
       04- https://www.adidas.com.ar/zapatillas-ultraboost-winter.rdy/EG9803.html
       05- https://www.adidas.com.ar/zapatillas-ultraboost-21-primeblue/FX7729.html
-      06- 
-      07- 
-      08- 
-      09- 
-      10- 
-      11- 
-      12- 
-      13- 
-      14- 
-      15- 
+      06- https://www.adidas.com.ar/zapatillas-supernova-tokio/FY2861.html
+      07- https://www.adidas.com.ar/x9000l4-m/S23665.html
+      08- https://www.adidas.com.ar/zapatillas-x9000l1/H00578.html
+      09- https://www.adidas.com.ar/zapatillas-fluidflow-2.0/G58106.html
+      10- https://www.adidas.com.ar/zapatillas-response-run/FY9579.html
+      11- https://www.adidas.com.ar/zapatillas-alphatorsion-2.0/GZ8765.html
+      12- https://www.adidas.com.ar/zapatillas-solardrive-19/EE4280.html
+      13- https://www.adidas.com.ar/zapatillas-kaptir-super/FZ2859.html
+      14- https://www.adidas.com.ar/zapatillas-response-super/FY6490.html
+      15- https://www.adidas.com.ar/zapatillas-response-sr/GW5701.html
 
 -------------------------------------------------------------
