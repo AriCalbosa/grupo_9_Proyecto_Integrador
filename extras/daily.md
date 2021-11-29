@@ -55,25 +55,25 @@ Daily Stand-up Miércoles 24/11
 Ari: 
 
 ● Qué hizo ayer?
-   - 
+   - Clase 20 Playground
 
 ● Se encontró con algún impedimento?
-   - 
+   - No.
 
 ● Qué va a hacer hoy?
-   - 
+   - Tercer Sprint.
 
 ---------------------------------------------------
 Caro: 
 
 ● Qué hizo ayer?
-   - 
+   - Repaso Clase 19.
 
 ● Se encontró con algún impedimento?
-   - 
+   - No.
 
 ● Qué va a hacer hoy?
-   - 
+   - Clase 21 y tercer sprint.
 
 ---------------------------------------------------
 Eddu: 
@@ -91,13 +91,13 @@ Eddu:
 Teo: 
 
 ● Qué hizo ayer?
-   - 
+   - Clase 20 Playground.
 
 ● Se encontró con algún impedimento?
-   - 
+   - No.
 
 ● Qué va a hacer hoy?
-   - 
+   - Clase 21 y tercer sprint.
 
 ------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------
@@ -106,13 +106,13 @@ Daily Stand-up Viernes 26/11
 Ari: 
 
 ● Qué hizo ayer?
-   - 
+   - productList.ejs, productNew.ejs y sus respectivos estilos.
 
 ● Se encontró con algún impedimento?
-   - 
+   - No.
 
 ● Qué va a hacer hoy?
-   - 
+   - ProductEdit.ejs con sus respectivos estilos y clase 22 de Playground.
 
 ---------------------------------------------------
 Caro: 
@@ -142,10 +142,61 @@ Eddu:
 Teo: 
 
 ● Qué hizo ayer?
+   - Clase 22 Playground.
+
+● Se encontró con algún impedimento?
+   - No.
+
+● Qué va a hacer hoy?
+   - Repasar estilos de css módulo 4 y ver Clase Virtual 20
+
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+Daily Stand-up Viernes 26/11
+------------------------------------------------------------------------------------------------------
+Ari: 
+
+● Qué hizo ayer?
+   - Clase 22 Playground.
+
+● Se encontró con algún impedimento?
+   - No.
+
+● Qué va a hacer hoy?
+   - Clase 22 Playground.
+
+---------------------------------------------------
+Caro: 
+
+● Qué hizo ayer?
+   - Buscar productos Adidas Running.
+
+● Se encontró con algún impedimento?
+   - No.
+
+● Qué va a hacer hoy?
+   - 
+
+---------------------------------------------------
+Eddu: 
+
+● Qué hizo ayer?
    - 
 
 ● Se encontró con algún impedimento?
    - 
+
+● Qué va a hacer hoy?
+   - 
+
+---------------------------------------------------
+Teo: 
+
+● Qué hizo ayer?
+   - Buscar productos Adidas Casual.
+
+● Se encontró con algún impedimento?
+   - No.
 
 ● Qué va a hacer hoy?
    - 
