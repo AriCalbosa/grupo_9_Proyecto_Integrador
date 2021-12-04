@@ -158,6 +158,9 @@ footer i:hover{
     .logo, .buscador, .listas01 {
         width: 33%;
     }
+    .imagen-logo {
+        width: 50%;
+    }
     .menu-hamburguesa {
         display: none;
     }

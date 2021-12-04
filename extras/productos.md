@@ -28,16 +28,16 @@ Productos Adidas:
       03- https://www.adidas.com.ar/botines-predator-20.3-terreno-firme/EG0910.html
       04- https://www.adidas.com.ar/botines-x-speedflow.3-terreno-firme/FY3298.html
       05- https://www.adidas.com.ar/botines-x-speedflow.4-multiterreno/FY3293.html
-      06- 
-      07- 
-      08- 
-      09- 
-      10- 
-      11- 
-      12- 
-      13- 
-      14- 
-      15- 
+      06- https://www.adidas.com.ar/botines-malice-terreno-suave/FU8214.html
+      07- https://www.adidas.com.ar/botines-copa-20.1-terreno-firme/EH0882.html
+      08- https://www.adidas.com.ar/botines-kakari-terreno-suave/EF3397.html
+      09- https://www.adidas.com.ar/botines-predator-mutator-20.3-terreno-firme/FW9212.html
+      10- https://www.adidas.com.ar/botines-predator-freak.3-multiterreno/FY6304.html
+      11- https://www.adidas.com.ar/botines-x-ghosted-terreno-firme/EG8249.html
+      12- https://www.adidas.com.ar/botines-nemeziz-.1-terreno-firme/EH0760.html
+      13- https://www.adidas.com.ar/botines-nemeziz-19-terreno-firme/F34404.html
+      14- https://www.adidas.com.ar/botines-de-rugby-engage/AC7751.html
+      15- https://www.adidas.com.ar/botines-nemeziz-messi-19.3-terreno-firme/EH0591.html
 
 
    Running

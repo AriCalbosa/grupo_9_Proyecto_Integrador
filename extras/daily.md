@@ -202,3 +202,54 @@ Teo:
    - 
 
 ------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+Weekly Stand-up 29 de Noviembre
+------------------------------------------------------------------------------------------------------
+Ari: 
+
+● Qué hizo esta semana?
+   - Clases en vivo.
+
+● Se encontró con algún impedimento?
+   - Impedimento para entender toda la clase. Hay que volver a verla.
+
+● Qué va a hacer esta semana?
+   - 
+
+---------------------------------------------------
+Caro: 
+
+● Qué hizo esta semana?
+   - Clases en vivo.
+
+● Se encontró con algún impedimento?
+   - Impedimento para entender toda la clase. Hay que volver a verla.
+
+● Qué va a hacer esta semana?
+   - 
+
+---------------------------------------------------
+Eddu: 
+
+● Qué hizo esta semana?
+   - Clases en vivo.
+
+● Se encontró con algún impedimento?
+   - Impedimento para entender toda la clase. Hay que volver a verla.
+
+● Qué va a hacer esta semana?
+   - 
+
+---------------------------------------------------
+Teo: 
+
+● Qué hizo esta semana?
+   - Clases en vivo.
+
+● Se encontró con algún impedimento?
+   - Impedimento para entender toda la clase. Hay que volver a verla.
+
+● Qué va a hacer esta semana?
+   - 
+
+-------------------------------------------------------------------------------------------------------

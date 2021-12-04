@@ -73,7 +73,7 @@ select {
     width: 100%;
 }
 
-.boton button {
+.boton button, .boton-editar button, .boton-eliminar button{
     width: 80%;
     border-radius: 6px;
     padding: 5px;
@@ -95,6 +95,15 @@ select {
     transform: rotateZ(-360deg);
 }
 
+.boton-editar button {
+    margin-top: 0;
+    background-color: rgb(50 , 50 , 50 );
+}
+
+.boton-eliminar button {
+    margin-top: 0;
+    background-color: rgb(170, 19, 19);
+}
 
 @media (min-width: 769px){
     .detalle-producto {
@@ -118,6 +127,9 @@ select {
         justify-content: space-between;
         align-items: center;
         width: 35%;
+    }
+    .descripcion-producto div, .descripcion-producto form {
+        width: 100%;
     }
     .nombre-producto h4, .precio-producto p {
         font-size: 29px;
