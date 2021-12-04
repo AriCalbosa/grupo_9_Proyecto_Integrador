@@ -9,12 +9,12 @@
     <%- include('../partials/header.ejs') %>
     <main>
         <h3>Crear Producto</h3>
-        <form action="/nuevo-producto" method="POST" class="detalle-producto">
+        <form action="/productos" method="POST" class="detalle-producto" enctype="multipart/form-data">
             <div class="producto-principal">
-                <div class="imagen-producto-color01">
+                <!-- <div class="imagen-producto-color01">
                     <input type="file" name="imagen-producto01" id="imagen-producto01" accept=".png, .jpg, .webp" style="display:none;"/>
                     <label for="imagen-producto01"><i class="fas fa-download"></i> Imagen Color 01</label>
-                </div>
+                </div> -->
             </div>
             <div class="colores-producto">
                 <div class="imagen-producto-color01">
@@ -24,8 +24,8 @@
                     <br>
                     <br>
                     <br>
-                    <input type="file" name="imagen-producto01" id="imagen-producto01" accept=".png, .jpg, .webp" style="display:none;"/>
-                    <label for="imagen-producto01"><i class="fas fa-download"></i> Imagen Color 01</label>
+                    <input type="file" name="imagen" id="imagen" accept=".png, .jpg, .webp" style="display:none;"/>
+                    <label for="imagen"><i class="fas fa-upload"></i> Imagen Color 01</label>
                 </div>
                 <div class="imagen-producto-color02">
                     <br>
@@ -34,8 +34,8 @@
                     <br>
                     <br>
                     <br>
-                    <input type="file" name="imagen-producto02" id="imagen-producto02" accept=".png, .jpg, .webp" style="display:none;"/>
-                    <label for="imagen-producto02"><i class="fas fa-download"></i> Imagen Color 02</label>
+                    <!-- <input type="file" name="imagen-producto02" id="imagen-producto02" accept=".png, .jpg, .webp" style="display:none;"/> -->
+                    <!-- <label for="imagen-producto02"><i class="fas fa-download"></i> Imagen Color 02</label> -->
                 </div>
                 <div class="imagen-producto-color03">
                     <br>
@@ -44,18 +44,43 @@
                     <br>
                     <br>
                     <br>
-                    <input type="file" name="imagen-producto03" id="imagen-producto03" accept=".png, .jpg, .webp" style="display:none;"/>
-                    <label for="imagen-producto03"><i class="fas fa-download"></i> Imagen Color 03</label>
+                    <!-- <input type="file" name="imagen-producto03" id="imagen-producto03" accept=".png, .jpg, .webp" style="display:none;"/> -->
+                    <!-- <label for="imagen-producto03"><i class="fas fa-download"></i> Imagen Color 03</label> -->
                 </div>
             </div>
             <div class="descripcion-producto">
                 <div class="nombre-producto">
-                    <input type="text" name="descripcion-producto" placeholder="Nombre del producto" required>
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre del producto" required>
                 </div>
                 <div class="precio-producto">
-                    <input type="number" name="precio" placeholder="Precio del producto $" required>
+                    <input type="number" name="precio" id="precio" placeholder="Precio del producto $" required>
+                </div>
+                <div class="descuento-producto">
+                    <input type="number" name="descuento" id="descuento" placeholder="Descuento del producto" required>
                 </div>
                 <div class="caracteristicas-producto">
+                    <div class="cantidad-colores">
+                        <label for="colores">Cantidad de Colores: </label>
+                        <select name="colores" id="colores">
+                           <option value="1">1</option>
+                           <option value="2">2</option>
+                           <option value="3">3</option>
+                        </select>
+                    </div>
+                    <div class="cantidad-talles">
+                        <label for="cantidadTalles">Cantidad de Talles: </label>
+                        <select name="cantidadTalles" id="cantidadTalles">
+                           <option value="1">1</option>
+                           <option value="2">2</option>
+                           <option value="3">3</option>
+                        </select>
+                    </div>
+                    <div class="talle">
+                        <label for="talle">Talle: </label>
+                        <input type="checkbox" name="talle1" id="talle1" value="38">38
+                        <input type="checkbox" name="talle2" id="talle2" value="39">39
+                        <input type="checkbox" name="talle3" id="talle3" value="40">40
+                    </div>
                     <div class="categoria">
                         <label for="categoria">Categoría: </label>
                         <select name="categoria" id="categoria">
@@ -64,20 +89,22 @@
                            <option value="running">Running</option>
                         </select>
                     </div>
-                    <div class="cantidad-colores">
-                        <label for="colores">Cantidad de Colores: </label>
-                        <select name="colores" id="colores">
-                           <option value="color01">1</option>
-                           <option value="color02">2</option>
-                           <option value="color03">3</option>
+                    <div class="cantidad">
+                        <label for="cantidad">Cantidad: </label>
+                        <select name="cantidad" id="cantidad">
+                           <option value="1">1</option>
+                           <option value="2">2</option>
+                           <option value="3">3</option>
+                           <option value="4">4</option>
+                           <option value="5">5</option>
+                           <option value="6">6</option>
+                           <option value="7">7</option>
+                           <option value="8">8</option>
+                           <option value="9">9</option>
+                           <option value="10">10</option>
                         </select>
                     </div>
-                    <div class="talle">
-                        <label for="talle">Talle: </label>
-                        <input type="checkbox" name="talle" value="38">38
-                        <input type="checkbox" name="talle" value="39">39
-                        <input type="checkbox" name="talle" value="40">40
-                    </div>
+                    
                 </div>
                 <div class="boton-crear">
                     <button type="submit">Crear Producto</button>

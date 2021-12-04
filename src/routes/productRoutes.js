@@ -14,6 +14,7 @@ productRouter.get('/', productController.listaProductos);
 
 /*** CREAR UN PRODUCTO ***/ 
 productRouter.get('/crear-producto', productController.crearProducto);
+productRouter.post('/', upload.single('imagen'), productController.guardarProductoNuevo); 
 
 
 /*** PRODUCTO ***/ 

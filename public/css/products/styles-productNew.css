@@ -22,7 +22,7 @@ label {
 }
 
 .producto-principal {
-    height: 415px;
+    height: 508px;
     text-align: center;
     border: 1px solid #c0bfbf;
     display: flex;
@@ -72,28 +72,19 @@ label {
     text-align: center;
 }
 
+.nombre-producto, .precio-producto, .descuento-producto {
+    padding-top: 20px;
+}
+
 .nombre-producto {
-    text-align: center;
     margin-top: 20px;
 }
-
-.nombre-producto h4, .precio-producto p {
-    font-size: 40px;
-}
-
-.precio-producto p {
-    color: #39b54a;
-    padding-top: 10px;
-}
-
 
 .caracteristicas-producto div {
     padding-top: 10px;
 }
 
-.nombre-producto, .precio-producto {
-    padding-top: 20px;
-}
+
 
 select {
     border-radius: 6px;
@@ -111,7 +102,7 @@ select {
     width: 40px;
 }
 
-.nombre-producto input,.precio-producto input{
+.nombre-producto input,.precio-producto input, .descuento-producto input{
     border-radius: 3px;
 }
 

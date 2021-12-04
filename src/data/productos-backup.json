@@ -1,0 +1,17 @@
+[{
+    "id":1,
+    "nombre":"Adidas Forum Mid",
+    "precio":18499,
+    "descuento":0,
+    "colores":2,
+    "cantidadTalles":3,
+    "talle1":38,
+    "talle2":39,
+    "talle3":40,
+    "categoria":"casual",
+    "cantidad": 5,
+    "imagen01":"01-adidas-forum-mid-01.webp",
+    "imagen02":"01-adidas-forum-mid-02.webp",
+    "imagen03":"default.png"
+}
+]
