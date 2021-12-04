@@ -22,7 +22,8 @@ productRouter.get('/:id', productController.producto);
 
 
 /*** EDITAR UN PRODUCTO ***/ 
-productRouter.get('/id:/editar-producto', productController.editarProducto);
+productRouter.get('/:id/editar-producto', productController.editarProducto);
+productRouter.put('/:id', upload.single('image'), productController.actualizarProducto); 
 
 
 /*** ELIMINAR UN PRODUCTO ***/ 

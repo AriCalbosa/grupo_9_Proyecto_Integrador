@@ -40,6 +40,26 @@ const productController = {
     editarProducto: (req, res) => {
         res.render('../src/views/products/productEdit')
     },
+    actualizarProducto: (req, res) => {
+        let id = req.params.id;
+		let productoModificado = productos.map(element => {
+			if (element.id == id) {
+				return element = {
+					id: id,
+					...req.body,
+					imagen01: req.file == undefined ? element.imagen01 : req.file.filename,
+                    imagen02: req.file == undefined ? element.imagen02 : req.file.filename,
+                    imagen03: req.file == undefined ? element.imagen03 : req.file.filename
+				}
+			}
+			return element;
+		});
+
+		let productosJSON = JSON.stringify(productoModificado, null, 2)  // el 2 hace que quede uno abajo del otro en la base de datos
+		fs.writeFileSync(rutaProductos,productosJSON);
+
+		res.redirect('/productos');
+    },
     eliminarProducto: (req, res) => {
         const productos = JSON.parse(fs.readFileSync(rutaProductos, 'utf-8'));
 		let id = req.params.id;
