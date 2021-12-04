@@ -29,7 +29,12 @@
                     <h4><%= producto.nombre %></h4>
                 </div>
                 <div class="precio-producto">
-                    <p>$<%= producto.precio %></p>
+                    <% if (producto.descuento != 0) { %>
+                        <p class="precio-descuento">$<%= producto.precio %></p>
+                        <p class="precio-final">$<%= producto.precio - (producto.precio * producto.descuento)/100 %></p>
+                    <% } else { %>
+                        <p class="precio">$<%= producto.precio %></p>
+                    <% } %>
                 </div>
                 <div class="caracteristicas-producto">
                     <form action="/carrito" method="POST">

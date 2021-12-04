@@ -10,6 +10,18 @@ const productController = {
         let productos = JSON.parse(fs.readFileSync(rutaProductos, 'utf-8'));
         res.render('../src/views/products/productList', {productos: productos});
     },
+    productosCasual: (req, res) => {
+        let productos = JSON.parse(fs.readFileSync(rutaProductos, 'utf-8'));
+        res.render('../src/views/products/productsCasual', {productos: productos});
+    },
+    productosFutbol: (req, res) => {
+        let productos = JSON.parse(fs.readFileSync(rutaProductos, 'utf-8'));
+        res.render('../src/views/products/productsFutbol', {productos: productos});
+    },
+    productosRunning: (req, res) => {
+        let productos = JSON.parse(fs.readFileSync(rutaProductos, 'utf-8'));
+        res.render('../src/views/products/productsRunning', {productos: productos});
+    },
     producto: (req, res) => {
         let productos = JSON.parse(fs.readFileSync(rutaProductos, 'utf-8'));
         let id = req.params.id;

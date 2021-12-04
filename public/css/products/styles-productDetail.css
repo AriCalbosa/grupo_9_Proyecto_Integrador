@@ -39,8 +39,16 @@ label {
 }
 
 .precio-producto p {
-    color: #39b54a;
     padding-top: 10px;
+}
+
+.precio-producto .precio-final, .precio-producto .precio {
+    color: #39b54a;
+}
+
+.precio-producto .precio-descuento {
+    color: #666;
+    text-decoration: line-through;
 }
 
 

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head.ejs') %>
+        <link href="/css/main/styles-home.css" rel="stylesheet">
+        <title>Casual</title>
+    </head>
+    <body>
+        <%- include('../partials/header.ejs') %>
+        <main>
+            <section class="casual">
+                <h3>Casual</h3>
+                <div class="productos">
+                    <% for ( i = 0; i < productos.length; i++) { %>
+                        <% if ( productos[i].categoria == 'casual' ) { %>
+                            <article>
+                                <a href="/productos/<%= productos[i].id %>">
+                                    <img src = "images/adidas/<%= productos[i].imagen01 %>" alt="<%=productos[i].nombre %>" class="product_img">
+                                    <div class="producto">
+                                        <i class="fas fa-truck"></i>
+                                        <p class = "precio">$ <%=productos[i].precio %></p>
+                                        <% if (productos[i].descuento != 0) { %>
+                                        <p class = "descuento">$ <%=productos[i].descuento %> off</p>
+                                        <% } %>
+                                        <h4 class = "descripcion"><%=productos[i].nombre %></h4>
+                                    </div>
+                                </a>
+                                </article>
+                        <% } %>
+                    <% } %>
+                </div>
+            </section>
+        </main>
+        <%- include('../partials/footer.ejs') %>
+    </body>
+</html>

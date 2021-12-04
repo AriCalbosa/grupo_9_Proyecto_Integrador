@@ -1,26 +1,17 @@
+const fs = require('fs');
 const path = require('path');
+
+const rutaProductos = path.join(__dirname, '../data/productos.json');
+const productos = JSON.parse(fs.readFileSync(rutaProductos, 'utf-8'));
+
 
 const mainController = {
     home: (req, res) => {
-        res.render('../src/views/main/home');
-    },
-    cuenta: (req, res) => {
-        res.render('../src/views/users/register-login');
+        let productos = JSON.parse(fs.readFileSync(rutaProductos, 'utf-8'));
+        res.render('../src/views/main/home', {productos: productos});
     },
     carrito: (req, res) => {
         res.render('../src/views/main/productCart');
-    },
-    listaProductos: (req, res) => {
-        res.render('../src/views/products/productList')
-    },
-    producto: (req, res) => {
-        res.render('../src/views/products/productDetail');
-    },
-    crearProducto: (req,res) => {
-        res.render('../src/views/products/productNew')
-    },
-    editarProducto: (req, res) => {
-        res.render('../src/views/products/productEdit')
     }
 };
 

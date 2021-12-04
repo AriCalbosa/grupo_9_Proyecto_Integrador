@@ -34,10 +34,6 @@ app.use('/productos', productRoutes);
 app.use('/cuenta', userRoutes);
 
 
-// app.use(express.static('../public'));
-
-
-
 
 // ************ Servidor ************
 app.listen(5000, function(){
