@@ -57,6 +57,10 @@ h3 {
     outline: none;
 }
 
+.buscador button {
+    border: 0px transparent;
+}
+
 .buscador i {
     border-top: 1px solid rgb(207, 206, 206);
     border-right: 1px solid rgb(207, 206, 206);

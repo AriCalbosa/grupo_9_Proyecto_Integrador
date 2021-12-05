@@ -3,7 +3,7 @@
     "id": 1,
     "nombre": "Adidas Forum Mid",
     "precio": 18500,
-    "descuento": 0,
+    "descuento": 10,
     "colores": 2,
     "cantidadTalles": 3,
     "talle1": 38,

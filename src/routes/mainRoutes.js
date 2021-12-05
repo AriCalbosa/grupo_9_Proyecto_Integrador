@@ -9,12 +9,17 @@ const mainController = require('../controllers/mainController');
 
 
 
-// ************ Home ************
+/*** HOME ***/
 mainRouter.get('/', mainController.home);
 
 
 
-// ************ Carrito ************
+/*** BUSCADOR ***/
+mainRouter.get('/productos-encontrados', mainController.buscador);
+
+
+
+/*** CARRITO ***/
 mainRouter.get('/carrito', mainController.carrito);
 
 

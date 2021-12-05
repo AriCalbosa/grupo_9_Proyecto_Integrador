@@ -31,6 +31,7 @@
                                 </article>
                         <% } %>
                     <% } %>
+                    <a class="mas-productos" href="/productos/casual"><i class="fas fa-plus"></i></a>
                 </div>
             </section>
             <section class="futbol">
@@ -53,6 +54,7 @@
                                 </article>
                         <% } %>
                     <% } %>
+                    <a class="mas-productos" href="/productos/futbol"><i class="fas fa-plus"></i></a>
                 </div>
             </section>
             <section class="running">
@@ -67,7 +69,7 @@
                                         <i class="fas fa-truck"></i>
                                         <p class = "precio">$ <%=productos[i].precio %></p>
                                         <% if (productos[i].descuento != 0) { %>
-                                        <p class = "descuento">$ <%=productos[i].descuento %> off</p>
+                                        <p class = "descuento">%<%=productos[i].descuento %> OFF</p>
                                         <% } %>
                                         <h4 class = "descripcion"><%=productos[i].nombre %></h4>
                                     </div>
@@ -75,6 +77,7 @@
                                 </article>
                         <% } %>
                     <% } %>
+                    <a class="mas-productos" href="/productos/running"><i class="fas fa-plus"></i></a>
                 </div>
             </section>
         </main>
