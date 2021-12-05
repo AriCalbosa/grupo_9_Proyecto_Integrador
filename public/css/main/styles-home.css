@@ -87,7 +87,7 @@ article i:hover {
 
 .mas-productos {
     position: absolute;
-    right: 0;
+    right: -46px;
     align-self: center;
     background-color: black;
     border-radius: 100%;

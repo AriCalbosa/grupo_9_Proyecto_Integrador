@@ -59,6 +59,7 @@ h3 {
 
 .buscador button {
     border: 0px transparent;
+    box-shadow : 0px 0px 0px white;
 }
 
 .buscador i {

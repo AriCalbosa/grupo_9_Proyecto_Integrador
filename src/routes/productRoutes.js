@@ -20,23 +20,23 @@ productRouter.get('/running', productController.productosRunning);
 
 /*** CREAR UN PRODUCTO ***/ 
 productRouter.get('/crear-producto', productController.crearProducto);
-productRouter.post('/', upload.single('imagen'), productController.guardarProductoNuevo); 
+productRouter.post('/', upload.single('imagen01'), productController.guardarProductoNuevo); 
 
 
 
 /*** PRODUCTO ***/ 
-productRouter.get('/:id', productController.producto);
+productRouter.get('/:categoria/:id', productController.producto);
 
 
 
 /*** EDITAR UN PRODUCTO ***/ 
-productRouter.get('/:id/editar-producto', productController.editarProducto);
-productRouter.put('/:id', upload.single('image'), productController.actualizarProducto); 
+productRouter.get('/:categoria/:id/editar-producto', productController.editarProducto);
+productRouter.put('/:categoria/:id', upload.single('image'), productController.actualizarProducto); 
 
 
 
 /*** ELIMINAR UN PRODUCTO ***/ 
-productRouter.delete('/:id', productController.eliminarProducto); 
+productRouter.delete('/:categoria/:id', productController.eliminarProducto); 
 
 
 
