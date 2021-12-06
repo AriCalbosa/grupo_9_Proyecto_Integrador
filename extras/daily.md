@@ -276,6 +276,7 @@ Ari:
    - Cambiar de imagen principal en productDetail cuando se clickea otra imagen.
    - Dejar seleccionados los talles, categoría, cantidad y cantidad de colores previos en productEdit.
    - Cambiar fotos en productEdit.
+   - Hacer que en el home solo se vean 4 productos por categoría (for dentro de if dentro de for?)
 
 
 ● Qué va a hacer esta semana?
