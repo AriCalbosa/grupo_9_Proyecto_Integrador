@@ -17,6 +17,11 @@ label {
     box-shadow : 0px 0px 20px rgb(0 , 0 , 0 );
 }
 
+.detalle-producto input {
+    border-radius: 6px;
+    padding: 5px;
+}
+
 .producto-principal, .imagen-producto-color01, .imagen-producto-color02, .imagen-producto-color03 {
     background-color: white;
 }
@@ -35,7 +40,7 @@ label {
 
 .producto-principal label {
     border: 1px solid #666;
-    border-radius: 4px;
+    border-radius: 6px;
     padding: 3px;
 }
 
@@ -54,10 +59,13 @@ label {
     border: 1px solid #666;
     border-radius: 4px;
     padding: 3px;
+    background-color: black;
+    color: white;
+    transition: all 0.5s;
 }
 
 .colores-producto label:hover {
-    background-color: #c4bfbf;
+    background-color: rgb(20, 20, 20);
 }
 
 .colores-producto .imagen-producto-color01, .colores-producto .imagen-producto-color02, .colores-producto .imagen-producto-color03 {

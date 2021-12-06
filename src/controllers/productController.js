@@ -50,7 +50,10 @@ const productController = {
 		res.redirect('/productos');
     },
     editarProducto: (req, res) => {
-        res.render('../src/views/products/productEdit')
+        let productos = JSON.parse(fs.readFileSync(rutaProductos, 'utf-8'));
+        let id = req.params.id;
+		let productoAMostrar = productos.find(element => element.id == id);
+        res.render('../src/views/products/productEdit', {producto: productoAMostrar});
     },
     actualizarProducto: (req, res) => {
         let id = req.params.id;

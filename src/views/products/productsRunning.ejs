@@ -15,7 +15,7 @@
                         <% if ( productos[i].categoria == 'running' ) { %>
                             <article>
                                 <a href="/productos/<%= productos[i].categoria %>/<%= productos[i].id %>">
-                                    <img src = "images/adidas/<%= productos[i].categoria %>/<%= productos[i].id %>/<%= productos[i].imagen01 %>" alt="<%=productos[i].nombre %>" class="product_img">
+                                    <img src = "images/adidas<%= productos[i].imagen01 %>" alt="<%=productos[i].nombre %>" class="product_img">
                                     <div class="producto">
                                         <i class="fas fa-truck"></i>
                                         <p class = "precio">$ <%=productos[i].precio %></p>

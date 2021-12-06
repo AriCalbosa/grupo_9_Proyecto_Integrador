@@ -31,7 +31,7 @@ productRouter.get('/:categoria/:id', productController.producto);
 
 /*** EDITAR UN PRODUCTO ***/ 
 productRouter.get('/:categoria/:id/editar-producto', productController.editarProducto);
-productRouter.put('/:categoria/:id', upload.single('image'), productController.actualizarProducto); 
+productRouter.put('/:categoria/:id', upload.single('imagen01'), productController.actualizarProducto); 
 
 
 
