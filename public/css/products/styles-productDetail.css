@@ -160,7 +160,7 @@ select {
         display: flex;
         flex-direction: column;
     } 
-    }
+}
 
 @media (min-width: 1200px) {
     .nombre-producto h4, .precio-producto p {

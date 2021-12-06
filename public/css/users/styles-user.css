@@ -1,0 +1,49 @@
+.avatar img {
+    background-color: #666;
+    width: 185px;
+    height: 185px;
+    border: 1px solid #666;
+    border-radius: 100%;
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+.cuenta div {
+    display: flex;
+    justify-content: center;
+}
+
+.titulo {
+    color: #666;
+}
+
+p {
+    text-align: center;
+    font-size: 25px;
+    margin: 20px 0;
+}
+
+.boton-editar button {
+    width: 80%;
+    border-radius: 6px;
+    padding: 5px;
+    margin-top: 15px;
+    background-color: black;
+    color: white;
+    transition: all 0.5s;
+}
+
+form {
+    text-align: center;
+}
+
+.boton-editar button:hover {
+    background-color: rgb(50, 50, 50);
+}
+
+@media (min-width: 769px){
+    .boton-editar button {
+        width: 420px;
+    }
+}
