@@ -203,11 +203,11 @@ Teo:
 
 ------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------
-Weekly Stand-up 29 de Noviembre
+Weekly Stand-up semana del 29 de Noviembre
 ------------------------------------------------------------------------------------------------------
 Ari: 
 
-● Qué hizo esta semana?
+● Qué hizo la semana pasada?
    - Clases en vivo.
 
 ● Se encontró con algún impedimento?
@@ -219,7 +219,7 @@ Ari:
 ---------------------------------------------------
 Caro: 
 
-● Qué hizo esta semana?
+● Qué hizo la semana pasada?
    - Clases en vivo.
 
 ● Se encontró con algún impedimento?
@@ -231,7 +231,7 @@ Caro:
 ---------------------------------------------------
 Eddu: 
 
-● Qué hizo esta semana?
+● Qué hizo la semana pasada?
    - Clases en vivo.
 
 ● Se encontró con algún impedimento?
@@ -248,6 +248,71 @@ Teo:
 
 ● Se encontró con algún impedimento?
    - Impedimento para entender toda la clase. Hay que volver a verla.
+
+● Qué va a hacer esta semana?
+   - 
+
+-------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+Weekly Stand-up semana del 06 de Diciembre
+------------------------------------------------------------------------------------------------------
+Ari: 
+
+● Qué hizo la semana pasada?
+   - Definir los campos necesarios para los productos y generar archivo JSON.
+   - Definir los campos necesarios para los usuarios y generar archivo JSON.
+   - CRUD de productos.
+   - Vista de perfil de usuario con sus respectivos estilos, rutas y controladores.
+   - Datos dinámicos con JavaScript a home.ejs, productList.ejs, productCasual.ejs, productFutbol.ejs, productRunning.ejs, productDetail.ejs productEdit.ejs y productosEncontrados.ejs.
+   - Lógica y rutas de multer.js.
+
+● Se encontró con algún impedimento?
+   - No cargan las imágenes en subcategorías.
+   - Subir más de una imagen (upload.array).
+   - Guardar imágenes con nombres originales sin extensión + Date.now().
+   - Guardar imágenes en carpetas según su categoría e id.
+   - Sacar sombra al botón de búsqueda.
+   - Buscar productos sin diferenciar minúsculas y mayúsculas.
+   - Cambiar de imagen principal en productDetail cuando se clickea otra imagen.
+   - Dejar seleccionados los talles, categoría, cantidad y cantidad de colores previos en productEdit.
+   - Cambiar fotos en productEdit.
+
+
+● Qué va a hacer esta semana?
+   - Clases virtuales y clases en vivo.
+
+---------------------------------------------------
+Caro: 
+
+● Qué hizo la semana pasada?
+   - 
+
+● Se encontró con algún impedimento?
+   - 
+
+● Qué va a hacer esta semana?
+   - 
+
+---------------------------------------------------
+Eddu: 
+
+● Qué hizo la semana pasada?
+   - 
+
+● Se encontró con algún impedimento?
+   - 
+
+● Qué va a hacer esta semana?
+   - 
+
+---------------------------------------------------
+Teo: 
+
+● Qué hizo esta semana?
+   - 
+
+● Se encontró con algún impedimento?
+   - 
 
 ● Qué va a hacer esta semana?
    - 
