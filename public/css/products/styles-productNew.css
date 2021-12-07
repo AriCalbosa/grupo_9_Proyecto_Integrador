@@ -110,6 +110,10 @@ select {
     width: 40px;
 }
 
+.cantidad select {
+    width: 118px;
+}
+
 .nombre-producto input,.precio-producto input, .descuento-producto input{
     border-radius: 3px;
 }

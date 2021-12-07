@@ -46,6 +46,15 @@
                                 <% } %>
                             </select>
                         </div>
+                        
+                        <div class="cantidad">
+                            <label for="cantidad">Cantidad: </label>
+                            <select name="cantidad" id="cantidad">
+                                <% for (let i=0; i < producto.cantidad; i++) { %>
+                                    <option value="<%= i+1 %>"><%= i+1 %></option>
+                               <% } %>
+                            </select>
+                        </div>
                         <div class="talle">
                             <label for="talle">Talle: </label>
                             <select name="talle" id="talle">
@@ -80,14 +89,6 @@
                                 <!-- <% for (let i=0; i< producto.cantidadTalles; i++) { %>
                                     <option value="talle-<%= i+1 %>"><%= producto.talle1 %></option>
                                <% } %> -->
-                            </select>
-                        </div>
-                        <div class="cantidad">
-                            <label for="cantidad">Cantidad: </label>
-                            <select name="cantidad" id="cantidad">
-                                <% for (let i=0; i < producto.cantidad; i++) { %>
-                                    <option value="<%= i+1 %>"><%= i+1 %></option>
-                               <% } %>
                             </select>
                         </div>
                         <div class="boton">

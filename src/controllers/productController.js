@@ -38,7 +38,7 @@ const productController = {
 			...req.body
 		}
         for (let i=0; i < req.files.length; i++) {
-                nuevoProducto[req.files[i].fieldname] = req.files[i].filename;
+            nuevoProducto[req.files[i].fieldname] = req.files[i].filename;
         }
 		
 		productos.push(nuevoProducto);
