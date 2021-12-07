@@ -10,27 +10,27 @@
     <main>
         <h3>Editar Producto</h3>
         
-            <form class="detalle-producto" action="/productos/<%= producto.categoria %>/<%= producto.id %>?_method=PUT" method="POST">
+            <form class="detalle-producto" action="/productos/<%= producto.categoria %>/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                 <div class="producto-principal">
-                    <img src = "images/adidas/<%= producto.imagen01 %>" alt="<%= producto.nombre %>" class="product_img">
+                    <img src = "/images/adidas/<%= producto.imagen01 %>" alt="<%= producto.nombre %>" class="product_img">
                 </div>
                 <div class="colores-producto">
                     <div class="color01">
-                        <img src = "images/adidas/<%= producto.imagen01 %>" alt="<%= producto.nombre %>" class="product_img">
+                        <img src = "/images/adidas/<%= producto.imagen01 %>" alt="<%= producto.nombre %>" class="product_img">
                         <div class="boton-editar">
                             <input type="file" name="imagen01" id="imagen01" accept=".png, .jpg, .webp" style="display:none;"/>
                             <label for="imagen01"><i class="fas fa-upload"></i> Imagen Color 01</label>
                         </div>
                     </div>
                     <div class="color02">
-                        <img src = "images/adidas/<%= producto.imagen02 %>" alt="<%= producto.nombre %>" class="product_img">
+                        <img src = "/images/adidas/<%= producto.imagen02 %>" alt="<%= producto.nombre %>" class="product_img">
                         <div class="boton-editar">
                             <input type="file" name="imagen02" id="imagen02" accept=".png, .jpg, .webp" style="display:none;"/>
                             <label for="imagen02"><i class="fas fa-upload"></i> Imagen Color 02</label>
                         </div>
                     </div>
                     <div class="color03">
-                        <img src = "images/adidas/<%= producto.imagen03 %>" alt="<%= producto.nombre %>" class="product_img">
+                        <img src = "/images/adidas/<%= producto.imagen03 %>" alt="<%= producto.nombre %>" class="product_img">
                         <div class="boton-editar">
                             <input type="file" name="imagen03" id="imagen03" accept=".png, .jpg, .webp" style="display:none;"/>
                             <label for="imagen03"><i class="fas fa-upload"></i> Imagen Color 03</label>

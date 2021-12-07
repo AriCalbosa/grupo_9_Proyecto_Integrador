@@ -20,7 +20,7 @@ productRouter.get('/running', productController.productosRunning);
 
 /*** CREAR UN PRODUCTO ***/ 
 productRouter.get('/crear-producto', productController.crearProducto);
-productRouter.post('/', upload.single('imagen01'), productController.guardarProductoNuevo); 
+productRouter.post('/', upload.any(), productController.guardarProductoNuevo); 
 
 
 
@@ -31,7 +31,7 @@ productRouter.get('/:categoria/:id', productController.producto);
 
 /*** EDITAR UN PRODUCTO ***/ 
 productRouter.get('/:categoria/:id/editar-producto', productController.editarProducto);
-productRouter.put('/:categoria/:id', upload.single('imagen01'), productController.actualizarProducto); 
+productRouter.put('/:categoria/:id', upload.any(), productController.actualizarProducto); 
 
 
 

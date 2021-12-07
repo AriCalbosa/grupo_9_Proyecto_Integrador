@@ -8,7 +8,7 @@ const productos = JSON.parse(fs.readFileSync(rutaProductos, 'utf-8'));
 const productController = {
     listaProductos: (req, res) => {
         let productos = JSON.parse(fs.readFileSync(rutaProductos, 'utf-8'));
-        res.render('../src/views/products/productList', {productos: productos});
+        res.render('../src/views/products/productList', {productos: productos}); //, productosCasual: productosCasual
     },
     productosCasual: (req, res) => {
         let productos = JSON.parse(fs.readFileSync(rutaProductos, 'utf-8'));
@@ -33,14 +33,13 @@ const productController = {
     },
     guardarProductoNuevo: (req, res) => {
         let nuevoId = productos[productos.length-1].id + 1;
-
 		let nuevoProducto = {
 			id: nuevoId,
-			...req.body,  
-			imagen01: req.file == undefined ? "default.png": req.file.filename,
-            imagen02: req.file == undefined ? "default.png": req.file.filename,
-            imagen03: req.file == undefined ? "default.png": req.file.filename
+			...req.body
 		}
+        for (let i=0; i < req.files.length; i++) {
+                nuevoProducto[req.files[i].fieldname] = req.files[i].filename;
+        }
 		
 		productos.push(nuevoProducto);
 
@@ -56,19 +55,22 @@ const productController = {
         res.render('../src/views/products/productEdit', {producto: productoAMostrar});
     },
     actualizarProducto: (req, res) => {
+        // return res.json(req.files);
         let id = req.params.id;
 		let productoModificado = productos.map(element => {
 			if (element.id == id) {
-				return element = {
-					id: id,
-					...req.body,
-					imagen01: req.file == undefined ? element.imagen01 : req.file.filename,
-                    imagen02: req.file == undefined ? element.imagen02 : req.file.filename,
-                    imagen03: req.file == undefined ? element.imagen03 : req.file.filename
+				element = {
+                    ...element,
+					...req.body
 				}
+                if (Array.isArray(req.files)){
+                    for (let i=0; i < req.files.length; i++) {
+                        element[req.files[i].fieldname] = req.files[i].filename;
+                }}
+                return(element);
 			}
-			return element;
-		});
+            return element;
+        });
 
 		let productosJSON = JSON.stringify(productoModificado, null, 2)  // el 2 hace que quede uno abajo del otro en la base de datos
 		fs.writeFileSync(rutaProductos,productosJSON);
