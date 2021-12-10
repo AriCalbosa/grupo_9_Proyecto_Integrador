@@ -17,12 +17,16 @@
                 <div class="color01">
                     <img src = "/images/adidas/<%= producto.imagen01 %>" alt="<%= producto.nombre %> color 1" class="product_img">
                 </div>
-                <div class="color02">
-                    <img src = "/images/adidas/<%= producto.imagen02 %>" alt="<%= producto.nombre %> color 2" class="product_img">
-                </div>
-                <div class="color03">
-                    <img src = "/images/adidas/<%= producto.imagen03 %>" alt="<%= producto.nombre %> color 3" class="product_img">
-                </div>
+                <% if ( producto.imagen02 != undefined) { %>
+                    <div class="color02">
+                        <img src = "/images/adidas/<%= producto.imagen02 %>" alt="<%= producto.nombre %> color 2" class="product_img">
+                    </div>
+                <% } %>
+                <% if ( producto.imagen03 != undefined) { %>
+                    <div class="color03">
+                        <img src = "/images/adidas/<%= producto.imagen03 %>" alt="<%= producto.nombre %> color 3" class="product_img">
+                    </div>
+                <% } %>
             </div>
             <div class="descripcion-producto">
                 <div class="nombre-producto">

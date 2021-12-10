@@ -267,15 +267,11 @@ Ari:
    - Lógica y rutas de multer.js.
 
 ● Se encontró con algún impedimento?
-   - No cargan las imágenes en subcategorías. OK
-   - Subir más de una imagen (upload.array). OK
    - Guardar imágenes con nombres originales sin extensión + Date.now(). PENDIENTE
    - Guardar imágenes en carpetas según su categoría e id. PENDIENTE
-   - Sacar sombra al botón de búsqueda. OK
    - Buscar productos sin diferenciar minúsculas y mayúsculas. uppercase, lowercase
    - Cambiar de imagen principal en productDetail cuando se clickea otra imagen. OTRA CLASE
    - Dejar seleccionados los talles, categoría, cantidad y cantidad de colores previos en productEdit. buscar dejar seleccionado elemento de un select
-   - Cambiar fotos en productEdit. OK
    - Hacer que en el home solo se vean 4 productos por categoría (for dentro de if dentro de for?) EN CONTROLLER FILTRAR 4 ELEMENTOS
 
 
