@@ -269,9 +269,7 @@ Ari:
 ● Se encontró con algún impedimento?
    - Guardar imágenes con nombres originales sin extensión + Date.now(). PENDIENTE
    - Guardar imágenes en carpetas según su categoría e id. PENDIENTE
-   - Buscar productos sin diferenciar minúsculas y mayúsculas. uppercase, lowercase
    - Cambiar de imagen principal en productDetail cuando se clickea otra imagen. OTRA CLASE
-   - Dejar seleccionados los talles, categoría, cantidad y cantidad de colores previos en productEdit. buscar dejar seleccionado elemento de un select
    - Hacer que en el home solo se vean 4 productos por categoría (for dentro de if dentro de for?) EN CONTROLLER FILTRAR 4 ELEMENTOS
 
 

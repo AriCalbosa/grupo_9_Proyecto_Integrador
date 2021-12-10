@@ -13,10 +13,12 @@ const mainController = {
     buscador: (req, res) => {
         const productos = JSON.parse(fs.readFileSync(rutaProductos, 'utf-8'));
         let productosBuscado = req.query.search;
+        let productosBuscadoMin = productosBuscado.toLowerCase();
         let productosEncontrados = [];
 
         for (let i = 0; i < productos.length; i++) {
-            if (productos[i].nombre.includes(productosBuscado)) {
+            let producto = productos[i].nombre.toLowerCase();
+            if (producto.includes(productosBuscadoMin)) {
                 productosEncontrados.push(productos[i]);
             }
         }
