@@ -8,10 +8,10 @@ Productos Adidas:
       <!-- 02- https://www.adidas.com.ar/zapatillas-hoops-2.0-mid/FY6023.html -->
       <!-- 03- https://www.adidas.com.ar/zapatillas-grand-court/H02555.html -->
       <!-- 04- https://www.adidas.com.ar/zapatillas-courtpoint-base-los-simpsons/GZ5343.html -->
-      05- https://www.adidas.com.ar/zapatillas-zx-1k-boost-pride/GW2418.html
-      06- https://www.adidas.com.ar/zapatillas-3mc-vulc/B22706.html
-      07- https://www.adidas.com.ar/zapatillas-continental-80-stripes/FX5091.html
-      08- https://www.adidas.com.ar/zapatillas-samba-adv/GZ8477.html
+      <!-- 05- https://www.adidas.com.ar/zapatillas-zx-1k-boost-pride/GW2418.html -->
+      <!-- 06- https://www.adidas.com.ar/zapatillas-3mc-vulc/B22706.html -->
+      <!-- 07- https://www.adidas.com.ar/zapatillas-continental-80-stripes/FX5091.html -->
+      <!-- 08- https://www.adidas.com.ar/zapatillas-samba-adv/GZ8477.html -->
       09- https://www.adidas.com.ar/superstar-slip-on/FW7052.html
       10- https://www.adidas.com.ar/zapatillas-tyshawn/H04930.html
       11- https://www.adidas.com.ar/zapatillas-busenitz-vintage/H04879.html
@@ -27,10 +27,10 @@ Productos Adidas:
       <!-- 02- https://www.adidas.com.ar/botines-predator-20.3-terreno-firme/EG0910.html -->
       <!-- 03- https://www.adidas.com.ar/botines-copa-sense-terreno-firme/FW6492.html -->
       <!-- 04- https://www.adidas.com.ar/botines-x-speedflow.3-terreno-firme/FY3298.html -->
-      05- https://www.adidas.com.ar/botines-x-speedflow.4-multiterreno/FY3293.html
-      06- https://www.adidas.com.ar/botines-malice-terreno-suave/FU8214.html
-      07- https://www.adidas.com.ar/botines-copa-20.1-terreno-firme/EH0882.html
-      08- https://www.adidas.com.ar/botines-kakari-terreno-suave/EF3397.html
+      <!-- 05- https://www.adidas.com.ar/botines-x-speedflow.4-multiterreno/FY3293.html -->
+      <!-- 06- https://www.adidas.com.ar/botines-malice-terreno-suave/FU8214.html -->
+      <!-- 07- https://www.adidas.com.ar/botines-copa-20.1-terreno-firme/EH0882.html -->
+      <!-- 08- https://www.adidas.com.ar/botines-kakari-terreno-suave/EF3397.html -->
       09- https://www.adidas.com.ar/botines-predator-mutator-20.3-terreno-firme/FW9212.html
       10- https://www.adidas.com.ar/botines-predator-freak.3-multiterreno/FY6304.html
       11- https://www.adidas.com.ar/botines-x-ghosted-terreno-firme/EG8249.html
@@ -46,10 +46,10 @@ Productos Adidas:
       <!-- 02- https://www.adidas.com.ar/zapatillas-x9000l1/H68081.html -->
       <!-- 03- https://www.adidas.com.ar/zapatillas-supernova-tokio/FY2862.html -->
       <!-- 04- https://www.adidas.com.ar/zapatillas-ultraboost-winter.rdy/EG9803.html -->
-      05- https://www.adidas.com.ar/zapatillas-ultraboost-21-primeblue/FX7729.html
-      06- https://www.adidas.com.ar/zapatillas-supernova-tokio/FY2861.html
-      07- https://www.adidas.com.ar/x9000l4-m/S23665.html
-      08- https://www.adidas.com.ar/zapatillas-x9000l1/H00578.html
+      <!-- 05- https://www.adidas.com.ar/zapatillas-ultraboost-21-primeblue/FX7729.html -->
+      <!-- 06- https://www.adidas.com.ar/zapatillas-para-correr-sl20/FW9156.html -->
+      <!-- 07- https://www.adidas.com.ar/x9000l4-m/S23665.html -->
+      <!-- 08- https://www.adidas.com.ar/supernova--m/S42716.html -->
       09- https://www.adidas.com.ar/zapatillas-fluidflow-2.0/G58106.html
       10- https://www.adidas.com.ar/zapatillas-response-run/FY9579.html
       11- https://www.adidas.com.ar/zapatillas-alphatorsion-2.0/GZ8765.html

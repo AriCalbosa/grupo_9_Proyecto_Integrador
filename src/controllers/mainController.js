@@ -8,7 +8,16 @@ const productos = JSON.parse(fs.readFileSync(rutaProductos, 'utf-8'));
 const mainController = {
     home: (req, res) => {
         let productos = JSON.parse(fs.readFileSync(rutaProductos, 'utf-8'));
-        res.render('../src/views/main/home', {productos: productos});
+        let productosCasual = productos.filter ((producto) => {
+            return producto.categoria == "casual";
+        });
+        let productosFutbol = productos.filter ((producto) => {
+            return producto.categoria == "futbol";
+        });
+        let productosRunning = productos.filter ((producto) => {
+            return producto.categoria == "running";
+        });
+        res.render('../src/views/main/home', {productos: productos, productosCasual: productosCasual, productosFutbol: productosFutbol, productosRunning: productosRunning});
     },
     buscador: (req, res) => {
         const productos = JSON.parse(fs.readFileSync(rutaProductos, 'utf-8'));
@@ -17,8 +26,8 @@ const mainController = {
         let productosEncontrados = [];
 
         for (let i = 0; i < productos.length; i++) {
-            let producto = productos[i].nombre.toLowerCase();
-            if (producto.includes(productosBuscadoMin)) {
+            let productoMin = productos[i].nombre.toLowerCase();
+            if (productoMin.includes(productosBuscadoMin)) {
                 productosEncontrados.push(productos[i]);
             }
         }

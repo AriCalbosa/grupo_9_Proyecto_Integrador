@@ -57,19 +57,19 @@ const productController = {
     actualizarProducto: (req, res) => {
         // return res.json(req.files);
         let id = req.params.id;
-		let productoModificado = productos.map(element => {
-			if (element.id == id) {
-				element = {
-                    ...element,
+		let productoModificado = productos.map(producto => {
+			if (producto.id == id) {
+				producto = {
+                    ...producto,
 					...req.body
 				}
                 if (Array.isArray(req.files)){
                     for (let i=0; i < req.files.length; i++) {
-                        element[req.files[i].fieldname] = req.files[i].filename;
+                        producto[req.files[i].fieldname] = req.files[i].filename;
                 }}
-                return(element);
+                return(producto);
 			}
-            return element;
+            return producto;
         });
 
 		let productosJSON = JSON.stringify(productoModificado, null, 2)  // el 2 hace que quede uno abajo del otro en la base de datos
