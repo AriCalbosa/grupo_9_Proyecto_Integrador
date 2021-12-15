@@ -277,7 +277,7 @@ Ari:
    - Clases virtuales y clases en vivo.
 
 ---------------------------------------------------
-Caro: 
+Eddu: 
 
 ● Qué hizo la semana pasada?
    - 
@@ -287,6 +287,22 @@ Caro:
 
 ● Qué va a hacer esta semana?
    - 
+
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+Weekly Stand-up semana del 13 de Diciembre
+------------------------------------------------------------------------------------------------------
+Ari: 
+
+● Qué hizo la semana pasada?
+   - Clases 25 y 26 de Playground.
+
+● Se encontró con algún impedimento?
+   - No.
+
+
+● Qué va a hacer esta semana?
+   - Seguir con Clases 25 y 26 de Playground y empezar Sprint 5 del proyecto integrador.
 
 ---------------------------------------------------
 Eddu: 
@@ -301,9 +317,9 @@ Eddu:
    - 
 
 ---------------------------------------------------
-Teo: 
+Alex: 
 
-● Qué hizo esta semana?
+● Qué hizo la semana pasada?
    - 
 
 ● Se encontró con algún impedimento?
@@ -312,4 +328,4 @@ Teo:
 ● Qué va a hacer esta semana?
    - 
 
--------------------------------------------------------------------------------------------------------
+   ------------------------------------------------------------------------------------------------------
