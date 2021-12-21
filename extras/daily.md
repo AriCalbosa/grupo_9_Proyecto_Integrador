@@ -308,13 +308,13 @@ Ari:
 Eddu: 
 
 ● Qué hizo la semana pasada?
-   - 
+   - Avanzar con las clases de PG
 
 ● Se encontró con algún impedimento?
-   - 
+   - No 
 
 ● Qué va a hacer esta semana?
-   - 
+   - seguir avanzando con las clases de PG finalizar modulo 4 y avanzar con modulo 5 
 
 ---------------------------------------------------
 Alex: 
