@@ -311,7 +311,7 @@ Eddu:
    - Poniendome al día con Playground.
 
 ● Se encontró con algún impedimento?
-   - 
+   - No 
 
 ● Qué va a hacer esta semana?
    - Seguir poniendome al día con Playground.
