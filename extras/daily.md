@@ -308,13 +308,13 @@ Ari:
 Eddu: 
 
 ● Qué hizo la semana pasada?
-   - 
+   - Poniendome al día con Playground.
 
 ● Se encontró con algún impedimento?
    - 
 
 ● Qué va a hacer esta semana?
-   - 
+   - Seguir poniendome al día con Playground.
 
 ---------------------------------------------------
 Alex: 
