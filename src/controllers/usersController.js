@@ -21,7 +21,7 @@ const usersController = {
 				oldData: req.body // ENVÍA A LA VISTA LA INFORMACIÓN PREVIAMENTE COMPLETADA
 			});
 		}
-        
+
 
         let userInDBByUser = User.findByField('usuario', req.body.usuario); // BUSCA EL MAIL INGRESADO POR EL USUARIO EN LA BASE DE DATOS
 
@@ -81,7 +81,43 @@ const usersController = {
         });
     },
     login: (req, res) => {
-        
+        res.render('../src/views/users/login');
+    },
+    loginProcess: (req, res) => {    // FUNCIÓN QUE PROCESA LA INFORMACIÓN DEL FORMULARIO DE LOGIN
+        let userToLogin = User.findByField('email', req.body.email); // BUSCA EL USUARIO QUE COINCIDA CON EL MAIL QUE SE INGRESÓ EN EL FORMULARIO LOGIN EN LA BASE DE DATOS
+		
+		if(userToLogin) { // SI ENCUENTRA EL USUARIO CON EL MAIL INGRESADO EN EL FORMULARIO EN LA BASE DE DATOS
+			let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password); // COMPARA CONTRASEÑA INGRESADA POR EL CLIENTE Y LA DE LA BASE DE DATOS ENCRIPTADA
+			if (isOkThePassword) { // SI LAS CONTRASEÑAS SON IGUALES
+				delete userToLogin.password; // BORRA LA CONTRASEÑA DEL USUARIO A LOGUEARSE POR SEGURIDAD
+				req.session.userLogged = userToLogin; // GUARDA INFORMACIÓN DEL USUARIO LOGUEADO EN EL SESSION (SIN LA CONTRASEÑA)
+
+				if(req.body.remember_user) { // SI SE TILDA LA OPCIÓN DE RECORDAR USUARIO EN EL FORMULARIO DE LOGIN
+					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 }) // GUARDA UNA COOKIE CON EL EMAIL DEL USUARIO POR UNA HORA
+				}
+
+				return res.redirect('/cuenta/perfil'); // SI TODO EL LOGUEO ESTÁ BIEN REDIRIGE AL PERFIL DEL CLIENTE
+			} 
+			return res.render('../src/views/users/login', { // SI ENCUENTRA EL MAIL PERO LAS CONTRASEÑAS NO COINCIDEN RENDERIZA LA VISTA DE LOGIN CON EL ERROR
+				errors: {
+					// email: {
+					// 	msg: 'Las credenciales son inválidas'
+					// },
+                    password: {
+                        msg: 'La contraseña es inválida'
+                    }
+				},
+                    oldData: req.body
+			});
+		}
+
+		return res.render('../src/views/users/login', { // SI NO ENCUENTRA EL MAIL INGRESADO EN EL FORMULARIO DE LOGIN EN LA BASE DE DATOS RENDERIZA EL FORMULARIO DE LOGIN CON EL ERROR
+			errors: {
+				email: {
+					msg: 'No se encuentra este email en nuestra base de datos'
+				}
+			}
+		});
     },
     profile: (req, res) => {
         res.render('../src/views/users/profile');

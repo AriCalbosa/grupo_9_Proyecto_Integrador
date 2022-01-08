@@ -18,10 +18,23 @@
                 <h3>Ingresá a tu cuenta</h3>
                 <form action="/cuenta" method="POST" class="ingresar">
                     <div>
-                        <input type="text" name="usuario" placeholder="Nombre de usuario">
+                        <input type="text" name="usuario" placeholder="Nombre de usuario" class="<%= locals.errors && errors.usuario ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.usuario : null %>">
+                        <% if (locals.errors && errors.usuario) { %>
+                            <div class="text-danger">
+                                <%= errors.usuario.msg %> 
+                            </div>
+                        <% } %>
                     </div>
                     <div>
-                        <input type="password" name="contraseña" placeholder="Contraseña">
+                        <input type="password" name="contraseña" placeholder="Contraseña" class="<%= locals.errors && errors.password ? 'is-invalid' : null %>">
+                        <% if (locals.errors && errors.password) { %>
+                            <div class="text-danger">
+                                <%= errors.password.msg %> 
+                            </div>
+                        <% } %>
+                    </div>
+                    <div class="remember_user">
+                        <input type="checkbox" name="remember_user">Recordar mi usuario
                     </div>
                     <div>
                         <button type="submit">Ingresar</button>

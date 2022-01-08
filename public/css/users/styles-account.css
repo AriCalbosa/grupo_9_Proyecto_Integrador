@@ -17,6 +17,17 @@ h3 {
     padding: 5px;
 }
 
+.remember_user {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.remember_user input {
+    width: 20px;
+}
+
 .ingresar div input{
     margin: 15px 0px;
 }

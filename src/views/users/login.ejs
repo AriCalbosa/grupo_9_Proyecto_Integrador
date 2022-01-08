@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs') %>
+    <title>Cuenta</title>
+    <link href="/css/users/styles-account.css" rel="stylesheet">
+</head>
+<body>
+    <%- include('../partials/header.ejs') %>
+    <main>
+        <% if (locals.user && user.nombre) { %>
+            <div class="usuario-registrado">
+                <h3>Gracias por registrarte! Ya podes iniciar sesión.</h3>
+            </div>
+        <% } %>
+        <div class="cuenta">
+            <div class="login">
+                <h3>Ingresá a tu cuenta</h3>
+                <form action="/cuenta/login" method="POST" class="ingresar">
+                    <div>
+                        <input type="text" name="email" placeholder="E-mail" class="<%= locals.errors && errors.email ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.email : null %>">
+                        <% if (locals.errors && errors.email) { %>
+                            <div class="text-danger">
+                                <%= errors.email.msg %> 
+                            </div>
+                        <% } %>
+                    </div>
+                    <div>
+                        <input type="password" name="password" placeholder="Contraseña" class="<%= locals.errors && errors.password ? 'is-invalid' : null %>">
+                        <% if (locals.errors && errors.password) { %>
+                            <div class="text-danger">
+                                <%= errors.password.msg %> 
+                            </div>
+                        <% } %>
+                    </div>
+                    <div class="remember_user">
+                        <input type="checkbox" name="remember_user">Recordar mi usuario
+                    </div>
+                    <div>
+                        <button type="submit">Ingresar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>

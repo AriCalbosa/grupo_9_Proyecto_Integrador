@@ -13,6 +13,8 @@ const usersController = require('../controllers/usersController');
 
 /*** CUENTA ***/
 usersRouter.get('/', usersController.account); // RENDERIZA LA VISTA DE REGISTER-LOGIN(ACCOUNT)
+usersRouter.get('/login', usersController.login);
+usersRouter.post('/login', usersController.loginProcess); // PROCESA EL FORMULARIO DE LOGIN
 usersRouter.post('/', upload.single('avatar'), validateRegisterMiddleware, usersController.register); // PROCESA EL FORMULARIO DE REGISTRO CON VALIDACIONES Y MULTER
 usersRouter.post('/', usersController.login) // PROCESAR EL FORMULARIO DE LOGIN
 
