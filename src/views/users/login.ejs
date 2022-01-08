@@ -18,18 +18,18 @@
                 <h3>Ingresá a tu cuenta</h3>
                 <form action="/cuenta/login" method="POST" class="ingresar">
                     <div>
-                        <input type="text" name="email" placeholder="E-mail" class="<%= locals.errors && errors.email ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.email : null %>">
-                        <% if (locals.errors && errors.email) { %>
+                        <input type="text" name="email1" placeholder="E-mail del usuario" class="<%= locals.errors && errors.email1 ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.email1 : null %>">
+                        <% if (locals.errors && errors.email1) { %>
                             <div class="text-danger">
-                                <%= errors.email.msg %> 
+                                <%= errors.email1.msg %> 
                             </div>
                         <% } %>
                     </div>
                     <div>
-                        <input type="password" name="password" placeholder="Contraseña" class="<%= locals.errors && errors.password ? 'is-invalid' : null %>">
-                        <% if (locals.errors && errors.password) { %>
+                        <input type="password" name="password1" placeholder="Contraseña" class="<%= locals.errors && errors.password1 ? 'is-invalid' : null %>">
+                        <% if (locals.errors && errors.password1) { %>
                             <div class="text-danger">
-                                <%= errors.password.msg %> 
+                                <%= errors.password1.msg %> 
                             </div>
                         <% } %>
                     </div>
