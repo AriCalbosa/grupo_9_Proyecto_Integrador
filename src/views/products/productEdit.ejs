@@ -93,7 +93,7 @@
                         <div class="cantidad">
                             <label for="cantidad">Cantidad: </label>
                             <select name="cantidad" id="cantidad">
-                                <% for (let i = 0; i< producto.cantidad; i++) { %>
+                                <% for (let i = 0; i< 10; i++) { %>
                                     <option value="<%= i+1 %>" <%= producto.cantidad == i+1 ? "selected" : null  %>> <%= i+1 %></option>
                                 <% } %>
                             </select>

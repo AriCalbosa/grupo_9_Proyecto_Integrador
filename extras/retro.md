@@ -4,7 +4,6 @@ Retrospectiva del Cuarto Sprint
 Comenzar a hacer:
 
 - Ponernos al día con las clases.
-- 
 
 -----------------------------------------------------------------------------------------------------------
 Hacer más: 

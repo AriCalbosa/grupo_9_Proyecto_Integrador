@@ -26,7 +26,18 @@ label {
 }
 
 .descripcion-producto {
+    position: relative;
     text-align: center;
+}
+
+.descripcion-producto .logo-adidas {
+    position: absolute;
+    top: -10px;
+    opacity: 0.1;
+}
+
+.descripcion-producto .logo-adidas img{
+    width: 80%;
 }
 
 .nombre-producto {

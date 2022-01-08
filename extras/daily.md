@@ -4,26 +4,26 @@ Weekly Stand-up semana del 03 de Enero
 Ari: 
 
 ● Qué hizo la semana pasada?
-   - 
+   - Ponerme al día con Playound (Clase 31)
 
 ● Se encontró con algún impedimento?
-   - 
+   - No.
 
 
 ● Qué va a hacer esta semana?
-   - 
+   - Sprint 5 (Implentar entidades de usuarios, implentar el registro de usuarios, implementar el login de usuarios)
 
 ---------------------------------------------------
 Eddu: 
 
 ● Qué hizo la semana pasada?
-   - Poniendome al día con Playground.
+   - Ponerme al día con Playground (Clase 22)
 
 ● Se encontró con algún impedimento?
-   - No 
+   -  No.
 
 ● Qué va a hacer esta semana?
-   - Seguir poniendome al día con Playground.
+   - Sprint 5 (Implentar entidades de usuarios, implentar el registro de usuarios, implementar el login de usuarios)
 
 ---------------------------------------------------
 Alex: 
