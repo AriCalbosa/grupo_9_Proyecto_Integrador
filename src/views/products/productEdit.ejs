@@ -12,25 +12,25 @@
         
             <form class="detalle-producto" action="/productos/<%= producto.categoria %>/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                 <div class="producto-principal">
-                    <img src = "/images/adidas/<%= producto.imagen01 %>" alt="<%= producto.nombre %>" class="product_img">
+                    <img src = "/images/adidas/<%= producto.imagen01 %>" alt="<%= producto.imagen01 ? producto.nombre : " " %>" class="product_img">
                 </div>
                 <div class="colores-producto">
                     <div class="color01">
-                        <img src = "/images/adidas/<%= producto.imagen01 %>" alt="<%= producto.nombre %>" class="product_img">
+                        <img src = "/images/adidas/<%= producto.imagen01 %>" alt="<%= producto.imagen01 ? producto.nombre : " " %>" class="product_img">
                         <div class="boton-editar">
                             <input type="file" name="imagen01" id="imagen01" accept=".png, .jpg, .webp" style="display:none;"/>
                             <label for="imagen01"><i class="fas fa-upload"></i> Imagen Color 01</label>
                         </div>
                     </div>
                     <div class="color02">
-                        <img src = "/images/adidas/<%= producto.imagen02 %>" alt="<%= producto.nombre %>" class="product_img">
+                        <img src = "/images/adidas/<%= producto.imagen02 %>" alt="<%= producto.imagen02 ? producto.nombre : " " %>" class="product_img">
                         <div class="boton-editar">
                             <input type="file" name="imagen02" id="imagen02" accept=".png, .jpg, .webp" style="display:none;"/>
                             <label for="imagen02"><i class="fas fa-upload"></i> Imagen Color 02</label>
                         </div>
                     </div>
                     <div class="color03">
-                        <img src = "/images/adidas/<%= producto.imagen03 %>" alt="<%= producto.nombre %>" class="product_img">
+                        <img src = "/images/adidas/<%= producto.imagen03 %>" alt="<%= producto.imagen03 ? producto.nombre : " " %>" class="product_img">
                         <div class="boton-editar">
                             <input type="file" name="imagen03" id="imagen03" accept=".png, .jpg, .webp" style="display:none;"/>
                             <label for="imagen03"><i class="fas fa-upload"></i> Imagen Color 03</label>
@@ -101,7 +101,10 @@
                         <div class="talles">
                             <label for="talles">Talles: </label>
                             <br>
-                            <% if (producto.talle1 != undefined) { %>
+                            <% for (let i=0; i < 9; i++) { %>
+                                <input type="checkbox" name="talles" id="talles" value="<%= 36 + i %>" <%= producto.talles[i] == 36 + i ? "checked" : null %>><%= 36 + i %>
+                            <% } %>
+                            <!-- <% if (producto.talle1 != undefined) { %>
                                 <input type="checkbox" name="talle1" id="talle1" value="36" checked>36
                             <% } else { %>
                                 <input type="checkbox" name="talle1" id="talle1" value="36">36
@@ -145,7 +148,7 @@
                                 <input type="checkbox" name="talle9" id="talle9" value="44" checked>44
                             <% } else { %>
                                 <input type="checkbox" name="talle9" id="talle9" value="44">44
-                            <% } %>
+                            <% } %> -->
                         </div>
                     </div>
                     <div class="boton-editar">

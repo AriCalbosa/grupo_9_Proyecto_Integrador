@@ -27,11 +27,11 @@ app.set('view engine', 'ejs');
 // ************ Rutas requeridas y use() ************
 const mainRoutes = require('./routes/mainRoutes');
 const productRoutes = require('./routes/productRoutes');
-const userRoutes = require('./routes/userRoutes');
+const usersRoutes = require('./routes/usersRoutes');
 
 app.use('/', mainRoutes);
 app.use('/productos', productRoutes);
-app.use('/cuenta', userRoutes);
+app.use('/cuenta', usersRoutes);
 
 
 

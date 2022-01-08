@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const rutaProductos = path.join(__dirname, '../data/productos.json');
+const rutaProductos = path.join(__dirname, '../data/products.json');
 const productos = JSON.parse(fs.readFileSync(rutaProductos, 'utf-8'));
 
 

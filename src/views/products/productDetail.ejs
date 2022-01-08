@@ -62,7 +62,10 @@
                         <div class="talle">
                             <label for="talle">Talle: </label>
                             <select name="talle" id="talle">
-                                <% if ( producto.talle1 != undefined) { %>
+                                <% for (let i=0; i<producto.talles.length; i++) { %>
+                                        <option value=" <%= producto.talles[i] %>"><%= producto.talles[i] %></option>
+                                <% } %>
+                                <!-- <% if ( producto.talle1 != undefined) { %>
                                     <option value="talle-1"><%= producto.talle1 %></option>
                                 <% } %>
                                 <% if ( producto.talle2 != undefined) { %>
@@ -88,7 +91,7 @@
                                 <% } %>
                                 <% if ( producto.talle9 != undefined) { %>
                                     <option value="talle-9"><%= producto.talle9 %></option>
-                                <% } %>
+                                <% } %> -->
 
                                 <!-- <% for (let i=0; i< producto.cantidadTalles; i++) { %>
                                     <option value="talle-<%= i+1 %>"><%= producto.talle1 %></option>

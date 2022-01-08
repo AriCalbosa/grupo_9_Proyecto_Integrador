@@ -206,7 +206,7 @@ label {
 }
 
 .producto-principal {
-    height: 508px;
+    width: 100%;
     text-align: center;
     display: flex;
 }
@@ -231,6 +231,13 @@ label {
     justify-content: space-between;
     font-size: 10px;
     text-align: center;
+}
+
+.color01, .color02, .color03 {
+    width: 33%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
 }
 
 .colores-producto label {
@@ -343,6 +350,9 @@ select {
         flex-direction: column;
         justify-content: space-around;
         width: 15%;
+    }
+    .color01, .color02, .color03 {
+        width: 100%;
     }
     .colores-producto .imagen-producto-color01, .colores-producto .imagen-producto-color02, .colores-producto .imagen-producto-color03 {
         width: 100%;
