@@ -46,6 +46,11 @@ const User = {
 		return newUser;
 	},
 
+	edit: function (userData) {
+		let allUsers = this.findAll();
+		
+	},
+
 	delete: function (id) {               // FUNCIÓN QUE ELIMINA UN USUAIO POR ID
 		let allUsers = this.findAll();
 		let finalUsers = allUsers.filter(oneUser => oneUser.id !== id);

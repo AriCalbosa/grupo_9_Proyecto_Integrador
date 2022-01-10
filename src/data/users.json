@@ -1,3 +1,12 @@
 [
- 
+ {
+  "id": 1,
+  "nombre": "Ariel",
+  "apellido": "Calbosa",
+  "usuario": "acalbosa",
+  "email": "ariel.l.calbosa@gmail.com",
+  "domicilio": "Brasil 2305",
+  "password": "$2a$10$1UNlD7UvgDCU1Oia25Ze2.NhUBa5P/HSkUQKtQQs8.HJHmhUt69Au",
+  "avatar": "1641796375174_img.jpg"
+ }
 ]

@@ -121,8 +121,27 @@ const usersController = {
 		});
     },
     profile: (req, res) => {
-        res.render('../src/views/users/profile');
-    }
+		let user = req.session.userLogged
+        res.render('../src/views/users/profile', {
+			user: user // INFORMACIÓN GUARDADA EN SESSION DEL USUARIO ENCONTRADO EN LA BASE DE DATOS
+		})
+    },
+	editProfile: (req, res) => {
+		let user = req.session.userLogged
+		res.render('../src/views/users/editProfile', {
+			user: user // INFORMACIÓN GUARDADA EN SESSION DEL USUARIO ENCONTRADO EN LA BASE DE DATOS
+		});
+	},
+	editProfileProcess: (req, res) => {
+		let userToEdit = User.findByField('email', req.session.userLogged.email);
+		console.log(userToEdit)
+		return res.redirect('/cuenta/perfil');
+	},
+	logout: (req, res) => {       // FUNCIÓN QUE DESLOGUEA AL USUARIO BORRANDO LAS COOKIES Y EL SESSION
+		res.clearCookie('userEmail'); // BORRA LAS COOKIES PARA QUE NO SE LOGUEE AUTOMÁTICAMENTE CUANDO EL USUARIO CIERRA SESIÓN
+		req.session.destroy();  // BORRA TODA LA INFORMACIÓN GUARDADA EN SESSION
+		return res.redirect('/'); // REDIRIGE AL HOME
+	}
 };
 
 module.exports = usersController;

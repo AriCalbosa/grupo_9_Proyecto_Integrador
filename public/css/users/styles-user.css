@@ -9,23 +9,29 @@
     text-align: center;
 }
 
-.cuenta div {
+.cuenta div, .boton-cerrar-sesion {
     display: flex;
     justify-content: center;
+}
+
+.cuenta div div {
+    width: 80%;
 }
 
 .titulo {
     color: #666;
 }
 
-p {
+main p {
     text-align: center;
     font-size: 25px;
     margin: 20px 0;
 }
 
-.boton-editar button {
-    width: 80%;
+
+
+.boton-editar, .boton-cerrar-sesion, .boton-editar-avatar, .boton-confirmar button {
+    width: 60%;
     border-radius: 6px;
     padding: 5px;
     margin-top: 15px;
@@ -34,16 +40,57 @@ p {
     transition: all 0.5s;
 }
 
+.boton-editar-avatar {
+    width: 160px;
+    margin: auto;
+    margin-top: 5px;
+}
+
+.boton-cerrar-sesion {
+    background-color: rgb(141, 4, 4);
+}
+
+.boton-editar a, .boton-cerrar-sesion a{
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
 form {
     text-align: center;
 }
 
-.boton-editar button:hover {
+.boton-editar:hover {
     background-color: rgb(50, 50, 50);
 }
 
+.boton-confirmar button:hover {
+    background-color: rgb(50, 50, 50);
+}
+
+.boton-cerrar-sesion:hover {
+    background-color: rgb(85, 2, 2);
+}
+
+.avatar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.edit-form input {
+    width: 320px;
+    height: 30px;
+font-size: 25px;
+margin: 20px 0;
+}
+
 @media (min-width: 769px){
-    .boton-editar button {
+    .boton-editar, .boton-cerrar-sesion {
         width: 420px;
+    }
+    .cuenta div div {
+        width: 40%;
     }
 }

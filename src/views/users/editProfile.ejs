@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs') %>
+    <title>Editar Cuenta</title>
+    <link href="/css/users/styles-user.css" rel="stylesheet">
+</head>
+<body>
+    <%- include('../partials/header.ejs') %>
+    <main>
+        <h3>Mi Cuenta</h3>
+        <form action="/cuenta/perfil/editar-perfil?_method=PUT" method="POST"  enctype="multipart/form-data" class="edit-form">
+            <div class="avatar">
+                <img src="/images/users/<%= user.avatar %>" alt="Avatar">
+                <div class="boton-editar-avatar">
+                    <input type="file" name="avatar" id="avatar"style="display:none;"/>
+                    <label for="avatar"><i class="fas fa-upload"></i> Cambiar Avatar</label>
+                </div>
+            </div>
+            <div class="cuenta">
+                <div class="nombre">
+                    <p class="titulo">Nombre: </p>
+                    <input type="text" name="nombre" id="nombre" value="<%= user.nombre %>">
+                </div>
+                <div class="apellido">
+                    <p class="titulo">Apellido: </p>
+                    <input type="text" name="apellido" id="apellido" value="<%= user.apellido %>">
+                </div>
+                <div class="usuario">
+                    <p class="titulo">Usuario: </p>
+                    <input type="text" name="usuario" id="usuario" value="<%= user.usuario %>">
+                </div>
+                <div class="email">
+                    <p class="titulo">E-mail: </p>
+                    <input type="email" name="email" id="email" value="<%= user.email %>">
+                </div>
+                <div class="domicilio">
+                    <p class="titulo">Domicilio: </p>
+                    <input type="text" name="domicilio" id="domicilio" value="<%= user.domicilio %>">
+                </div>
+                <!-- <div class="categoria">
+                    <p class="titulo">Categoría: </p>
+                    <p>Administrador</p>
+                </div> -->
+                <div>
+                    <div class="boton-confirmar">
+                        <button type="submit">Editar Perfil</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </main>
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>

@@ -10,38 +10,43 @@
     <main>
         <h3>Mi Cuenta</h3>
         <div class="avatar">
-            <img src="/images/users/1641636733127_img.jpg" alt="Avatar">
+            <img src="/images/users/<%= user.avatar %>" alt="Avatar">
         </div>
         <div class="cuenta">
             <div class="nombre">
                 <p class="titulo">Nombre: </p>
-                <p>Ariel</p>
+                <p><%= user.nombre %></p>
             </div>
             <div class="apellido">
                 <p class="titulo">Apellido: </p>
-                <p>Calbosa</p>
+                <p><%= user.apellido %></p>
             </div>
             <div class="usuario">
                 <p class="titulo">Usuario: </p>
-                <p>acalbosa</p>
+                <p><%= user.usuario %></p>
             </div>
             <div class="email">
-                <p class="titulo">E-maill: </p>
-                <p>ariel.l.calbosa@gmail.com</p>
+                <p class="titulo">E-mail: </p>
+                <p><%= user.email %></p>
             </div>
             <div class="domicilio">
                 <p class="titulo">Domicilio: </p>
-                <p>Brasil 2305</p>
+                <p><%= user.domicilio %></p>
             </div>
-            <div class="categoria">
+            <!-- <div class="categoria">
                 <p class="titulo">Categoría: </p>
                 <p>Administrador</p>
-            </div>
-            <form action="/cuenta/perfil/editar-perfil" method="GET">
+            </div> -->
+            <div>
                 <div class="boton-editar">
-                    <button type="submit">Editar Perfil</button>
+                    <a href="/cuenta/perfil/editar-perfil">Editar Perfil</a>
                 </div>
-            </form>
+            </div>
+            <div>
+                <div class="boton-cerrar-sesion">
+                    <a href="/cuenta/logout">Cerrar Sesión</a>
+                </div>
+            </div>
         </div>
     </main>
     <%- include('../partials/footer.ejs') %>

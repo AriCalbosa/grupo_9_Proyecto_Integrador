@@ -14,7 +14,21 @@
        </div>
        <nav class="listas01">
         <ul class="lista01">
-            <li><a href ="/cuenta"><i class="fas fa-user-circle"></i></a></li>
+            <% if (locals.isLogged) { %>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="/cuenta/perfil" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Bienvenido, <%= locals.userLogged.nombre %>!
+                        <img src="/images/users/<%= locals.userLogged.avatar %>" width="40" style="border-radius: 100%;">
+                    </a>
+                    <!-- <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/cuenta/perfil">Mi perfil</a>
+                        <li><hr class="dropdown-divider"></li>
+                        <a class="dropdown-item" href="/cuenta/logout">Cerrar sesión</a>
+                    </ul> -->
+                </li>
+            <% } else { %>
+                <li><a href ="/cuenta"><i class="fas fa-user-circle"></i></a></li>
+            <% } %>
             <li><a href ="/carrito"><i class="fas fa-cart-plus"></i></a></li>
         </ul>
        </nav>
