@@ -15,12 +15,8 @@ const usersController = require('../controllers/usersController');
 
 /*** CUENTA ***/
 usersRouter.get('/', guestMiddleware, usersController.account); // RENDERIZA LA VISTA DE REGISTER-LOGIN(ACCOUNT). SI EL USUARIO ESTÁ LOGUEADO EL MIDDLEWARE LO REDIRIGE AL PERFIL EN VEZ DE A LA PÁGINA DE REGISTRO
-
-usersRouter.get('/login', guestMiddleware, usersController.login); // SI EL USUARIO ESTÁ LOGUEADO EL MIDDLEWARE LO REDIRIGE AL PERFIL EN VEZ DE A LA PÁGINA DE LOGIN
-usersRouter.post('/login', usersController.loginProcess); // PROCESA EL FORMULARIO DE LOGIN
-
-usersRouter.post('/', upload.single('avatar'), validateRegisterMiddleware, usersController.register); // PROCESA EL FORMULARIO DE REGISTRO CON VALIDACIONES Y MULTER
-usersRouter.post('/', usersController.login) // PROCESAR EL FORMULARIO DE LOGIN
+usersRouter.post('/login', usersController.login); // PROCESA EL FORMULARIO DE LOGIN
+usersRouter.post('/register', upload.single('avatar'), validateRegisterMiddleware, usersController.register); // PROCESA EL FORMULARIO DE REGISTRO CON VALIDACIONES Y MULTER
 
 usersRouter.get('/perfil', authMiddleware, usersController.profile);
 

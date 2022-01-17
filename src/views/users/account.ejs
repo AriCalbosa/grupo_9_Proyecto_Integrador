@@ -16,7 +16,7 @@
         <div class="cuenta">
             <div class="login">
                 <h3>Ingresá a tu cuenta</h3>
-                <form action="/cuenta" method="POST" class="ingresar">
+                <form action="/cuenta/login" method="POST" class="ingresar">
                     <div>
                         <input type="text" name="email1" placeholder="Email del usuario" class="<%= locals.errors && errors.email1 ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.email1 : null %>">
                         <% if (locals.errors && errors.email1) { %>
@@ -43,7 +43,7 @@
             </div>
             <div class="registro">
                 <h3>Creá tu Cuenta</h3>
-                <form action="/cuenta" method="POST" class="registrarse" enctype="multipart/form-data">
+                <form action="/cuenta/register" method="POST" class="registrarse" enctype="multipart/form-data">
                     <div class="nombre">
                         <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="<%= locals.errors && errors.nombre ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.nombre : null %>">
                         <% if (locals.errors && errors.nombre) { %>

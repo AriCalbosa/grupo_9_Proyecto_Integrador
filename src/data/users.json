@@ -7,6 +7,16 @@
   "email": "ariel.l.calbosa@gmail.com",
   "domicilio": "Brasil 2305",
   "password": "$2a$10$1UNlD7UvgDCU1Oia25Ze2.NhUBa5P/HSkUQKtQQs8.HJHmhUt69Au",
-  "avatar": "1641796375174_img.jpg"
+  "avatar": "1642448837101_img.jpg"
+ },
+ {
+  "id": 2,
+  "nombre": "Lisandro",
+  "apellido": "Calbosa",
+  "usuario": "lisandrocalbosa",
+  "email": "ariel_zz@hotmail.com",
+  "domicilio": "Brasil 2305",
+  "password": "$2a$10$ihayJMlxvOt//6a/XHeVTesQ08XmV5/IL9OXueQncQCIZZ2ScioLm",
+  "avatar": "1641799265637_img.png"
  }
 ]

@@ -80,10 +80,7 @@ const usersController = {
             }
         });
     },
-    login: (req, res) => {
-        res.render('../src/views/users/login');
-    },
-    loginProcess: (req, res) => {    // FUNCIÓN QUE PROCESA LA INFORMACIÓN DEL FORMULARIO DE LOGIN
+    login: (req, res) => {    // FUNCIÓN QUE PROCESA LA INFORMACIÓN DEL FORMULARIO DE LOGIN
         let userToLogin = User.findByField('email', req.body.email1); // BUSCA EL USUARIO QUE COINCIDA CON EL MAIL QUE SE INGRESÓ EN EL FORMULARIO LOGIN EN LA BASE DE DATOS
 		
 		if(userToLogin) { // SI ENCUENTRA EL USUARIO CON EL MAIL INGRESADO EN EL FORMULARIO EN LA BASE DE DATOS
@@ -133,8 +130,29 @@ const usersController = {
 		});
 	},
 	editProfileProcess: (req, res) => {
-		let userToEdit = User.findByField('email', req.session.userLogged.email);
-		console.log(userToEdit)
+		let userToEdit = User.findByField('email', req.session.userLogged.email); // BUSCA AL USUARIO LOGUEADO EN LA BASE DE DATOS
+
+		if (req.file) { // SI EL FORMULARIO VIENE CON UNA IMAGEN
+			userToEdit = {
+				...userToEdit,
+				...req.body, // REEMPLAZA LA INFORMACIÓN DEL USUARIO QUE ESTÁ EN LA BASE DE DATOS POR LA QUE TRAE EL FORMULARIO
+				avatar: req.file.filename
+			};
+		} else { // SI EL FORMULARIO VIENE SIN IMAGEN
+			userToEdit = {
+				...userToEdit,
+				...req.body // REEMPLAZA LA INFORMACIÓN DEL USUARIO QUE ESTÁ EN LA BASE DE DATOS POR LA QUE TRAE EL FORMULARIO
+			};
+		};
+		let allUsers = User.findAll() // BUSCA TODOS LOS USUARIOS DE LA BASE DE DATOS
+		for (let i=0; i < allUsers.length; i++) { // RECORRE TODOS LOS USUARIOS DE LA BASE DE DATOS
+			if (allUsers[i].id == userToEdit.id) { // SI EL USUARIO EN LA BASE DE DATOS TIENE EL MISMO ID QUE EL USUARIO A EDITAR
+				allUsers[i] = {
+					...userToEdit // REEMPLAZA LA INFORMACIÓN DEL USUARIO QUE ESTÁ EN LA BASE DE DATOS POR LA QUE TRAE EL FORMULARIO
+				}
+			}
+		};
+		fs.writeFileSync(User.fileName, JSON.stringify(allUsers, null,  ' ')); // REEMPLAZA LA BASE DE DATOS POR LA NUEVA CON EL USUARIO EDITADO
 		return res.redirect('/cuenta/perfil');
 	},
 	logout: (req, res) => {       // FUNCIÓN QUE DESLOGUEA AL USUARIO BORRANDO LAS COOKIES Y EL SESSION
