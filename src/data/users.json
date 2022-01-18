@@ -5,7 +5,7 @@
   "apellido": "Calbosa",
   "usuario": "acalbosa",
   "email": "ariel.l.calbosa@gmail.com",
-  "domicilio": "Brasil 2305",
+  "domicilio": "Brasil 2301",
   "password": "$2a$10$1UNlD7UvgDCU1Oia25Ze2.NhUBa5P/HSkUQKtQQs8.HJHmhUt69Au",
   "avatar": "1642448837101_img.jpg"
  },
@@ -18,5 +18,15 @@
   "domicilio": "Brasil 2305",
   "password": "$2a$10$ihayJMlxvOt//6a/XHeVTesQ08XmV5/IL9OXueQncQCIZZ2ScioLm",
   "avatar": "1641799265637_img.png"
+ },
+ {
+  "id": 3,
+  "nombre": "Edward",
+  "apellido": "Casanova",
+  "usuario": "ecasanova",
+  "email": "ecasanova@gmail.com",
+  "domicilio": "Brasil 2301",
+  "password": "$2a$10$sPxVIRs/l6Jn1qmQPKSBqeezW8iQmZk8KWBY9r5CbI4i9oqZvxBqu",
+  "avatar": "1642461597883_img.png"
  }
 ]

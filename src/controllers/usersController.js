@@ -90,12 +90,12 @@ const usersController = {
 				req.session.userLogged = userToLogin; // GUARDA INFORMACIÓN DEL USUARIO LOGUEADO EN EL SESSION (SIN LA CONTRASEÑA)
 
 				if(req.body.remember_user) { // SI SE TILDA LA OPCIÓN DE RECORDAR USUARIO EN EL FORMULARIO DE LOGIN
-					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 }) // GUARDA UNA COOKIE CON EL EMAIL DEL USUARIO POR UNA HORA
+					res.cookie('userEmail', req.body.email1, { maxAge: (1000 * 60) * 60 }) // GUARDA UNA COOKIE CON EL EMAIL DEL USUARIO POR UNA HORA
 				}
 
 				return res.redirect('/cuenta/perfil'); // SI TODO EL LOGUEO ESTÁ BIEN REDIRIGE AL PERFIL DEL CLIENTE
 			} 
-			return res.render('../src/views/users/login', { // SI ENCUENTRA EL MAIL PERO LAS CONTRASEÑAS NO COINCIDEN RENDERIZA LA VISTA DE LOGIN CON EL ERROR
+			return res.render('../src/views/users/account', { // SI ENCUENTRA EL MAIL PERO LAS CONTRASEÑAS NO COINCIDEN RENDERIZA LA VISTA DE LOGIN CON EL ERROR
 				errors: {
 					// email: {
 					// 	msg: 'Las credenciales son inválidas'
@@ -108,7 +108,7 @@ const usersController = {
 			});
 		}
 
-		return res.render('../src/views/users/login', { // SI NO ENCUENTRA EL MAIL INGRESADO EN EL FORMULARIO DE LOGIN EN LA BASE DE DATOS RENDERIZA EL FORMULARIO DE LOGIN CON EL ERROR
+		return res.render('../src/views/users/account', { // SI NO ENCUENTRA EL MAIL INGRESADO EN EL FORMULARIO DE LOGIN EN LA BASE DE DATOS RENDERIZA EL FORMULARIO DE LOGIN CON EL ERROR
 			errors: {
 				email1: {
 					msg: 'No se encuentra este email en nuestra base de datos'
@@ -153,6 +153,7 @@ const usersController = {
 			}
 		};
 		fs.writeFileSync(User.fileName, JSON.stringify(allUsers, null,  ' ')); // REEMPLAZA LA BASE DE DATOS POR LA NUEVA CON EL USUARIO EDITADO
+		req.session.userLogged = userToEdit;
 		return res.redirect('/cuenta/perfil');
 	},
 	logout: (req, res) => {       // FUNCIÓN QUE DESLOGUEA AL USUARIO BORRANDO LAS COOKIES Y EL SESSION
