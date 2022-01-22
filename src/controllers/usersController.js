@@ -5,7 +5,7 @@ const { validationResult } = require('express-validator'); // REQUIERE EL MÓDUL
 
 const User = require('../models/User');  // REQUIERE LAS FUNCIONES EXPORTADAS DE MODELS USER.JS
 
-const usersRoute = path.join(__dirname, '../data/users.json');
+const usersRoute = path.join(__dirname, '../database/users.json');
 const users = JSON.parse(fs.readFileSync(usersRoute, 'utf-8'));
 
 const usersController = {
@@ -23,12 +23,12 @@ const usersController = {
 		}
 
 
-        let userInDBByUser = User.findByField('usuario', req.body.usuario); // BUSCA EL MAIL INGRESADO POR EL USUARIO EN LA BASE DE DATOS
+        let userInDBByUser = User.findByField('usuario', req.body.user_name); // BUSCA EL MAIL INGRESADO POR EL USUARIO EN LA BASE DE DATOS
 
 		if (userInDBByUser) {
 			return res.render('../src/views/users/account', { // SI ENCUENTRA EL MAIL RENDERIZA EL FORMULARIO DE REGISTRO INDICANDO QUE EL MAIL YA ESTÁ REGISTRADO Y LOS CAMPOS AUTOCOMPLETADOS
 				errors: {
-					usuario: {
+					user_name: {
 						msg: 'Este usuario ya está registrado'
 					}
 				},
@@ -63,11 +63,11 @@ const usersController = {
         }
 
         let userToCreate = { // SI NO HAY NINGÚN ERROR GUARDA TODOS LOS DATOS DEL FORMULARIO LLENADO POR EL CLIENTE Y ENCRIPTA CONTRASEÑA
-            nombre: req.body.nombre,
-            apellido: req.body.apellido,
-            usuario: req.body.usuario,
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+            user_name: req.body.user_name,
             email: req.body.email,
-            domicilio: req.body.domicilio,
+            adress: req.body.adress,
             password: bcryptjs.hashSync(req.body.password, 10), // CONTRASEÑA ENCRIPTADA
             avatar: req.file.filename // NOMBRE DEL ARCHIVO DE IMAGEN GUARDADO POR MULTER
         }
@@ -76,7 +76,7 @@ const usersController = {
 
         return res.render('../src/views/users/account', {  // REDIRIGE A LA PÁGINA DE LOGIN
             user: {
-                nombre: req.body.nombre
+                first_name: req.body.first_name
             }
         });
     },

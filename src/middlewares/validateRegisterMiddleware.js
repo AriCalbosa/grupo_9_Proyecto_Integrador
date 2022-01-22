@@ -4,12 +4,12 @@ const path = require('path');
 const { body } = require('express-validator');
 
 module.exports = [
-	body('nombre').notEmpty().withMessage('Tenes que escribir un nombre'),
-    body('apellido').notEmpty().withMessage('Tenes que escribir un apellido'),
-    body('usuario').notEmpty().withMessage('Tenes que escribir un usuario'),
+	body('first_name').notEmpty().withMessage('Tenes que escribir un nombre'),
+    body('last_name').notEmpty().withMessage('Tenes que escribir un apellido'),
+    body('user_name').notEmpty().withMessage('Tenes que escribir un usuario'),
 	body('email').notEmpty().withMessage('Tenes que escribir un correo electrónico').bail()
 		         .isEmail().withMessage('Tenes que escribir un formato de correo válido'),
-    body('domicilio').notEmpty().withMessage('Tenes que escribir un domicilio'),
+    body('adress').notEmpty().withMessage('Tenes que escribir un domicilio'),
 	body('password').notEmpty().withMessage('Tenes que escribir una contraseña')
 	                .isLength({min: 7}).withMessage('La contraseña debe tener al menos 7 caracteres'),
     body('password2').notEmpty().withMessage('Tenes que confirmar la contraseña'),

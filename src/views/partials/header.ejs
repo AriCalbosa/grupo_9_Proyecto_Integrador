@@ -17,7 +17,7 @@
             <% if (locals.isLogged) { %>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="/cuenta/perfil" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Bienvenido, <%= locals.userLogged.nombre %>!
+                        Bienvenido, <%= locals.userLogged.first_name%>!
                         <img src="/images/users/<%= locals.userLogged.avatar %>" width="40" style="border-radius: 100%;">
                     </a>
                     <!-- <ul class="dropdown-menu" aria-labelledby="navbarDropdown">

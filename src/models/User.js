@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const usersRoute = path.join(__dirname, '../data/users.json');
+const usersRoute = path.join(__dirname, '../database/users.json');
 
 const User = {
 	fileName: usersRoute,    // RUTA AL ARCHIVO DE LA BASE DE DATOS
