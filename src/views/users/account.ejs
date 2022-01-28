@@ -8,7 +8,7 @@
 <body>
     <%- include('../partials/header.ejs') %>
     <main>
-        <% if (locals.user && user.nombre) { %>
+        <% if (locals.user && user.first_name) { %>
             <div class="usuario-registrado">
                 <h3>Gracias por registrarte! Ya podes iniciar sesión.</h3>
             </div>
@@ -45,7 +45,7 @@
                 <h3>Creá tu Cuenta</h3>
                 <form action="/cuenta/register" method="POST" class="registrarse" enctype="multipart/form-data">
                     <div class="nombre">
-                        <input type="text" name="first_name" id="first_name" placeholder="Nombre" class="<%= locals.errors && errors.nombre ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.nombre : null %>">
+                        <input type="text" name="first_name" id="first_name" placeholder="Nombre" class="<%= locals.errors && errors.first_name? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.first_name : null %>">
                         <% if (locals.errors && errors.first_name) { %>
                             <div class="text-danger">
                                 <%= errors.first_name.msg %> 
@@ -53,7 +53,7 @@
                         <% } %>
                     </div>
                     <div class="apellido">
-                        <input type="text" name="last_name" id="last_name" placeholder="Apellido" class="<%= locals.errors && errors.apellido ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.apellido : null %>">
+                        <input type="text" name="last_name" id="last_name" placeholder="Apellido" class="<%= locals.errors && errors.last_name ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.last_name : null %>">
                         <% if (locals.errors && errors.last_name) { %>
                             <div class="text-danger">
                                 <%= errors.last_name.msg %> 
@@ -69,7 +69,7 @@
                         <% } %>
                     </div>
                     <div class="domicilio">
-                        <input type="text" name="adress" id="adress" placeholder="Domicilio" class="<%= locals.errors && errors.domicilio ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.domicilio : null %>">
+                        <input type="text" name="adress" id="adress" placeholder="Domicilio" class="<%= locals.errors && errors.adress ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.adress : null %>">
                         <% if (locals.errors && errors.adress) { %>
                             <div class="text-danger">
                                 <%= errors.adress.msg %> 

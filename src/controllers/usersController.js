@@ -3,7 +3,10 @@ const path = require('path');
 const bcryptjs = require('bcryptjs'); // REQUIERE EL MÓDULO PARA ENCRIPTAR
 const { validationResult } = require('express-validator'); // REQUIERE EL MÓDULO EXPRESS-VALIDATOR
 
-const User = require('../models/User');  // REQUIERE LAS FUNCIONES EXPORTADAS DE MODELS USER.JS
+const db = require('../database/models');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
+// const User = require('../database/models/User');  // REQUIERE LAS FUNCIONES EXPORTADAS DE MODELS USER.JS
 
 const usersRoute = path.join(__dirname, '../database/users.json');
 const users = JSON.parse(fs.readFileSync(usersRoute, 'utf-8'));
@@ -24,47 +27,55 @@ const usersController = {
 
 
 
-		let userInDBByEmail = User.findByField('email', req.body.email); // BUSCA EL MAIL INGRESADO POR EL USUARIO EN LA BASE DE DATOS
+		db.User.findOne({ // BUSCA EL MAIL INGRESADO POR EL USUARIO EN LA BASE DE DATOS
+			where: {
+				email: req.body.email
+			}
+		}).then(userInDBByEmail => {
 
-		if (userInDBByEmail) {
-			return res.render('../src/views/users/account', { // SI ENCUENTRA EL MAIL RENDERIZA EL FORMULARIO DE REGISTRO INDICANDO QUE EL MAIL YA ESTÁ REGISTRADO Y LOS CAMPOS AUTOCOMPLETADOS
-				errors: {
-					email: {
-						msg: 'Este email ya está registrado'
+			if (userInDBByEmail) {
+				return res.render('../src/views/users/account', { // SI ENCUENTRA EL MAIL RENDERIZA EL FORMULARIO DE REGISTRO INDICANDO QUE EL MAIL YA ESTÁ REGISTRADO Y LOS CAMPOS AUTOCOMPLETADOS
+					errors: {
+						email: {
+							msg: 'Este email ya está registrado'
+						}
+					},
+					oldData: req.body
+				});
+			}
+	
+	
+			if (req.body.password !== req.body.password2) {
+				return res.render('../src/views/users/account', { // SI LAS CONTRASEÑAS INGRESADAS NO COINCIDEN RENDERIZA EL FORMULARIO DE REGISTRO INDICANDO QUE AMBAS CONTRASEÑAS DEBEN SER IGUALES
+					errors: {
+						password2: {
+							msg: 'Las contraseñas deben ser iguales'
+						}
+					},
+					oldData: req.body
+				});
+			}
+	
+			let userToCreate = { // SI NO HAY NINGÚN ERROR GUARDA TODOS LOS DATOS DEL FORMULARIO LLENADO POR EL CLIENTE Y ENCRIPTA CONTRASEÑA
+				first_name: req.body.first_name,
+				last_name: req.body.last_name,
+				email: req.body.email,
+				adress: req.body.adress,
+				password: bcryptjs.hashSync(req.body.password, 10), // CONTRASEÑA ENCRIPTADA
+				avatar: req.file.filename // NOMBRE DEL ARCHIVO DE IMAGEN GUARDADO POR MULTER
+			}
+	
+			db.User.create(userToCreate).then(() => { // CREA UN USUARIO NUEVO EN LA BASE DE DATOS CON LA INFORMACIÓN LLENADA POR EL CLIENTE
+
+				return res.render('../src/views/users/account', {  // REDIRIGE A LA PÁGINA DE LOGIN
+					user: {
+						first_name: req.body.first_name
 					}
-				},
-				oldData: req.body
+				});
 			});
-		}
+	
+		})
 
-
-        if (req.body.password !== req.body.password2) {
-            return res.render('../src/views/users/account', { // SI LAS CONTRASEÑAS INGRESADAS NO COINCIDEN RENDERIZA EL FORMULARIO DE REGISTRO INDICANDO QUE AMBAS CONTRASEÑAS DEBEN SER IGUALES
-				errors: {
-					password2: {
-						msg: 'Las contraseñas deben ser iguales'
-					}
-				},
-				oldData: req.body
-			});
-        }
-
-        let userToCreate = { // SI NO HAY NINGÚN ERROR GUARDA TODOS LOS DATOS DEL FORMULARIO LLENADO POR EL CLIENTE Y ENCRIPTA CONTRASEÑA
-            first_name: req.body.first_name,
-            last_name: req.body.last_name,
-            email: req.body.email,
-            adress: req.body.adress,
-            password: bcryptjs.hashSync(req.body.password, 10), // CONTRASEÑA ENCRIPTADA
-            avatar: req.file.filename // NOMBRE DEL ARCHIVO DE IMAGEN GUARDADO POR MULTER
-        }
-
-        let userCreated = User.create(userToCreate); // CREA UN USUARIO NUEVO EN LA BASE DE DATOS CON LA INFORMACIÓN LLENADA POR EL CLIENTE
-
-        return res.render('../src/views/users/account', {  // REDIRIGE A LA PÁGINA DE LOGIN
-            user: {
-                first_name: req.body.first_name
-            }
-        });
     },
     login: (req, res) => {    // FUNCIÓN QUE PROCESA LA INFORMACIÓN DEL FORMULARIO DE LOGIN
         let userToLogin = User.findByField('email', req.body.email1); // BUSCA EL USUARIO QUE COINCIDA CON EL MAIL QUE SE INGRESÓ EN EL FORMULARIO LOGIN EN LA BASE DE DATOS
