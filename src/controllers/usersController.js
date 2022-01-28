@@ -78,41 +78,58 @@ const usersController = {
 
     },
     login: (req, res) => {    // FUNCIÓN QUE PROCESA LA INFORMACIÓN DEL FORMULARIO DE LOGIN
-        let userToLogin = User.findByField('email', req.body.email1); // BUSCA EL USUARIO QUE COINCIDA CON EL MAIL QUE SE INGRESÓ EN EL FORMULARIO LOGIN EN LA BASE DE DATOS
-		
-		if(userToLogin) { // SI ENCUENTRA EL USUARIO CON EL MAIL INGRESADO EN EL FORMULARIO EN LA BASE DE DATOS
-			let isOkThePassword = bcryptjs.compareSync(req.body.password1, userToLogin.password); // COMPARA CONTRASEÑA INGRESADA POR EL CLIENTE Y LA DE LA BASE DE DATOS ENCRIPTADA
-			if (isOkThePassword) { // SI LAS CONTRASEÑAS SON IGUALES
-				delete userToLogin.password; // BORRA LA CONTRASEÑA DEL USUARIO A LOGUEARSE POR SEGURIDAD
-				req.session.userLogged = userToLogin; // GUARDA INFORMACIÓN DEL USUARIO LOGUEADO EN EL SESSION (SIN LA CONTRASEÑA)
+        db.User.findOne({ // BUSCA EL MAIL INGRESADO POR EL USUARIO EN LA BASE DE DATOS
+			
+			where: {
+				email: req.body.email1
+			}
+		}).then(userToLogin => {
+			if(userToLogin) { // SI ENCUENTRA EL USUARIO CON EL MAIL INGRESADO EN EL FORMULARIO EN LA BASE DE DATOS
+				let isOkThePassword = bcryptjs.compareSync(req.body.password1, userToLogin.password); // COMPARA CONTRASEÑA INGRESADA POR EL CLIENTE Y LA DE LA BASE DE DATOS ENCRIPTADA
+				if (isOkThePassword) { // SI LAS CONTRASEÑAS SON IGUALES
+					userToLogin = { // BORRA LA CONTRASEÑA DEL USUARIO A LOGUEARSE POR SEGURIDAD
+						id: userToLogin.id,
+						first_name: userToLogin.first_name,
+						last_name: userToLogin.last_name,
+						email: userToLogin.email,
+						adress: userToLogin.adress,
+						profile: userToLogin.profile,
+						avatar: userToLogin.avatar
+					}
 
-				if(req.body.remember_user) { // SI SE TILDA LA OPCIÓN DE RECORDAR USUARIO EN EL FORMULARIO DE LOGIN
-					res.cookie('userEmail', req.body.email1, { maxAge: (1000 * 60) * 60 }) // GUARDA UNA COOKIE CON EL EMAIL DEL USUARIO POR UNA HORA
-				}
-
-				return res.redirect('/cuenta/perfil'); // SI TODO EL LOGUEO ESTÁ BIEN REDIRIGE AL PERFIL DEL CLIENTE
-			} 
-			return res.render('../src/views/users/account', { // SI ENCUENTRA EL MAIL PERO LAS CONTRASEÑAS NO COINCIDEN RENDERIZA LA VISTA DE LOGIN CON EL ERROR
+					req.session.userLogged = userToLogin; // GUARDA INFORMACIÓN DEL USUARIO LOGUEADO EN EL SESSION (SIN LA CONTRASEÑA)
+					
+	
+					if(req.body.remember_user) { // SI SE TILDA LA OPCIÓN DE RECORDAR USUARIO EN EL FORMULARIO DE LOGIN
+						res.cookie('userEmail', userToLogin.email, { maxAge: (1000 * 60) * 60 }) // GUARDA UNA COOKIE CON EL EMAIL DEL USUARIO POR UNA HORA
+					}
+	
+					return res.redirect('/cuenta/perfil'); // SI TODO EL LOGUEO ESTÁ BIEN REDIRIGE AL PERFIL DEL CLIENTE
+				} 
+				return res.render('../src/views/users/account', { // SI ENCUENTRA EL MAIL PERO LAS CONTRASEÑAS NO COINCIDEN RENDERIZA LA VISTA DE LOGIN CON EL ERROR
+					errors: {
+						email: {
+							msg: 'Las credenciales son inválidas'
+						},
+						password1: {
+							msg: 'La contraseña es inválida'
+						}
+					},
+						oldData: req.body
+				});
+			}
+	
+			return res.render('../src/views/users/account', { // SI NO ENCUENTRA EL MAIL INGRESADO EN EL FORMULARIO DE LOGIN EN LA BASE DE DATOS RENDERIZA EL FORMULARIO DE LOGIN CON EL ERROR
 				errors: {
-					// email: {
-					// 	msg: 'Las credenciales son inválidas'
-					// },
-                    password1: {
-                        msg: 'La contraseña es inválida'
-                    }
+					email1: {
+						msg: 'No se encuentra este email en nuestra base de datos'
+					}
 				},
-                    oldData: req.body
+				oldData: req.body
 			});
-		}
-
-		return res.render('../src/views/users/account', { // SI NO ENCUENTRA EL MAIL INGRESADO EN EL FORMULARIO DE LOGIN EN LA BASE DE DATOS RENDERIZA EL FORMULARIO DE LOGIN CON EL ERROR
-			errors: {
-				email1: {
-					msg: 'No se encuentra este email en nuestra base de datos'
-				}
-			},
-            oldData: req.body
-		});
+		})
+		// .catch(error => res.send(error))
+		
     },
     profile: (req, res) => {
 		let user = req.session.userLogged
@@ -127,31 +144,76 @@ const usersController = {
 		});
 	},
 	editProfileProcess: (req, res) => {
-		let userToEdit = User.findByField('email', req.session.userLogged.email); // BUSCA AL USUARIO LOGUEADO EN LA BASE DE DATOS
-
-		if (req.file) { // SI EL FORMULARIO VIENE CON UNA IMAGEN
-			userToEdit = {
-				...userToEdit,
-				...req.body, // REEMPLAZA LA INFORMACIÓN DEL USUARIO QUE ESTÁ EN LA BASE DE DATOS POR LA QUE TRAE EL FORMULARIO
-				avatar: req.file.filename
-			};
-		} else { // SI EL FORMULARIO VIENE SIN IMAGEN
-			userToEdit = {
-				...userToEdit,
-				...req.body // REEMPLAZA LA INFORMACIÓN DEL USUARIO QUE ESTÁ EN LA BASE DE DATOS POR LA QUE TRAE EL FORMULARIO
-			};
-		};
-		let allUsers = User.findAll() // BUSCA TODOS LOS USUARIOS DE LA BASE DE DATOS
-		for (let i=0; i < allUsers.length; i++) { // RECORRE TODOS LOS USUARIOS DE LA BASE DE DATOS
-			if (allUsers[i].id == userToEdit.id) { // SI EL USUARIO EN LA BASE DE DATOS TIENE EL MISMO ID QUE EL USUARIO A EDITAR
-				allUsers[i] = {
-					...userToEdit // REEMPLAZA LA INFORMACIÓN DEL USUARIO QUE ESTÁ EN LA BASE DE DATOS POR LA QUE TRAE EL FORMULARIO
-				}
+		db.User.findOne({ // BUSCA AL USUARIO LOGUEADO EN LA BASE DE DATOS
+			where: {
+				email: req.session.userLogged.email
 			}
-		};
-		fs.writeFileSync(User.fileName, JSON.stringify(allUsers, null,  ' ')); // REEMPLAZA LA BASE DE DATOS POR LA NUEVA CON EL USUARIO EDITADO
-		req.session.userLogged = userToEdit;
-		return res.redirect('/cuenta/perfil');
+		})
+		.then(userToEdit => {
+			if (req.file) { // SI EL FORMULARIO VIENE CON UNA IMAGEN
+				db.User.update({  // REEMPLAZA LA INFORMACIÓN DEL USUARIO QUE ESTÁ EN LA BASE DE DATOS POR LA QUE TRAE EL FORMULARIO
+					first_name: req.body.first_name,
+					last_name: req.body.last_name,
+					email: req.body.email,
+					adress: req.body.adress,
+					avatar: req.file.filename
+				},
+				{
+					where: {id: userToEdit.id}
+				}).then(() => {
+					db.User.findOne({ // BUSCA AL USUARIO LOGUEADO EN LA BASE DE DATOS
+						where: {
+							id: req.session.userLogged.id
+						}
+					}).then(userToEdit => {
+						req.session.userLogged = userToEdit;
+						return res.redirect('/cuenta/perfil');
+					})
+				})
+				// userToEdit = {
+				// 	...userToEdit,
+				// 	...req.body, // REEMPLAZA LA INFORMACIÓN DEL USUARIO QUE ESTÁ EN LA BASE DE DATOS POR LA QUE TRAE EL FORMULARIO
+				// 	avatar: req.file.filename
+				// };
+			} else { // SI EL FORMULARIO VIENE SIN IMAGEN
+				db.User.update({  // REEMPLAZA LA INFORMACIÓN DEL USUARIO QUE ESTÁ EN LA BASE DE DATOS POR LA QUE TRAE EL FORMULARIO
+					first_name: req.body.first_name,
+					last_name: req.body.last_name,
+					email: req.body.email,
+					adress: req.body.adress
+				},
+				{
+					where: {id: userToEdit.id}
+				})
+				.then(() => {
+					db.User.findOne({ // BUSCA AL USUARIO LOGUEADO EN LA BASE DE DATOS
+						where: {
+							id: req.session.userLogged.id
+						}
+					}).then(userToEdit => {
+						req.session.userLogged = userToEdit;
+						return res.redirect('/cuenta/perfil');
+					})
+				})
+				// userToEdit = {
+				// 	...userToEdit,
+				// 	...req.body // REEMPLAZA LA INFORMACIÓN DEL USUARIO QUE ESTÁ EN LA BASE DE DATOS POR LA QUE TRAE EL FORMULARIO
+				// };
+			}
+			
+			// let allUsers = User.findAll() // BUSCA TODOS LOS USUARIOS DE LA BASE DE DATOS
+			// for (let i=0; i < allUsers.length; i++) { // RECORRE TODOS LOS USUARIOS DE LA BASE DE DATOS
+			// 	if (allUsers[i].id == userToEdit.id) { // SI EL USUARIO EN LA BASE DE DATOS TIENE EL MISMO ID QUE EL USUARIO A EDITAR
+			// 		allUsers[i] = {
+			// 			...userToEdit // REEMPLAZA LA INFORMACIÓN DEL USUARIO QUE ESTÁ EN LA BASE DE DATOS POR LA QUE TRAE EL FORMULARIO
+			// 		}
+			// 	}
+			// };
+			// fs.writeFileSync(User.fileName, JSON.stringify(allUsers, null,  ' ')); // REEMPLAZA LA BASE DE DATOS POR LA NUEVA CON EL USUARIO EDITADO
+			// req.session.userLogged = userToEdit;
+			// return res.redirect('/cuenta/perfil');
+		})
+		// .catch(error => res.send(error))
 	},
 	logout: (req, res) => {       // FUNCIÓN QUE DESLOGUEA AL USUARIO BORRANDO LAS COOKIES Y EL SESSION
 		res.clearCookie('userEmail'); // BORRA LAS COOKIES PARA QUE NO SE LOGUEE AUTOMÁTICAMENTE CUANDO EL USUARIO CIERRA SESIÓN
