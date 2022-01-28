@@ -23,19 +23,6 @@ const usersController = {
 		}
 
 
-        let userInDBByUser = User.findByField('usuario', req.body.user_name); // BUSCA EL MAIL INGRESADO POR EL USUARIO EN LA BASE DE DATOS
-
-		if (userInDBByUser) {
-			return res.render('../src/views/users/account', { // SI ENCUENTRA EL MAIL RENDERIZA EL FORMULARIO DE REGISTRO INDICANDO QUE EL MAIL YA ESTÁ REGISTRADO Y LOS CAMPOS AUTOCOMPLETADOS
-				errors: {
-					user_name: {
-						msg: 'Este usuario ya está registrado'
-					}
-				},
-				oldData: req.body
-			});
-		}
-
 
 		let userInDBByEmail = User.findByField('email', req.body.email); // BUSCA EL MAIL INGRESADO POR EL USUARIO EN LA BASE DE DATOS
 
@@ -65,7 +52,6 @@ const usersController = {
         let userToCreate = { // SI NO HAY NINGÚN ERROR GUARDA TODOS LOS DATOS DEL FORMULARIO LLENADO POR EL CLIENTE Y ENCRIPTA CONTRASEÑA
             first_name: req.body.first_name,
             last_name: req.body.last_name,
-            user_name: req.body.user_name,
             email: req.body.email,
             adress: req.body.adress,
             password: bcryptjs.hashSync(req.body.password, 10), // CONTRASEÑA ENCRIPTADA

@@ -6,7 +6,6 @@ const { body } = require('express-validator');
 module.exports = [
 	body('first_name').notEmpty().withMessage('Tenes que escribir un nombre'),
     body('last_name').notEmpty().withMessage('Tenes que escribir un apellido'),
-    body('user_name').notEmpty().withMessage('Tenes que escribir un usuario'),
 	body('email').notEmpty().withMessage('Tenes que escribir un correo electrónico').bail()
 		         .isEmail().withMessage('Tenes que escribir un formato de correo válido'),
     body('adress').notEmpty().withMessage('Tenes que escribir un domicilio'),

@@ -60,14 +60,6 @@
                             </div>
                         <% } %>
                     </div>
-                    <div class="usuario">
-                        <input type="text" name="user_name" id="user_name" placeholder="Nombre de usuario" class="<%= locals.errors && errors.usuario ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.usuario : null %>">
-                        <% if (locals.errors && errors.user_name) { %>
-                            <div class="text-danger">
-                                <%= errors.user_name.msg %> 
-                            </div>
-                        <% } %>
-                    </div>
                     <div class="mail">
                         <input type="text" name="email" id="email" placeholder="E-mail" class="<%= locals.errors && errors.email ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.email : null %>">
                         <% if (locals.errors && errors.email) { %>
