@@ -15,14 +15,11 @@ module.exports = (sequelize, DataTypes) => {
         discount: {
             type: DataTypes.INTEGER
         },
-        id_color: {
-            type: DataTypes.INTEGER
+        color: {
+            type: DataTypes.STRING
         },
-        id_category: {
-            type: DataTypes.INTEGER
-        },
-        id_size: {
-            type: DataTypes.INTEGER
+        category: {
+            type: DataTypes.STRING
         },
         image: {
             type: DataTypes.STRING
@@ -34,5 +31,18 @@ module.exports = (sequelize, DataTypes) => {
    }
 
    const Product = sequelize.define(alias, cols, config); 
+
+   Product.associate = models => {
+       Product.belongsToMany(models.Size, {
+           as: 'sizes',
+           through: models.Product_Size,
+           foreignKey: 'id_product',
+           otherKey: 'id_size',
+           timestamps: false,
+           onDelete: 'cascade'
+       });
+   }
+
+
    return Product;
    }

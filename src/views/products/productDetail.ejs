@@ -11,20 +11,20 @@
         <h3>Detalle de Producto</h3>
         <div class="detalle-producto">
             <div class="producto-principal">
-                <img src = "/images/adidas/<%= producto.imagen01 %>" alt="<%= producto.nombre %>" class="product_img">
+                <img src = "/images/adidas/<%= product.image %>" alt="<%= product.product_name %>" class="product_img">
             </div>
             <div class="colores-producto">
                 <div class="color01">
-                    <img src = "/images/adidas/<%= producto.imagen01 %>" alt="<%= producto.nombre %> color 1" class="product_img">
+                    <img src = "/images/adidas/<%= product.image %>" alt="<%= product.product_name %> color 1" class="product_img">
                 </div>
-                <% if ( producto.imagen02 != undefined) { %>
+                <% if ( product.imagen02 != undefined) { %>
                     <div class="color02">
-                        <img src = "/images/adidas/<%= producto.imagen02 %>" alt="<%= producto.nombre %> color 2" class="product_img">
+                        <img src = "/images/adidas/<%= product.imagen02 %>" alt="<%= product.nombre %> color 2" class="product_img">
                     </div>
                 <% } %>
-                <% if ( producto.imagen03 != undefined) { %>
+                <% if ( product.imagen03 != undefined) { %>
                     <div class="color03">
-                        <img src = "/images/adidas/<%= producto.imagen03 %>" alt="<%= producto.nombre %> color 3" class="product_img">
+                        <img src = "/images/adidas/<%= product.imagen03 %>" alt="<%= product.nombre %> color 3" class="product_img">
                     </div>
                 <% } %>
             </div>
@@ -33,14 +33,14 @@
                     <img src="/images/banner/logo-adidas.png" alt="">
                 </div>
                 <div class="nombre-producto">
-                    <h4><%= producto.nombre %></h4>
+                    <h4><%= product.product_name %></h4>
                 </div>
                 <div class="precio-producto">
-                    <% if (producto.descuento != 0) { %>
-                        <p class="precio-descuento">$<%= producto.precio %></p>
-                        <p class="precio-final">$<%= producto.precio - (producto.precio * producto.descuento)/100 %></p>
+                    <% if (product.discount != 0) { %>
+                        <p class="precio-descuento">$<%= product.price %></p>
+                        <p class="precio-final">$<%= product.price - (product.price * product.discount)/100 %></p>
                     <% } else { %>
-                        <p class="precio">$<%= producto.precio %></p>
+                        <p class="precio">$<%= product.price %></p>
                     <% } %>
                 </div>
                 <div class="caracteristicas-producto">
@@ -48,57 +48,17 @@
                         <div class="color">
                             <label for="color">Color: </label>
                             <select name="color" id="color">
-                                <% for (let i=0; i< producto.colores; i++) { %>
-                                <option value="<%= i + 1 %>"><%= i + 1 %></option>
-                                <% } %>
+                                <option value="<%= product.color %>"><%= product.color %></option>
                             </select>
                         </div>
                         
-                        <div class="cantidad">
-                            <label for="cantidad">Cantidad: </label>
-                            <select name="cantidad" id="cantidad">
-                                <% for (let i=0; i < producto.cantidad; i++) { %>
-                                    <option value="<%= i+1 %>"><%= i+1 %></option>
-                               <% } %>
-                            </select>
-                        </div>
+                       
                         <div class="talle">
                             <label for="talle">Talle: </label>
-                            <select name="talle" id="talle">
-                                <% for (let i=0; i<producto.talles.length; i++) { %>
-                                        <option value=" <%= producto.talles[i] %>"><%= producto.talles[i] %></option>
-                                <% } %>
-                                <!-- <% if ( producto.talle1 != undefined) { %>
-                                    <option value="talle-1"><%= producto.talle1 %></option>
-                                <% } %>
-                                <% if ( producto.talle2 != undefined) { %>
-                                    <option value="talle-2"><%= producto.talle2 %></option>
-                                <% } %>
-                                <% if ( producto.talle3 != undefined) { %>
-                                    <option value="talle-3"><%= producto.talle3 %></option>
-                                <% } %>
-                                <% if ( producto.talle4 != undefined) { %>
-                                    <option value="talle-4"><%= producto.talle4 %></option>
-                                <% } %>
-                                <% if ( producto.talle5 != undefined) { %>
-                                    <option value="talle-5"><%= producto.talle5 %></option>
-                                <% } %>
-                                <% if ( producto.talle6 != undefined) { %>
-                                    <option value="talle-6"><%= producto.talle6 %></option>
-                                <% } %>
-                                <% if ( producto.talle7 != undefined) { %>
-                                    <option value="talle-7"><%= producto.talle7 %></option>
-                                <% } %>
-                                <% if ( producto.talle8 != undefined) { %>
-                                    <option value="talle-8"><%= producto.talle8 %></option>
-                                <% } %>
-                                <% if ( producto.talle9 != undefined) { %>
-                                    <option value="talle-9"><%= producto.talle9 %></option>
-                                <% } %> -->
-
-                                <!-- <% for (let i=0; i< producto.cantidadTalles; i++) { %>
-                                    <option value="talle-<%= i+1 %>"><%= producto.talle1 %></option>
-                               <% } %> -->
+                            <select name="size" id="size">
+                                        <option value=" <%= product.size %>"><%= product.size %></option>
+                               
+                               
                             </select>
                         </div>
                         <div class="boton">
@@ -106,12 +66,12 @@
                         </div>
                     </form>
                     <% if (locals.isLogged) { %>
-                        <form action="/productos/<%= producto.categoria %>/<%= producto.id %>/editar-producto" method="GET">
+                        <form action="/productos/<%= product.category %>/<%= product.id %>/editar-producto" method="GET">
                             <div class="boton-editar">
                                 <button type="submit">Editar</button>
                             </div>
                         </form>
-                        <form action="/productos/<%= producto.categoria %>/<%= producto.id %>?_method=DELETE" method="POST">
+                        <form action="/productos/<%= product.category %>/<%= product.id %>?_method=DELETE" method="POST">
                             <div class="boton-eliminar">
                                 <button type="submit">Eliminar</button>
                             </div>

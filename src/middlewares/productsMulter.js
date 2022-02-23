@@ -2,7 +2,7 @@
 const path = require('path');
 const multer = require('multer');
 
-const folderPath = path.resolve(__dirname, '../../../public/images/adidas');
+const folderPath = path.resolve(__dirname, '../../../Proyecto/public/images/adidas');
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {

@@ -25,8 +25,6 @@ const usersController = {
 			});
 		}
 
-
-
 		db.User.findOne({ // BUSCA EL MAIL INGRESADO POR EL USUARIO EN LA BASE DE DATOS
 			where: {
 				email: req.body.email
@@ -72,8 +70,20 @@ const usersController = {
 						first_name: req.body.first_name
 					}
 				});
-			});
+			})
+			.catch(error => {
+				console.log(error)
+				return res.render('../src/views/users/account', {  // REDIRIGE A LA PÁGINA DE LOGIN
+					error: error
+				});
+			})
 	
+		})
+		.catch(error => {
+			console.log(error)
+			return res.render('../src/views/users/account', {  // REDIRIGE A LA PÁGINA DE LOGIN
+				error: error
+			});
 		})
 
     },
@@ -128,7 +138,12 @@ const usersController = {
 				oldData: req.body
 			});
 		})
-		// .catch(error => res.send(error))
+		.catch(error => {
+			console.log(error)
+			return res.render('../src/views/users/account', {  // REDIRIGE A LA PÁGINA DE LOGIN
+				error: error
+			})
+		})
 		
     },
     profile: (req, res) => {
@@ -170,6 +185,10 @@ const usersController = {
 						return res.redirect('/cuenta/perfil');
 					})
 				})
+				.catch(error => {
+					console.log(error)
+					return res.redirect('/cuenta/perfil');
+				})
 				// userToEdit = {
 				// 	...userToEdit,
 				// 	...req.body, // REEMPLAZA LA INFORMACIÓN DEL USUARIO QUE ESTÁ EN LA BASE DE DATOS POR LA QUE TRAE EL FORMULARIO
@@ -194,6 +213,10 @@ const usersController = {
 						req.session.userLogged = userToEdit;
 						return res.redirect('/cuenta/perfil');
 					})
+				})
+				.catch(error => {
+					console.log(error)
+					return res.redirect('/cuenta/perfil');
 				})
 				// userToEdit = {
 				// 	...userToEdit,

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs') %>
+    <link href="/css/products/styles-productNew.css" rel="stylesheet">
+    <title>Crear Producto</title>
+</head>
+<body>
+    <%- include('../partials/header.ejs') %>
+    <main>
+        <h3>Crear Producto</h3>
+        <form action="/productos" method="POST" class="detalle-producto" enctype="multipart/form-data">
+            <div class="producto-principal">
+                <div class="imagen-producto-color01">
+                    <input type="file" name="image" id="image" accept=".png, .jpg, .webp"  required/>
+                    <!-- <label for="image"><i class="fas fa-upload"></i> Imagen</label> -->
+                </div>
+            </div>
+            <div class="descripcion-producto">
+                <div class="nombre-producto">
+                    <input type="text" name="product_name" id="product_name" placeholder="Nombre del producto" >
+                </div>
+                <div class="precio-producto">
+                    <input type="text" name="price" id="price" placeholder="Precio del producto $" >
+                </div>
+                <div class="descuento-producto">
+                    <input type="text" name="discount" id="discount" placeholder="Descuento del producto %" >
+                </div>
+                <div class="caracteristicas-producto">
+                    <div class="categoria">
+                        <label for="category">Categoría: </label>
+                        <select name="category" id="category">
+                            <option value=""></option>
+                           <option value="casual">Casual</option>
+                           <option value="futbol">Futbol</option>
+                           <option value="running">Running</option>
+                        </select>
+                    </div>
+                    <div class="cantidad-colores">
+                        <label for="color"> Color: </label>
+                        <select name="color" id="color">
+                            <option value=""></option>
+                           <option value="Rojo">Rojo</option>
+                           <option value="Negro">Negro</option>
+                           <option value="Blanco">Blanco</option>
+                           <option value="Azul">Azul</option>
+                           <option value="Verde">Verde</option>
+                           <option value="Violeta">Violeta</option>
+                           <option value="Naranja">Naranja</option>
+                        </select>
+                    </div>
+                    <div class="talle">
+                        <label for="size">Talle: </label>
+                        <select class="size" name="size" id="size">
+                            <option value=""></option>
+                            <% for (let i=0 ; i< 11 ; i++) { %>
+                                <option value="<%= 1+i %>"><%= 35+i %></option>
+                            <% } %>
+                        </select>
+                    </div>
+                    <div class="cantidad">
+                        <label for="quantity">Cantidad: </label>
+                        <select name="quantity" id="quantity">
+                            <% for (let i=0 ; i<30 ; i++) { %>
+                                <option value="<%= i+1 %>"><%= i+1 %></option>
+                            <% } %>
+                        </select>
+                    </div>
+                    
+                </div>
+                <div class="boton-crear">
+                    <button type="submit">Crear Producto</button>
+                </div>
+                <div class="boton-borrar">
+                    <button type="reset">Borrar</button>
+                </div>
+            </div>
+        </form>
+    </main>
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>

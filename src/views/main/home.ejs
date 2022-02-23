@@ -14,17 +14,17 @@
             <section class="casual">
                 <h3>Casual</h3>
                 <div class="productos">
-                    <% for ( i = 0; i < 4; i++) { %>
+                    <% for ( i = 0; i < productsCasual.length; i++) { %>
                         <article>
-                            <a href="/productos/<%= productosCasual[i].categoria %>/<%= productosCasual[i].id %>">
-                                <img src = "/images/adidas/<%= productosCasual[i].imagen01 %>" alt="<%=productosCasual[i].nombre %>" class="product_img">
+                            <a href="/productos/<%= productsCasual[i].category %>/<%= productsCasual[i].id %>">
+                                <img src = "/images/adidas/<%= productsCasual[i].image %>" alt="<%=productsCasual[i].product_name %>" class="product_img">
                                 <div class="producto">
                                     <i class="fas fa-truck"></i>
-                                    <p class = "precio">$ <%=productosCasual[i].precio %></p>
-                                    <% if (productosCasual[i].descuento != 0) { %>
-                                    <p class = "descuento">%<%=productosCasual[i].descuento %> OFF</p>
+                                    <p class = "precio">$ <%=productsCasual[i].price %></p>
+                                    <% if (productsCasual[i].discount != 0) { %>
+                                    <p class = "descuento">%<%=productsCasual[i].discount %> OFF</p>
                                     <% } %>
-                                    <h4 class = "descripcion"><%=productosCasual[i].nombre %></h4>
+                                    <h4 class = "descripcion"><%=productsCasual[i].product_name %></h4>
                                 </div>
                             </a>
                         </article>
@@ -35,17 +35,17 @@
             <section class="futbol">
                 <h3>Futbol</h3>
                 <div class="productos">
-                    <% for ( i = 0; i < 4; i++) { %>
+                    <% for ( i = 0; i < productsFutbol.length; i++) { %>
                         <article>
-                            <a href="/productos/<%= productosFutbol[i].categoria %>/<%= productosFutbol[i].id %>">
-                                <img src = "/images/adidas/<%= productosFutbol[i].imagen01 %>" alt="<%=productosFutbol[i].nombre %>" class="product_img">
+                            <a href="/productos/<%= productsFutbol[i].category %>/<%= productsFutbol[i].id %>">
+                                <img src = "/images/adidas/<%= productsFutbol[i].image %>" alt="<%=productsFutbol[i].product_name %>" class="product_img">
                                 <div class="producto">
                                     <i class="fas fa-truck"></i>
-                                    <p class = "precio">$ <%=productosFutbol[i].precio %></p>
-                                    <% if (productosFutbol[i].descuento != 0) { %>
-                                    <p class = "descuento">%<%=productosFutbol[i].descuento %> OFF</p>
+                                    <p class = "precio">$ <%=productsFutbol[i].price %></p>
+                                    <% if (productsFutbol[i].discount != 0) { %>
+                                    <p class = "descuento">%<%=productsFutbol[i].discount %> OFF</p>
                                     <% } %>
-                                    <h4 class = "descripcion"><%=productosFutbol[i].nombre %></h4>
+                                    <h4 class = "descripcion"><%=productsFutbol[i].product_name %></h4>
                                 </div>
                             </a>
                         </article>
@@ -56,17 +56,17 @@
             <section class="running">
                 <h3>Running</h3>
                 <div class="productos">
-                    <% for ( i = 0; i < 4; i++) { %>
+                    <% for ( i = 0; i < productsRunning.length; i++) { %>
                         <article>
-                            <a href="/productos/<%= productosRunning[i].categoria %>/<%= productosRunning[i].id %>">
-                                <img src = "/images/adidas/<%= productosRunning[i].imagen01 %>" alt="<%=productosRunning[i].nombre %>" class="product_img">
+                            <a href="/productos/<%= productsRunning[i].category %>/<%= productsRunning[i].id %>">
+                                <img src = "/images/adidas/<%= productsRunning[i].image %>" alt="<%=productsRunning[i].product_name %>" class="product_img">
                                 <div class="producto">
                                     <i class="fas fa-truck"></i>
-                                    <p class = "precio">$ <%=productosRunning[i].precio %></p>
-                                    <% if (productosRunning[i].descuento != 0) { %>
-                                    <p class = "descuento">%<%=productosRunning[i].descuento %> OFF</p>
+                                    <p class = "precio">$ <%=productsRunning[i].price %></p>
+                                    <% if (productsRunning[i].discount != 0) { %>
+                                    <p class = "descuento">%<%=productsRunning[i].discount %> OFF</p>
                                     <% } %>
-                                    <h4 class = "descripcion"><%=productosRunning[i].nombre %></h4>
+                                    <h4 class = "descripcion"><%=productsRunning[i].product_name %></h4>
                                 </div>
                             </a>
                         </article>

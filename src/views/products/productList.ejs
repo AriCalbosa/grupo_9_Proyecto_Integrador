@@ -10,17 +10,17 @@
     <main>
         <h3>Listado de Productos</h3>
             <div class="productos">
-                <% for ( let i = 0; i < productos.length; i++) { %>
+                <% for ( let i = 0; i < products.length; i++) { %>
                     <article>
-                        <a href="/productos/<%= productos[i].categoria %>/<%= productos[i].id %>">
-                            <img src = "images/adidas/<%= productos[i].imagen01 %>" alt="<%=productos[i].nombre %>" class="product_img">
+                        <a href="/productos/<%= products[i].category %>/<%= products[i].id %>">
+                            <img src = "images/adidas/<%= products[i].image %>" alt="<%=products[i].product_name %>" class="product_img">
                             <div class="producto">
                                 <i class="fas fa-truck"></i>
-                                <p class = "precio">$ <%=productos[i].precio %></p>
-                                <% if (productos[i].descuento != 0) { %>
-                                <p class = "descuento">%<%=productos[i].descuento %> OFF</p>
+                                <p class = "precio">$ <%=products[i].price %></p>
+                                <% if (products[i].discount != 0) { %>
+                                <p class = "descuento">%<%=products[i].discount %> OFF</p>
                                 <% } %>
-                                <h4 class = "descripcion"><%=productos[i].nombre %></h4>
+                                <h4 class = "descripcion"><%=products[i].product_name %></h4>
                             </div>
                         </a>
                         </article>
