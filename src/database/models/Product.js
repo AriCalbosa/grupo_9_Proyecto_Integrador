@@ -15,13 +15,7 @@ module.exports = (sequelize, DataTypes) => {
         discount: {
             type: DataTypes.INTEGER
         },
-        color: {
-            type: DataTypes.STRING
-        },
         category: {
-            type: DataTypes.STRING
-        },
-        image: {
             type: DataTypes.STRING
         }
     }
@@ -42,6 +36,16 @@ module.exports = (sequelize, DataTypes) => {
            onDelete: 'cascade'
        });
    }
+//    Product.associate = models => {
+//     Product.belongsToMany(models.Color, {
+//         as: 'colors',
+//         through: models.Product_Size,
+//         foreignKey: 'id_product',
+//         otherKey: 'id_color',
+//         timestamps: false,
+//         onDelete: 'cascade'
+//     });
+// }
 
 
    return Product;

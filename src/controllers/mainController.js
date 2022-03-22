@@ -11,25 +11,66 @@ const productos = JSON.parse(fs.readFileSync(rutaProductos, 'utf-8'));
 
 const mainController = {
     home: (req, res) => {
-        let productsCasual = db.Product.findAll({
+        let productsCasual = db.Product.findAll({ raw:true, include: ['sizes'],
             where: {
                 category: 'casual'
             }
         });
-        let productsFutbol = db.Product.findAll({
+        let productsFutbol = db.Product.findAll({ raw:true, include: ['sizes'],
             where: {
                 category: 'futbol'
             }
         });
-        let productsRunning = db.Product.findAll({
+        let productsRunning = db.Product.findAll({ raw:true, include: ['sizes'],
             where: {
                 category: 'running'
             }
         });
         Promise.all([productsCasual, productsFutbol, productsRunning])
             .then(([productsCasual, productsFutbol, productsRunning]) => {
-                console.log(productsCasual[0].category)
-                res.render('../src/views/main/home', {productsCasual: productsCasual, productsFutbol: productsFutbol, productsRunning: productsRunning});
+                let productsListCasual =productsCasual.map(product => {
+                    let oneProduct = {
+                        id: product.id,
+                        product_name: product.product_name,
+                        price: product.price,
+                        discount: product.discount,
+                        category: product.category,
+                        size: product['sizes.id'],
+                        color: product['sizes.Product_Size.color'],
+                        image: product['sizes.Product_Size.image'],
+                        quantity: product['sizes.Product_Size.stock']
+                    }
+                    return oneProduct;
+                })
+                let productsListFutbol =productsFutbol.map(product => {
+                    let oneProduct = {
+                        id: product.id,
+                        product_name: product.product_name,
+                        price: product.price,
+                        discount: product.discount,
+                        category: product.category,
+                        size: product['sizes.id'],
+                        color: product['sizes.Product_Size.color'],
+                        image: product['sizes.Product_Size.image'],
+                        quantity: product['sizes.Product_Size.stock']
+                    }
+                    return oneProduct;
+                })
+                let productsListRunning =productsRunning.map(product => {
+                    let oneProduct = {
+                        id: product.id,
+                        product_name: product.product_name,
+                        price: product.price,
+                        discount: product.discount,
+                        category: product.category,
+                        size: product['sizes.id'],
+                        color: product['sizes.Product_Size.color'],
+                        image: product['sizes.Product_Size.image'],
+                        quantity: product['sizes.Product_Size.stock']
+                    }
+                    return oneProduct;
+                })
+                res.render('../src/views/main/home', {productsCasual: productsListCasual, productsFutbol: productsListFutbol, productsRunning: productsListRunning});
             })
             .catch(error => {
                 console.log(error)
@@ -37,19 +78,6 @@ const mainController = {
                     error: error
                 });
             })
-
-
-        // let productos = JSON.parse(fs.readFileSync(rutaProductos, 'utf-8'));
-        // let productosCasual = productos.filter ((producto) => {
-        //     return producto.categoria == "casual";
-        // });
-        // let productosFutbol = productos.filter ((producto) => {
-        //     return producto.categoria == "futbol";
-        // });
-        // let productosRunning = productos.filter ((producto) => {
-        //     return producto.categoria == "running";
-        // });
-        // res.render('../src/views/main/home', {productos: productos, productosCasual: productosCasual, productosFutbol: productosFutbol, productosRunning: productosRunning});
     },
     buscador: (req, res) => {
         const productos = JSON.parse(fs.readFileSync(rutaProductos, 'utf-8'));

@@ -29,14 +29,26 @@ app.set('view engine', 'ejs');
 
 
 
-// ************ Rutas requeridas y use() ************
+// ************ Rutas requeridas ************
 const mainRoutes = require('./routes/mainRoutes');
 const productRoutes = require('./routes/productRoutes');
 const usersRoutes = require('./routes/usersRoutes');
 
+// ************ Rutas requeridas APIs ************
+const productRoutesApi = require('./routes/api/productsRoutes');
+// const usersRoutesApi = require('./routes/api/usersRoutes');
+
+
+// ************ use() ************
 app.use('/', mainRoutes);
 app.use('/productos', productRoutes);
 app.use('/cuenta', usersRoutes);
+
+
+
+// ************ use() APIs ************
+app.use('/api/productos', productRoutesApi);
+// app.use('/api/cuenta', usersRoutesApi);
 
 
 

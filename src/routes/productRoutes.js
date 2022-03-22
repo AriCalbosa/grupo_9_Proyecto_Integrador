@@ -1,7 +1,11 @@
 // ************ Require's ************
 const express = require('express');
 const productRouter = express.Router();
+
+// ************ Middlewares ************
+
 const upload = require('../middlewares/productsMulter');
+const validateProductMiddleware = require('../middlewares/validateProductMiddleware');
 
 
 
@@ -22,7 +26,7 @@ productRouter.get('/running', productController.productosRunning);
 
 /*** CREAR UN PRODUCTO ***/ 
 productRouter.get('/crear-producto', productController.createProduct);
-productRouter.post('/', upload.single('image'), productController.storeProduct); 
+productRouter.post('/', upload.single('image'), validateProductMiddleware, productController.storeProduct); 
 
 
 

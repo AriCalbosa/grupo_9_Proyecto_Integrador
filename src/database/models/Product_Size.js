@@ -11,8 +11,13 @@ module.exports = (sequelize, DataTypes) => {
         },
         id_size: {
             type: DataTypes.INTEGER
-        }
-        ,
+        },
+        color: {
+            type: DataTypes.STRING
+        },
+        image: {
+            type: DataTypes.STRING
+        },
         stock: {
             type: DataTypes.INTEGER
         }

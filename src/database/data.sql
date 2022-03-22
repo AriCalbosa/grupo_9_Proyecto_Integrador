@@ -124,3 +124,27 @@ VALUES (DEFAULT, 44);
 
 INSERT INTO sizes(id, number)
 VALUES (DEFAULT, 45);
+
+ALTER TABLE products
+DROP id_size;
+
+ALTER TABLE products
+DROP id_category;
+
+ALTER TABLE products
+DROP id_color;
+
+ALTER TABLE colors
+DROP active;
+
+ALTER TABLE colors
+DROP name;
+
+ALTER TABLE colors
+ADD color TINYINT NOT NULL;
+
+ALTER TABLE products_sizes
+ADD id_color INT NOT NULL;
+
+ALTER TABLE products_sizes
+ADD FOREIGN KEY (id_color) REFERENCES colors(id);
