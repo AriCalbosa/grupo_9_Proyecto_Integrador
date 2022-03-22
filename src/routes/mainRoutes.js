@@ -15,7 +15,7 @@ mainRouter.get('/', mainController.home);
 
 
 /*** BUSCADOR ***/
-mainRouter.get('/productos-encontrados', mainController.buscador);
+mainRouter.get('/productos-encontrados', mainController.search);
 
 
 

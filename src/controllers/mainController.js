@@ -79,19 +79,42 @@ const mainController = {
                 });
             })
     },
-    buscador: (req, res) => {
-        const productos = JSON.parse(fs.readFileSync(rutaProductos, 'utf-8'));
-        let productosBuscado = req.query.search;
-        let productosBuscadoMin = productosBuscado.toLowerCase();
-        let productosEncontrados = [];
-
-        for (let i = 0; i < productos.length; i++) {
-            let productoMin = productos[i].nombre.toLowerCase();
-            if (productoMin.includes(productosBuscadoMin)) {
-                productosEncontrados.push(productos[i]);
+    search: (req, res) => {
+        db.Product.findAll({raw:true, include: ['sizes']})
+        .then(products => {
+            let productsList =products.map(product => {
+                let oneProduct = {
+                    id: product.id,
+                    product_name: product.product_name,
+                    price: product.price,
+                    discount: product.discount,
+                    category: product.category,
+                    size: product['sizes.id'],
+                    color: product['sizes.Product_Size.color'],
+                    image: product['sizes.Product_Size.image'],
+                    quantity: product['sizes.Product_Size.stock']
+                }
+                return oneProduct;
+            })
+            let searchedProducts = req.query.search;
+            let searchedProductsMin = searchedProducts.toLowerCase();
+            let foundedProducts = [];
+            for (let i = 0; i < productsList.length; i++) {
+                let productMin = productsList[i].product_name.toLowerCase();
+                if (productMin.includes(searchedProductsMin)) {
+                    foundedProducts.push(productsList[i]);
+                }
             }
-        }
-        res.render('../src/views/main/productosEncontrados', {productos: productosEncontrados});
+            res.render('../src/views/main/searchProducts', {products: foundedProducts});
+        })
+        .catch(error => {
+            console.log(error)
+            return res.render('../src/views/main/home', { 
+                error: error
+            });
+        })
+
+        
     },
     carrito: (req, res) => {
         res.render('../src/views/main/productCart');
