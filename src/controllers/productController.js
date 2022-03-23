@@ -137,11 +137,13 @@ const productController = {
                  price: product.price,
                  discount: product.discount,
                  category: product.category,
-                 size: product['sizes.id'],
+                 size: product['sizes.number'],
                  color: product['sizes.Product_Size.color'],
                  image: product['sizes.Product_Size.image'],
                  quantity: product['sizes.Product_Size.stock']
             }
+
+
             res.render('../src/views/products/productDetail', {product: product});
         })
         .catch(error => {
@@ -207,32 +209,32 @@ const productController = {
 
     },
     editProduct: async (req, res) => {
-        let product = await db.Product.findByPk(req.params.id)
+        let product = await db.Product.findByPk(req.params.id,{ raw:true, include: ['sizes']})
         .catch(error => {
             console.log(error)
             return res.render('../src/views/main/home', { 
                 error: error
             });
         })
-        let productSize = await db.Product_Size.findAll({
-            where: {
-                id_product: req.params.id
-            }
-        })
-        let sizesId = [];
-        for (let i=0; i<productSize.length; i++) {
-            sizesId.push(productSize[i].dataValues.id_size)
-        }
 
         product = {
-            ...product,
+                id: product.id,
+                product_name: product.product_name,
+                price: product.price,
+                discount: product.discount,
+                category: product.category,
+                size: product['sizes.number'],
+                color: product['sizes.Product_Size.color'],
+                image: product['sizes.Product_Size.image'],
+                quantity: product['sizes.Product_Size.stock']
+            }
 
-        }
-    
-        console.log(product.dataValues.product_name)
+
+            console.log(product.size)
+        
     
 
-        res.render('../src/views/products/productEdit', {product: product.dataValues, sizesId: sizesId});
+        res.render('../src/views/products/productEdit', {product: product});
     },
     updateProduct: async (req, res) => {
         let id = req.params.id;
@@ -244,14 +246,19 @@ const productController = {
                     product_name : req.body.product_name,
                     price: req.body.price,
                     discount: req.body.discount,
-                    color: req.body.color,
                     category: req.body.category,
-                    image: req.file.filename
                 },
                 {
                     where: {id: req.params.id}
                 }
             )
+            productUpdated.updateSize(req.body.size, {through: {stock: req.body.quantity, color: req.body.color, image: req.file.filename}})
+            .catch(error => {
+                console.log(error)
+                return res.render('../src/views/main/home', { 
+                    error: error
+                });
+            })
             .catch(error => {
                 console.log(error)
                 return res.render('../src/views/main/home', { 
@@ -280,6 +287,52 @@ const productController = {
             })
             res.redirect('/productos');
         }
+    },
+    addColor: (req, res) => {
+        db.Product.findByPk(req.params.id,{ raw:true, include: ['sizes']})
+        .then(product => {
+           
+            product = {
+                id: product.id,
+                 product_name: product.product_name,
+                 price: product.price,
+                 discount: product.discount,
+                 category: product.category,
+                 size: product['sizes.number'],
+                 color: product['sizes.Product_Size.color'],
+                 image: product['sizes.Product_Size.image'],
+                 quantity: product['sizes.Product_Size.stock']
+            }
+
+
+            res.render('../src/views/products/addColor', {product: product});
+        })
+    },
+    createColor: (req, res) => {
+        console.log('hola')
+    },
+    addSize: (req, res) => {
+        db.Product.findByPk(req.params.id,{ raw:true, include: ['sizes']})
+        .then(product => {
+           
+            product = {
+                id: product.id,
+                 product_name: product.product_name,
+                 price: product.price,
+                 discount: product.discount,
+                 category: product.category,
+                 size: product['sizes.number'],
+                 color: product['sizes.Product_Size.color'],
+                 image: product['sizes.Product_Size.image'],
+                 quantity: product['sizes.Product_Size.stock']
+            }
+
+
+            res.render('../src/views/products/addSize', {product: product});
+        })
+    },
+    createSize: (req, res) => {
+        console.log('hola')
     },
     deleteProduct: (req, res) => {
 

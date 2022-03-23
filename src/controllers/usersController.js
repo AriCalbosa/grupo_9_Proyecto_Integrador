@@ -122,7 +122,7 @@ const usersController = {
 							msg: 'Las credenciales son inválidas'
 						},
 						password1: {
-							msg: 'La contraseña es inválida'
+							msg: 'Las credenciales son inválidas'
 						}
 					},
 						oldData: req.body

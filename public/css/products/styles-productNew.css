@@ -128,6 +128,33 @@ select {
     width: 118px;
 }
 
+.descripcion-producto .logo-adidas img{
+    width: 80%;
+}
+
+.nombre-producto {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.nombre-producto h4, .precio-producto p {
+    font-size: 40px;
+}
+
+.precio-producto p {
+    padding-top: 10px;
+}
+
+.precio-producto .precio-final, .precio-producto .precio {
+    color: #39b54a;
+}
+
+.precio-producto .precio-descuento {
+    color: #666;
+    text-decoration: line-through;
+}
+
+
 .nombre-producto input,.precio-producto input, .descuento-producto input{
     border-radius: 3px;
 }

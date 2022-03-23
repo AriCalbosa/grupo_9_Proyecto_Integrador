@@ -120,20 +120,41 @@
                         </div>
                         <div class="talles">
                             <label for="size">Talles: </label>
-                            <br>
                             <select name="size" id="size">
-                                <% for (let i=0; i < sizesId.length; i++) { %>
-                                    <option value="<%= sizesId[i] %>" <%= product.size == i ? "selected" : null %>> <%= sizesId[i] + 34 %> </option>
-                                <% } %>
+                                
+                                <option value="<%= product.size %>"> <%= product.size %></option>
+                                
                             </select>
                             <!-- <% for (let i=35; i < 46; i++) { %>
                                 <input type="checkbox" name="talles" id="talles" value="<%= i %>" <%= product.size == i ? "checked" : null %>><%= 36 + i %>
-                            <% } %> -->
+                            <% } %>  --> 
+                        </div>
+                        <div class="cantidad">
+                            <label for="quantity">Stock: </label>
+                            <select name="quantity" id="quantity">
+                                <% for (i = 0; i < 50; i++) { %>
+                                    <% if (i+1 == product.quantity) { %>
+                                <option value="i+1" selected> <%= i+1 %></option>
+                                    <% } else { %>
+                                    <option value="i+1"> <%= i+1 %></option>
+                                    <% } %>
+                                <% } %>
+                            </select>
                         </div>
                     </div>
                     <div class="boton-editar">
                         <button type="submit">Editar Producto</button>
                     </div>
+                </div>
+            </form>
+            <form action="/productos/<%= product.category %>/<%= product.id %>/editar-producto/agregar-color" method="GET">
+                <div class="boton-editar extra">
+                    <button type="submit">Agregar Color Nuevo</button>
+                </div>
+            </form>
+            <form action="/productos/<%= product.category %>/<%= product.id %>/editar-producto/agregar-talle" method="GET">
+                <div class="boton-editar extra">
+                    <button type="submit">Agregar Talle Nuevo</button>
                 </div>
             </form>
         

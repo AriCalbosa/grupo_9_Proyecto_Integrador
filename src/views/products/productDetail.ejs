@@ -4,6 +4,7 @@
     <%- include('../partials/head.ejs') %>
     <title>Detalle de Producto</title>
     <link href="/css/products/styles-productDetail.css" rel="stylesheet">
+    <script src="/js/productDetail.js"></script>
 </head>
 <body>
     <%- include('../partials/header.ejs') %>
@@ -44,7 +45,7 @@
                     <% } %>
                 </div>
                 <div class="caracteristicas-producto">
-                    <form action="/carrito" method="POST">
+                    <form class="form" action="/carrito" method="POST">
                         <div class="color">
                             <label for="color">Color: </label>
                             <select name="color" id="color">
@@ -57,15 +58,21 @@
                             <label for="talle">Talle: </label>
                             <select name="size" id="size">
                                         <option value=" <%= product.size %>"><%= product.size %></option>
-                               
-                               
+                            </select>
+                        </div>
+                        <div class="cantidad">
+                            <label for="talle">Cantidad: </label>
+                            <select name="quantity" id="quantity">
+                                <% for (let i=0; i < product.quantity; i++) { %>
+                                    <option value=" <%= i+1 %>"><%= i+1 %></option>
+                                <% } %>
                             </select>
                         </div>
                         <div class="boton">
                             <button type="submit">Agregar al Carrito <i class="fas fa-cart-plus"></i></button>
                         </div>
                     </form>
-                    <% if (locals.isLogged) { %>
+                    <% if (locals.isLogged && locals.userLogged.profile == 'administrator') { %>
                         <form action="/productos/<%= product.category %>/<%= product.id %>/editar-producto" method="GET">
                             <div class="boton-editar">
                                 <button type="submit">Editar</button>

@@ -42,6 +42,9 @@
             <li><a href ="/productos/casual">Casual</a></li>
             <li><a href ="/productos/futbol">Futbol</a></li>
             <li><a href ="/productos/running">Running</a></li>
+            <% if (locals.isLogged && locals.userLogged.profile == 'administrator') { %>
+                <li><a href="/productos/crear-producto"> Crear Producto</a></li>
+            <% } %>
         </ul>
     </nav>
 </header>

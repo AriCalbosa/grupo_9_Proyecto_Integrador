@@ -41,6 +41,16 @@ productRouter.put('/:categoria/:id', upload.any(), productController.updateProdu
 
 
 
+/*** AGREGAR NUEVO COLOR A UN PRODUCTO ***/ 
+productRouter.get('/:categoria/:id/editar-producto/agregar-color', productController.addColor);
+productRouter.put('/:categoria/:id', upload.any(), productController.createColor); 
+
+
+/*** AGREGAR NUEVO TALLE A UN COLOR DE UN PRODUCTO ***/ 
+productRouter.get('/:categoria/:id/editar-producto/agregar-talle', productController.addSize);
+productRouter.put('/:categoria/:id', upload.any(), productController.createSize); 
+
+
 /*** ELIMINAR UN PRODUCTO ***/ 
 productRouter.delete('/:categoria/:id', productController.deleteProduct); 
 

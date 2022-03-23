@@ -27,6 +27,7 @@ function userLoggedMiddleware(req, res, next) {
 	if (req.session.userLogged) { // SI HAY UN USUARIO LOGUEADO POR SESSION
 		res.locals.isLogged = true; // HAY USUARIO LOGUEADO POR LO QUE CARGA BOTÓN DE PROFILE EN VISTA
 		res.locals.userLogged = req.session.userLogged; // PASA LO QUE HAY EN SESSION A UNA VARIABLE LOCAL PARA USAR EN LA VISTA
+		console.log(res.locals.userLogged)
 	}
 		next();
 	}

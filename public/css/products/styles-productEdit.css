@@ -292,11 +292,15 @@ select {
 }
 
 .cantidad-colores select {
-    width: 40px;
+    width: 144px;
 }
 
 .cantidad select {
-    width: 120px;
+    width: 139px;
+}
+
+.talles select {
+    width: 139px;
 }
 
 .nombre-producto input,.precio-producto input, .descuento-producto input{
@@ -330,11 +334,56 @@ select {
     transition: all 0.5s;
 }
 
-.boton-editar button:hover {
-    background-color: rgb(20, 20, 20);
+.producto-principal {
+    order: 2;
+    width: 50%;
+}
+
+.descripcion-producto .logo-adidas img{
+    width: 80%;
+}
+
+.nombre-producto {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.nombre-producto h4, .precio-producto p {
+    font-size: 40px;
+}
+
+.precio-producto p {
+    padding-top: 10px;
+}
+
+.precio-producto .precio-final, .precio-producto .precio {
+    color: #39b54a;
+}
+
+.precio-producto .precio-descuento {
+    color: #666;
+    text-decoration: line-through;
 }
 
 
+.producto-principal.product_img {
+    width: 100%;
+}
+
+.boton-editar button:hover {
+    background-color: rgb(20, 20, 20);
+}
+.boton-editar.extra {
+    text-align: center;
+}
+
+.boton-editar.extra button {
+    width: 200;
+}
+
+.boton-editar.extra button:hover {
+    background-color: rgb(20, 20, 20);
+}
 
 @media (min-width: 769px){
     .detalle-producto {

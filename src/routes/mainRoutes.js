@@ -1,6 +1,7 @@
 // ************ Require's ************
 const express = require('express');
 const mainRouter = express.Router();
+const authMiddleware = require('../middlewares/authMiddleware.js')
 
 
 
@@ -20,7 +21,7 @@ mainRouter.get('/productos-encontrados', mainController.search);
 
 
 /*** CARRITO ***/
-mainRouter.get('/carrito', mainController.carrito);
+mainRouter.get('/carrito',authMiddleware, mainController.carrito);
 
 
 
